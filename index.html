@@ -13,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Cloudflare Turnstile -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <!-- Analytics — replace with Plausible or GA4 tag -->
 <style>
 :root {
@@ -1067,6 +1069,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <div class="form-group"><label>Last Name</label><input type="text" name="lastName" required /><div class="err">Please enter your last name.</div></div>
           <div class="form-group"><label>Email</label><input type="email" name="email" required /><div class="err">Please enter a valid email.</div></div>
           <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required /><div class="err">Please enter a valid phone number.</div></div>
+          <div class="form-group"><div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark"></div></div>
           <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="2">← Back</button><button type="submit" class="btn btn-primary">Send My Free Quote →</button></div>
         </div>
         <div class="form-success" id="trac-formSuccess"><strong>Thank you!</strong><br>Your quote request is on its way. We will be in touch within 24 hours.</div>
@@ -1276,6 +1279,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <div class="field"><label>Business Type</label><select name="businessType" required><option value="">Select…</option><option>HVAC/Contractor</option><option>Real Estate</option><option>E-Commerce</option><option>Marketing/Agency</option><option>Freelancer/Consultant</option><option>Restaurant/Hospitality</option><option>Other</option></select></div>
           <div class="field"><label>Monthly Revenue (Optional)</label><select name="monthlyRevenue"><option value="">Select…</option><option>Under $5K</option><option>$5K-$20K</option><option>$20K-$50K</option><option>$50K+</option></select><p class="field-note">This helps us customize your onboarding — skip if you prefer.</p></div>
         </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:16px 0;"></div>
         <button type="submit" class="btn">Claim My Spot →</button>
         <p class="fineprint">No credit card. No commitment. Just early access.</p>
         <div class="form-msg" data-msg="top"></div>
@@ -1332,6 +1336,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <div class="field"><label>Business Type</label><select name="businessType" required><option value="">Select…</option><option>HVAC/Contractor</option><option>Real Estate</option><option>E-Commerce</option><option>Marketing/Agency</option><option>Freelancer/Consultant</option><option>Restaurant/Hospitality</option><option>Other</option></select></div>
           <div class="field"><label>Monthly Revenue (Optional)</label><select name="monthlyRevenue"><option value="">Select…</option><option>Under $5K</option><option>$5K-$20K</option><option>$20K-$50K</option><option>$50K+</option></select><p class="field-note">This helps us customize your onboarding — skip if you prefer.</p></div>
         </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:16px 0;"></div>
         <button type="submit" class="btn">Claim My Spot →</button>
         <p class="fineprint">No credit card. No commitment. Just early access.</p>
         <div class="form-msg" data-msg="bottom"></div>
@@ -1542,6 +1547,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="field" data-grade-field><label>Grade Level</label><select name="grade"><option value="" disabled selected>Select one</option><option>9th Grade</option><option>10th Grade</option><option>11th Grade</option><option>12th Grade</option><option>College Freshman</option><option>College Sophomore</option><option>College Junior</option><option>College Senior</option></select></div>
       <div class="field" data-school-field style="display:none;"><label>School or district name (optional)</label><input type="text" name="school" autocomplete="organization" /></div>
       <div class="field"><label>School Platform</label><select name="platform" required data-platform-select><option value="" disabled selected>Select one</option><option>Google Classroom</option><option>Canvas</option><option>Schoology</option><option>Blackboard</option><option>Not Sure</option><option>Other</option></select></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:16px 0;"></div>
       <button type="submit" class="btn">Join the Waitlist — Get 1 Month Free →</button>
       <p class="fine-print">No credit card. Cancel anytime. Student data is never sold.</p>
       <div class="form-message" data-message></div>
@@ -1598,6 +1604,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="field" data-grade-field><label>Grade Level</label><select name="grade"><option value="" disabled selected>Select one</option><option>9th Grade</option><option>10th Grade</option><option>11th Grade</option><option>12th Grade</option><option>College Freshman</option><option>College Sophomore</option><option>College Junior</option><option>College Senior</option></select></div>
       <div class="field" data-school-field style="display:none;"><label>School or district name (optional)</label><input type="text" name="school" autocomplete="organization" /></div>
       <div class="field"><label>School Platform</label><select name="platform" required><option value="" disabled selected>Select one</option><option>Google Classroom</option><option>Canvas</option><option>Schoology</option><option>Blackboard</option><option>Not Sure</option><option>Other</option></select></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:16px 0;"></div>
       <button type="submit" class="btn">Join the Waitlist — Get 1 Month Free →</button>
       <p class="fine-print">No credit card. Cancel anytime. Student data is never sold.</p>
       <div class="form-message" data-message></div>
@@ -1645,6 +1652,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <input type="hidden" name="time" id="booking-time" required />
       </div>
       <div class="bfield"><label>Anything we should know? (optional)</label><textarea name="notes"></textarea></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:8px 0;"></div>
       <button type="submit" class="bsubmit">Confirm Booking</button>
       <div class="bmsg" id="booking-msg"></div>
     </form>
@@ -1682,7 +1690,7 @@ function initBookingModal() {
   });
   const form = document.getElementById('booking-form');
   const msg = document.getElementById('booking-msg');
-  const BOOKING_ENDPOINT = 'https://formspree.io/f/mbdbpqdn';
+  const BOOKING_ENDPOINT = 'https://formspree.io/f/xkoelgra';
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     msg.className = 'bmsg'; msg.textContent = '';
@@ -1690,6 +1698,11 @@ function initBookingModal() {
     if (!data.name || !data.email || !data.date || !data.time) {
       msg.className = 'bmsg error'; msg.textContent = 'Please fill in name, email, date, and pick a time.'; return;
     }
+    const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
+    if (!tsInput || !tsInput.value) {
+      msg.className = 'bmsg error'; msg.textContent = 'Please wait for the security check to load, then try again.'; return;
+    }
+    data['cf-turnstile-response'] = tsInput.value;
     const btn = form.querySelector('.bsubmit');
     const original = btn.textContent;
     btn.disabled = true; btn.textContent = 'Booking…';
@@ -2003,6 +2016,12 @@ function initTractio() {
     const success = document.getElementById('trac-formSuccess');
     const error = document.getElementById('trac-formError');
     success.style.display = 'none'; error.style.display = 'none';
+    const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
+    if (!tsInput || !tsInput.value) {
+      alert('Please wait for the security check to load, then try again.');
+      return;
+    }
+    data['cf-turnstile-response'] = tsInput.value;
     try {
       const res = await fetch(QUOTE_ENDPOINT, { method: 'POST', headers: {'Accept':'application/json','Content-Type':'application/json'}, body: JSON.stringify(data) });
       if (!res.ok) throw new Error('Submit failed');
@@ -2122,6 +2141,11 @@ function initDrivoWL() {
       if (!data.firstName || !data.lastName || !data.email || !data.businessType) {
         msgEl.className = 'form-msg error'; msgEl.textContent = 'Please fill in all required fields.'; return;
       }
+      const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
+      if (!tsInput || !tsInput.value) {
+        msgEl.className = 'form-msg error'; msgEl.textContent = 'Please wait for the security check to load, then try again.'; return;
+      }
+      data['cf-turnstile-response'] = tsInput.value;
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.disabled = true; btn.textContent = 'Submitting…';
@@ -2296,6 +2320,10 @@ function initStudeoWL() {
       const originalText = btn.textContent;
       msg.className = 'form-message'; msg.textContent = '';
       const formData = new FormData(form);
+      const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
+      if (!tsInput || !tsInput.value) {
+        msg.className = 'form-message error'; msg.textContent = 'Please wait for the security check to load, then try again.'; return;
+      }
       const data = {
         firstName: (formData.get('firstName') || '').toString().trim(),
         email: (formData.get('email') || '').toString().trim(),
@@ -2303,6 +2331,7 @@ function initStudeoWL() {
         grade: formData.get('grade') || '',
         school: (formData.get('school') || '').toString().trim(),
         platform: formData.get('platform') || '',
+        'cf-turnstile-response': tsInput.value,
       };
       btn.disabled = true; btn.textContent = 'Joining...';
       try {
