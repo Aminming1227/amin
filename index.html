@@ -1708,12 +1708,18 @@ function initBookingModal() {
     btn.disabled = true; btn.textContent = 'Booking…';
     try {
       const res = await fetch(BOOKING_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-      if (!res.ok) throw new Error('failed');
+      if (!res.ok) {
+        let detail;
+        try { detail = await res.json(); } catch (_) { try { detail = await res.text(); } catch (_2) { detail = '(no body)'; } }
+        console.error('[booking] Formspree submission failed', { status: res.status, statusText: res.statusText, detail });
+        throw new Error('Formspree responded with HTTP ' + res.status);
+      }
       msg.className = 'bmsg success';
       msg.innerHTML = `Booked! We'll email ${data.email} a confirmation for ${data.date} at ${data.time}.`;
       form.reset();
       document.querySelectorAll('#booking-slots .bslot').forEach(s => s.classList.remove('selected'));
     } catch (err) {
+      console.error('[booking] submit error:', err);
       msg.className = 'bmsg error';
       msg.innerHTML = 'Could not submit. Email us at <a href="mailto:hello@fortevo.co" style="color:#3B82F6;">hello@fortevo.co</a>';
     } finally {
