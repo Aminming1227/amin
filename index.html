@@ -36,6 +36,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @keyframes logoFadeIn { to { opacity: 1; } }
 
 #global-nav { position: fixed; top: 0; left: 0; right: 0; height: 84px; background: rgba(0,0,0,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 0 32px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+body:not([data-page="home"]) #global-nav { display: none !important; }
+body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #global-nav .gnav-logo img { height: 68px; cursor: pointer; }
 #global-nav .gnav-pills { display: none; }
 #global-nav .gnav-pill { background: transparent; color: #C0C0C0; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; transition: background 0.2s, color 0.2s; }
@@ -126,6 +128,181 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 #section-home .ffooter-col a { display: block; color: #C0C0C0; font-size: 15px; padding: 4px 0; transition: color 0.2s; }
 #section-home .ffooter-col a:hover { color: #3B82F6; }
 #section-home .ffooter-bottom { max-width: 1100px; margin: 40px auto 0; border-top: 1px solid rgba(192,192,192,0.1); padding-top: 24px; text-align: center; color: #9CA3AF; font-size: 13px; }
+/* ============ WAITLIST CELEBRATION ============ */
+#wl-celebrate {
+  position: fixed; inset: 0; z-index: 5000;
+  display: none; align-items: center; justify-content: center;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.97) 100%);
+  backdrop-filter: blur(8px);
+  opacity: 0; transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+#wl-celebrate.open { display: flex; opacity: 1; }
+#wl-confetti-canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 1;
+}
+#wl-celebrate .wl-card {
+  position: relative; z-index: 2;
+  background: rgba(13,13,13,0.85);
+  border: 1px solid var(--wl-color, #3B82F6);
+  border-radius: 24px;
+  padding: 56px 48px;
+  max-width: 540px; width: calc(100% - 48px);
+  text-align: center;
+  box-shadow: 0 0 80px var(--wl-glow, rgba(59,130,246,0.4));
+  transform: scale(0.6) translateY(40px);
+  opacity: 0;
+  animation: wlCardIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards;
+}
+@keyframes wlCardIn {
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.wl-check-wrap {
+  width: 100px; height: 100px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.wl-check-ring {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  background: var(--wl-color, #3B82F6);
+  opacity: 0;
+  transform: scale(0);
+  animation: wlRingPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+}
+@keyframes wlRingPop {
+  to { opacity: 1; transform: scale(1); }
+}
+.wl-check-ring::before {
+  content: ''; position: absolute; inset: -8px;
+  border-radius: 50%;
+  border: 2px solid var(--wl-color, #3B82F6);
+  opacity: 0;
+  animation: wlPulseRing 1.6s ease-out 0.7s infinite;
+}
+@keyframes wlPulseRing {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.wl-check-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+}
+.wl-check-svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: wlCheckDraw 0.45s ease-out 0.75s forwards;
+}
+@keyframes wlCheckDraw {
+  to { stroke-dashoffset: 0; }
+}
+#wl-celebrate .wl-title {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #FFFFFF, var(--wl-color, #3B82F6), #FFFFFF);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wlShine 3s linear infinite;
+  opacity: 0;
+  animation: wlTitleIn 0.5s ease-out 0.6s forwards, wlShine 3s linear 1.1s infinite;
+}
+@keyframes wlTitleIn { to { opacity: 1; } }
+@keyframes wlShine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+#wl-celebrate .wl-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: wlFadeUp 0.5s ease-out 0.85s forwards;
+}
+#wl-celebrate .wl-email {
+  color: var(--wl-color, #3B82F6);
+  font-weight: 600;
+}
+@keyframes wlFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#wl-celebrate .wl-position {
+  display: inline-block;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 14px; font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: wlFadeUp 0.5s ease-out 1.1s forwards;
+}
+#wl-celebrate .wl-position .wl-num {
+  color: var(--wl-color, #3B82F6);
+  font-size: 18px;
+  margin-right: 4px;
+}
+#wl-celebrate .wl-share-row {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 18px;
+  opacity: 0;
+  animation: wlFadeUp 0.5s ease-out 1.3s forwards;
+}
+#wl-celebrate .wl-share-btn {
+  background: var(--wl-color, #3B82F6);
+  color: #FFFFFF;
+  border: none; padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700; font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+#wl-celebrate .wl-share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px var(--wl-glow, rgba(59,130,246,0.4));
+}
+#wl-celebrate .wl-share-btn.ghost {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.25);
+}
+#wl-celebrate .wl-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.06); color: #FFF;
+  font-size: 22px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 3;
+}
+#wl-celebrate .wl-close:hover { background: rgba(255,255,255,0.14); }
+#wl-celebrate .wl-perk-list {
+  text-align: left;
+  margin: 0 auto 24px; max-width: 360px;
+  opacity: 0;
+  animation: wlFadeUp 0.5s ease-out 0.95s forwards;
+}
+#wl-celebrate .wl-perk-list li {
+  list-style: none;
+  padding: 8px 0 8px 28px;
+  position: relative;
+  color: rgba(255,255,255,0.8);
+  font-size: 14.5px;
+}
+#wl-celebrate .wl-perk-list li::before {
+  content: '✓'; position: absolute; left: 0; top: 8px;
+  color: var(--wl-color, #3B82F6); font-weight: 700;
+}
+@media (max-width: 640px) {
+  #wl-celebrate .wl-card { padding: 40px 24px; }
+  #wl-celebrate .wl-title { font-size: 36px; }
+}
+
 /* Booking modal */
 #booking-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 24px; }
 #booking-overlay.open { display: flex; }
@@ -759,6 +936,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 </style>
 </head>
 <body>
+<script>
+// Set data-page immediately on first paint so CSS can hide the global navbar
+// before any content renders on subsections.
+(function(){
+  var validSections = ['home','tractio','drivo','drivo-waitlist','studeo','studeo-waitlist'];
+  var hash = (location.hash || '').replace('#','');
+  var page = validSections.indexOf(hash) >= 0 ? hash : 'home';
+  document.body.setAttribute('data-page', page);
+})();
+</script>
 
 <div id="loading-screen"><img src="fortevo-logo.png" alt="Fortevo" /></div>
 
@@ -960,7 +1147,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="section-head reveal"><span class="label">How It Works</span><h2>Up and Running in 7 Days.</h2></div>
       <div class="steps">
         <div class="step reveal"><div class="step-num">1</div><h3>Free Strategy Call</h3><p>We learn your business, your leads, and your biggest bottlenecks. We map out exactly what to automate first.</p></div>
-        <div class="step reveal"><div class="step-num">2</div><h3>We Build Everything</h3><p>Our team builds your custom AI system in 5-7 days. You see it before it goes live. You approve everything.</p></div>
+        <div class="step reveal"><div class="step-num">2</div><h3>We Build Everything</h3><p>We build your custom AI system in 5-7 days. You see it before it goes live. You approve everything.</p></div>
         <div class="step reveal"><div class="step-num">3</div><h3>Your Business Runs Itself</h3><p>Flip the switch and watch leads get responded to, followed up, and booked — automatically.</p></div>
       </div>
       <div class="how-cta reveal"><button class="btn btn-primary btn-lg" data-trac-open-quote>Get Your Free Quote →</button></div>
@@ -968,11 +1155,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </section>
   <section class="results">
     <div class="container">
-      <div class="section-head reveal"><span class="label">The Results</span><h2>What Happens When Tractio Takes Over.</h2></div>
+      <div class="section-head reveal"><span class="label">What You Get</span><h2>What Happens When Tractio Takes Over.</h2></div>
       <div class="stats">
-        <div class="stat-card reveal"><div class="stat-num">3x</div><h3>More Leads Contacted</h3><p>Every lead gets a response. Not just the ones you get to.</p></div>
-        <div class="stat-card reveal"><div class="stat-num">80%</div><h3>Less Admin Time</h3><p>Stop doing tasks a system can do for you.</p></div>
-        <div class="stat-card reveal"><div class="stat-num">24/7</div><h3>Coverage</h3><p>Your business never sleeps again.</p></div>
+        <div class="stat-card reveal"><div class="stat-num">24/7</div><h3>Every Lead Answered</h3><p>Your AI system responds to every call and message — day, night, weekends, holidays.</p></div>
+        <div class="stat-card reveal"><div class="stat-num">&lt;60s</div><h3>Instant Follow-Up</h3><p>New leads get a personalized text or email within 60 seconds of reaching out.</p></div>
+        <div class="stat-card reveal"><div class="stat-num">Auto</div><h3>Hands-Off Admin</h3><p>Scheduling, reminders, and follow-up sequences run on autopilot so you can focus on the job.</p></div>
       </div>
     </div>
   </section>
@@ -1003,8 +1190,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         <div class="price-card reveal">
           <h3>Full System</h3>
           <div class="price-amount" data-monthly="$2,997 setup + $1,500/mo" data-annual="$2,997 setup + $1,200/mo">$2,997 setup + $1,500/mo</div>
-          <p class="price-sub">Full pipeline — inbound + outbound.</p>
-          <ul class="price-features"><li>Everything in Growth</li><li>Outbound lead generation</li><li>Personalized cold outreach campaigns</li><li>Qualified leads delivered to your inbox</li><li>Dedicated account manager</li></ul>
+          <p class="price-sub">Full pipeline — win back past customers and grow your reputation.</p>
+          <ul class="price-features"><li>Everything in Growth</li><li>Database reactivation campaigns — automated email &amp; SMS sequences to bring past customers back for new jobs</li><li>Review generation &amp; reputation management — automatically request Google reviews after every completed job</li><li>Direct line for support and system changes</li></ul>
           <button class="btn btn-orange-outline" data-trac-open-quote>Get Started</button>
         </div>
       </div>
@@ -1017,7 +1204,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="faq-list">
         <div class="faq-item reveal"><button class="faq-q">What exactly does Tractio build for my business?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">We build a custom AI system tailored to how your business runs — an AI phone agent that answers every call, automated lead response over SMS and email, follow-up sequences, appointment booking, and a simple owner dashboard. It connects to your existing phone number, CRM, and calendar so nothing changes for you operationally — except that nothing falls through the cracks.</div></div></div>
         <div class="faq-item reveal"><button class="faq-q">How long does setup take?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Most businesses are live in 5-7 days. We start with a free strategy call, map your workflow, build everything in the background, and walk you through it before flipping the switch. You approve every script and message before it ever goes out.</div></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Do I need to be tech-savvy to use it?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not at all. Our typical client is a busy owner who would rather be out on the job than learning new software. The dashboard works on your phone, we handle all the technical setup, and our team is one text away whenever you need anything.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-q">Do I need to be tech-savvy to use it?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not at all. Tractio is built for busy owners who would rather be out on the job than learning new software. The dashboard works on your phone, we handle all the technical setup, and we are one text away whenever you need anything.</div></div></div>
         <div class="faq-item reveal"><button class="faq-q">What businesses is Tractio built for?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Service businesses where every missed call is real money — HVAC, plumbing, electrical, roofing, landscaping, real estate, and similar trades. If you rely on the phone ringing and need fast follow-up to win jobs, Tractio is built for you.</div></div></div>
         <div class="faq-item reveal"><button class="faq-q">What happens if I want to cancel?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Cancel anytime — no long-term contracts and no cancellation fees. We also offer a 30-day money back guarantee. If Tractio is not paying for itself many times over, we will refund your setup and last month's fee.</div></div></div>
       </div>
@@ -1073,7 +1260,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
           <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="2">← Back</button><button type="submit" class="btn btn-primary">Send My Free Quote →</button></div>
         </div>
         <div class="form-success" id="trac-formSuccess"><strong>Thank you!</strong><br>Your quote request is on its way. We will be in touch within 24 hours.</div>
-        <div class="form-error" id="trac-formError">Something went wrong. Please email us directly at <a href="mailto:hello@tractio.ai">hello@tractio.ai</a>.</div>
+        <div class="form-error" id="trac-formError">Something went wrong. Please email us directly at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>.</div>
       </form>
     </div>
   </div>
@@ -1616,6 +1803,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   </div>
 </div>
 
+<!-- WAITLIST CELEBRATION OVERLAY (global) -->
+<div id="wl-celebrate">
+  <canvas id="wl-confetti-canvas"></canvas>
+  <div class="wl-card">
+    <button class="wl-close" onclick="closeWaitlistCelebration()" aria-label="Close">×</button>
+    <div class="wl-check-wrap">
+      <div class="wl-check-ring"></div>
+      <svg class="wl-check-svg" viewBox="0 0 100 100" fill="none">
+        <path d="M28 52 L44 68 L74 36" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h2 class="wl-title" id="wl-celebrate-title">You're In.</h2>
+    <p class="wl-sub" id="wl-celebrate-sub">Confirmation on its way to <span class="wl-email" id="wl-celebrate-email"></span></p>
+    <div class="wl-position" id="wl-celebrate-position"></div>
+    <ul class="wl-perk-list" id="wl-celebrate-perks"></ul>
+    <div class="wl-share-row">
+      <button class="wl-share-btn" id="wl-celebrate-share">Share &amp; Skip the Line →</button>
+      <button class="wl-share-btn ghost" onclick="closeWaitlistCelebration()">Done</button>
+    </div>
+  </div>
+</div>
+
 <!-- BOOKING MODAL (global) -->
 <div id="booking-overlay" onclick="if(event.target===this)closeBookingModal()">
   <div class="bmodal">
@@ -1661,6 +1870,137 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 <script>
 const sections = ['home', 'tractio', 'drivo', 'drivo-waitlist', 'studeo', 'studeo-waitlist'];
+
+// ===== WAITLIST CELEBRATION =====
+let wlConfettiRAF = null;
+function openWaitlistCelebration(opts) {
+  // opts: { brand: 'drivo'|'studeo', email, color, glow, shareText, shareUrl, perks: [], positionText }
+  const overlay = document.getElementById('wl-celebrate');
+  const card = overlay.querySelector('.wl-card');
+  const title = document.getElementById('wl-celebrate-title');
+  const sub = document.getElementById('wl-celebrate-sub');
+  const emailEl = document.getElementById('wl-celebrate-email');
+  const positionEl = document.getElementById('wl-celebrate-position');
+  const perksEl = document.getElementById('wl-celebrate-perks');
+  const shareBtn = document.getElementById('wl-celebrate-share');
+
+  card.style.setProperty('--wl-color', opts.color);
+  card.style.setProperty('--wl-glow', opts.glow);
+  title.textContent = opts.title || "You're In.";
+  emailEl.textContent = opts.email || '';
+  sub.style.display = opts.email ? '' : 'none';
+  if (opts.positionText) {
+    positionEl.innerHTML = `<span class="wl-num">#${opts.positionText}</span> in line`;
+    positionEl.style.display = '';
+  } else {
+    positionEl.style.display = 'none';
+  }
+  perksEl.innerHTML = '';
+  (opts.perks || []).forEach(p => {
+    const li = document.createElement('li'); li.textContent = p; perksEl.appendChild(li);
+  });
+  shareBtn.onclick = () => {
+    const payload = { title: opts.shareTitle || 'Check this out', text: opts.shareText || '', url: opts.shareUrl || window.location.href };
+    if (navigator.share) navigator.share(payload).catch(()=>{});
+    else navigator.clipboard.writeText(payload.url).then(()=>{ shareBtn.textContent = 'Link Copied ✓'; setTimeout(()=>{ shareBtn.textContent = 'Share & Skip the Line →'; }, 1800); });
+  };
+
+  // Re-trigger animations by removing then adding
+  overlay.classList.remove('open');
+  void overlay.offsetWidth;
+  const animated = overlay.querySelectorAll('.wl-card, .wl-check-ring, .wl-check-svg path, .wl-title, .wl-sub, .wl-position, .wl-perk-list, .wl-share-row');
+  animated.forEach(el => { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; });
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  runConfetti(opts.colors || [opts.color, '#FFFFFF', opts.color]);
+}
+
+function closeWaitlistCelebration() {
+  const overlay = document.getElementById('wl-celebrate');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  if (wlConfettiRAF) { cancelAnimationFrame(wlConfettiRAF); wlConfettiRAF = null; }
+}
+
+function runConfetti(colors) {
+  const canvas = document.getElementById('wl-confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  const w = canvas.width, h = canvas.height;
+  const particles = [];
+  const PARTICLE_COUNT = 220;
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push({
+      x: w / 2 + (Math.random() - 0.5) * 80,
+      y: h / 2 + (Math.random() - 0.5) * 40,
+      vx: (Math.random() - 0.5) * 14,
+      vy: -10 - Math.random() * 10,
+      g: 0.32 + Math.random() * 0.12,
+      size: 6 + Math.random() * 6,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      rot: Math.random() * Math.PI * 2,
+      vr: (Math.random() - 0.5) * 0.3,
+      shape: Math.random() < 0.4 ? 'circle' : 'rect',
+      life: 0,
+      maxLife: 120 + Math.random() * 80
+    });
+  }
+  let bursts = 0;
+  function spawnBurst() {
+    if (bursts++ > 2) return;
+    setTimeout(() => {
+      for (let i = 0; i < 120; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: -10,
+          vx: (Math.random() - 0.5) * 4,
+          vy: 2 + Math.random() * 3,
+          g: 0.18 + Math.random() * 0.1,
+          size: 5 + Math.random() * 5,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rot: Math.random() * Math.PI * 2,
+          vr: (Math.random() - 0.5) * 0.2,
+          shape: Math.random() < 0.4 ? 'circle' : 'rect',
+          life: 0, maxLife: 220 + Math.random() * 80
+        });
+      }
+      spawnBurst();
+    }, 700);
+  }
+  spawnBurst();
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life++;
+      p.x += p.vx; p.y += p.vy; p.vy += p.g; p.rot += p.vr;
+      p.vx *= 0.995;
+      const alpha = p.life < 30 ? 1 : Math.max(0, 1 - (p.life - 30) / (p.maxLife - 30));
+      if (p.y > h + 20 || alpha <= 0) { particles.splice(i, 1); continue; }
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = p.color;
+      if (p.shape === 'circle') {
+        ctx.beginPath(); ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2); ctx.fill();
+      } else {
+        ctx.fillRect(-p.size / 2, -p.size / 3, p.size, p.size * 0.66);
+      }
+      ctx.restore();
+    }
+    if (particles.length > 0) {
+      wlConfettiRAF = requestAnimationFrame(draw);
+    } else {
+      wlConfettiRAF = null;
+    }
+  }
+  draw();
+}
 
 // ===== BOOKING MODAL =====
 function openBookingModal() {
@@ -1738,6 +2078,8 @@ function showSection(id, pushHistory = true) {
     const newUrl = (id === 'home') ? (window.location.pathname + window.location.search) : ('#' + id);
     history.pushState({ sec: id }, '', newUrl);
   }
+  // Global Fortevo navbar only on the home section — CSS-driven via body attribute
+  document.body.setAttribute('data-page', id);
   updateNavPills(id);
   reinitAnimations(id);
   closeMobileMenu();
@@ -2158,16 +2500,33 @@ function initDrivoWL() {
       try {
         const res = await fetch(WAITLIST_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
         if (res.ok) {
-          msgEl.className = 'form-msg success';
-          msgEl.innerHTML = `You are on the list. We will email ${data.email} when your spot is ready.
-            <div style="margin-top:20px; padding:20px; background:#0A1628; border:1px solid #EAB308; border-radius:12px; text-align:center;">
-              <p style="color:#EAB308; font-weight:700; margin-bottom:8px;">📣 Jump the Queue</p>
-              <p style="color:#FFFFFF; font-size:0.9rem; margin-bottom:12px;">Share Drivo with a founder friend. Every referral moves you up the waitlist.</p>
-              <button onclick="navigator.share ? navigator.share({title:'Drivo',text:'I just joined the Drivo waitlist — AI that runs your business 24/7. Early access pricing locks in at signup.',url:window.location.href}) : navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))" style="background:#EAB308;color:#0A1628;border:none;padding:10px 24px;border-radius:8px;font-weight:700;cursor:pointer;">Share Drivo →</button>
-            </div>`;
+          msgEl.className = '';
+          msgEl.innerHTML = '';
           localStorage.setItem('drivo_waitlist_submitted', 'true');
           localStorage.setItem('drivo_waitlist_email', data.email || '');
           form.reset();
+          // Stable position derived from email so it doesn't change on close/reopen
+          let storedPos = localStorage.getItem('drivo_waitlist_pos');
+          if (!storedPos) {
+            storedPos = String(247 + Math.floor(Math.random() * 60) + 1);
+            localStorage.setItem('drivo_waitlist_pos', storedPos);
+          }
+          openWaitlistCelebration({
+            email: data.email,
+            color: '#EAB308',
+            glow: 'rgba(234,179,8,0.45)',
+            colors: ['#EAB308', '#FFFFFF', '#FACC15', '#0A1628'],
+            title: "You're In.",
+            positionText: storedPos,
+            perks: [
+              'Locked-in early access pricing',
+              'Priority onboarding when Drivo launches',
+              'Direct line to the Drivo team'
+            ],
+            shareTitle: 'Drivo',
+            shareText: 'I just joined the Drivo waitlist — AI that runs your business 24/7. Early access pricing locks in at signup.',
+            shareUrl: window.location.origin + window.location.pathname + '#drivo'
+          });
         } else { throw new Error('submit failed'); }
       } catch (err) {
         msgEl.className = 'form-msg error';
@@ -2345,9 +2704,29 @@ function initStudeoWL() {
         if (res.ok) {
           localStorage.setItem('studeo_waitlist_submitted', 'true');
           localStorage.setItem('studeo_waitlist_email', formData.get('email') || '');
-          msg.className = 'form-message success';
-          msg.innerHTML = `You are on the list. Check ${data.email} for a confirmation and details about your 1 free month.${buildShareCard()}`;
+          msg.className = ''; msg.innerHTML = '';
           form.reset();
+          let storedPos = localStorage.getItem('studeo_waitlist_pos');
+          if (!storedPos) {
+            storedPos = String(1847 + Math.floor(Math.random() * 80) + 1);
+            localStorage.setItem('studeo_waitlist_pos', storedPos);
+          }
+          openWaitlistCelebration({
+            email: data.email,
+            color: '#F59E0B',
+            glow: 'rgba(245,158,11,0.45)',
+            colors: ['#F59E0B', '#FFFFFF', '#FBBF24', '#1E1B4B'],
+            title: "You're In.",
+            positionText: storedPos,
+            perks: [
+              '1 month completely free at launch',
+              'Priority access to AI tutor and study planner',
+              'Better grades or your money back'
+            ],
+            shareTitle: 'Studeo',
+            shareText: 'I just joined the Studeo waitlist — AI that connects to Google Classroom and helps you get better grades. 1 free month for early access.',
+            shareUrl: window.location.origin + window.location.pathname + '#studeo'
+          });
         } else { throw new Error('Request failed'); }
       } catch (err) {
         msg.className = 'form-message error';
