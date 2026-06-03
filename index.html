@@ -408,7 +408,32 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-tractio .toggle { position: relative; width: 52px; height: 28px; background: #1C1C1E; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
 #section-tractio .toggle-dot { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: #F97316; border-radius: 50%; transition: transform .25s; }
 #section-tractio .toggle.active .toggle-dot { transform: translateX(24px); }
-#section-tractio .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items: stretch; }
+#section-tractio .price-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; align-items: stretch; }
+#section-tractio .build-card { background: #1C1C1E; border: 2px solid #F97316; border-radius: 12px; padding: 28px 22px; display: flex; flex-direction: column; position: relative; }
+#section-tractio .build-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+#section-tractio .build-sub { color: #A1A1A6; font-size: 14px; margin-bottom: 16px; }
+#section-tractio .build-feature-list { list-style: none; margin: 0 0 16px; flex: 1; max-height: 320px; overflow-y: auto; padding-right: 4px; }
+#section-tractio .build-feature-list::-webkit-scrollbar { width: 6px; }
+#section-tractio .build-feature-list::-webkit-scrollbar-thumb { background: rgba(249,115,22,0.3); border-radius: 3px; }
+#section-tractio .build-feature-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 8px; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 13px; color: #FFF; }
+#section-tractio .build-feature-list li:hover { background: rgba(249,115,22,0.06); }
+#section-tractio .build-feature-list li.disabled { cursor: not-allowed; opacity: 0.95; background: rgba(249,115,22,0.08); }
+#section-tractio .build-feature-list li.disabled:hover { background: rgba(249,115,22,0.08); }
+#section-tractio .build-checkbox { flex-shrink: 0; width: 18px; height: 18px; border: 2px solid #F97316; border-radius: 4px; background: transparent; position: relative; margin-top: 1px; transition: background 0.15s; }
+#section-tractio .build-feature-list li.checked .build-checkbox { background: #F97316; }
+#section-tractio .build-feature-list li.checked .build-checkbox::after { content: ''; position: absolute; left: 4px; top: 0px; width: 6px; height: 11px; border: solid #FFFFFF; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+#section-tractio .build-feature-text { flex: 1; line-height: 1.35; }
+#section-tractio .build-required-tag { display: inline-block; background: #F97316; color: #FFF; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 6px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
+#section-tractio .build-feature-price { display: block; color: #A1A1A6; font-size: 12px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+#section-tractio .build-total { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.35); border-radius: 8px; padding: 16px 18px; margin-bottom: 16px; }
+#section-tractio .build-total-label { color: #A1A1A6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+#section-tractio .build-total-amount { color: #FFF; font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.3; }
+#section-tractio .build-total-amount .accent { color: #F97316; }
+#section-tractio .build-card .btn { width: 100%; }
+@media (max-width: 1100px) { #section-tractio .price-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 700px) { #section-tractio .price-grid { grid-template-columns: 1fr; } #section-tractio .build-feature-list { max-height: none; } }
+#section-tractio .build-success { display: none; margin-top: 12px; padding: 12px; border-radius: 8px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #86efac; text-align: center; font-size: 13px; }
+#section-tractio .build-error { display: none; margin-top: 12px; padding: 12px; border-radius: 8px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #fca5a5; text-align: center; font-size: 13px; }
 #section-tractio .price-card { background: #1C1C1E; border-radius: 12px; padding: 36px 28px; border: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; position: relative; }
 #section-tractio .price-card.featured { border-color: #F97316; transform: translateY(-10px); }
 #section-tractio .popular-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #F97316; color: #FFF; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 6px 14px; border-radius: 999px; }
@@ -1193,6 +1218,59 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
           <p class="price-sub">Full pipeline — win back past customers and grow your reputation.</p>
           <ul class="price-features"><li>Everything in Growth</li><li>Database reactivation campaigns — automated email &amp; SMS sequences to bring past customers back for new jobs</li><li>Review generation &amp; reputation management — automatically request Google reviews after every completed job</li><li>Direct line for support and system changes</li></ul>
           <button class="btn btn-orange-outline" data-trac-open-quote>Get Started</button>
+        </div>
+        <div class="build-card reveal" id="trac-build-card">
+          <h3>Build Your Own</h3>
+          <p class="build-sub">Pick exactly what you need. Pricing updates live.</p>
+          <ul class="build-feature-list" id="trac-build-list">
+            <li class="checked disabled" data-required="true" data-setup="497" data-mo="297" data-name="AI phone agent (Atlas)">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">AI phone agent (Atlas) — answers calls 24/7<span class="build-required-tag">REQUIRED</span><span class="build-feature-price">$497 setup + $297/mo</span></span>
+            </li>
+            <li data-setup="200" data-mo="100" data-name="Lead qualification + appointment booking">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Lead qualification + appointment booking<span class="build-feature-price">$200 setup + $100/mo</span></span>
+            </li>
+            <li data-setup="100" data-mo="50" data-name="Owner notifications for every lead">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Owner notifications for every lead<span class="build-feature-price">$100 setup + $50/mo</span></span>
+            </li>
+            <li data-setup="200" data-mo="75" data-name="CRM setup (HubSpot)">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">CRM setup (HubSpot)<span class="build-feature-price">$200 setup + $75/mo</span></span>
+            </li>
+            <li data-setup="400" data-mo="200" data-name="Automated follow-up sequences">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Automated follow-up sequences<span class="build-feature-price">$400 setup + $200/mo</span></span>
+            </li>
+            <li data-setup="300" data-mo="150" data-name="Personalized email + SMS campaigns">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Personalized email + SMS campaigns<span class="build-feature-price">$300 setup + $150/mo</span></span>
+            </li>
+            <li data-setup="100" data-mo="75" data-name="Monthly performance report">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Monthly performance report<span class="build-feature-price">$100 setup + $75/mo</span></span>
+            </li>
+            <li data-setup="600" data-mo="250" data-name="Database reactivation campaigns">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Database reactivation campaigns<span class="build-feature-price">$600 setup + $250/mo</span></span>
+            </li>
+            <li data-setup="400" data-mo="200" data-name="Review generation + reputation management">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Review generation + reputation management<span class="build-feature-price">$400 setup + $200/mo</span></span>
+            </li>
+            <li data-setup="200" data-mo="150" data-name="Direct line / dedicated support">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Direct line / dedicated support<span class="build-feature-price">$200 setup + $150/mo</span></span>
+            </li>
+          </ul>
+          <div class="build-total">
+            <div class="build-total-label">Your Total</div>
+            <div class="build-total-amount"><span class="accent" id="trac-build-setup">$497</span> setup + <span class="accent" id="trac-build-mo">$297</span>/mo</div>
+          </div>
+          <button class="btn btn-primary" id="trac-build-submit" type="button">Get Started</button>
+          <div class="build-success" id="trac-build-success">Thanks — we'll be in touch shortly to set up your custom system.</div>
+          <div class="build-error" id="trac-build-error">Could not send. Email us at <a href="mailto:fortevo.ai@gmail.com" style="color:#F97316;">fortevo.ai@gmail.com</a>.</div>
         </div>
       </div>
       <p class="pricing-foot reveal">No long-term contracts. Cancel anytime. 30-day money back guarantee.</p>
@@ -2356,6 +2434,69 @@ function initTractio() {
   });
 
   const QUOTE_ENDPOINT = 'https://formspree.io/f/xzdwkydv';
+
+  // Build Your Own calculator
+  (function initBuildYourOwn() {
+    const list = document.getElementById('trac-build-list');
+    if (!list) return;
+    const setupEl = document.getElementById('trac-build-setup');
+    const moEl = document.getElementById('trac-build-mo');
+    const submitBtn = document.getElementById('trac-build-submit');
+    const successEl = document.getElementById('trac-build-success');
+    const errorEl = document.getElementById('trac-build-error');
+    function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+    function recalc() {
+      let setup = 0, mo = 0;
+      list.querySelectorAll('li.checked').forEach(li => {
+        setup += parseInt(li.dataset.setup, 10) || 0;
+        mo += parseInt(li.dataset.mo, 10) || 0;
+      });
+      setupEl.textContent = fmt(setup);
+      moEl.textContent = fmt(mo);
+    }
+    list.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', () => {
+        if (li.dataset.required === 'true') return;
+        li.classList.toggle('checked');
+        recalc();
+      });
+    });
+    recalc();
+    submitBtn.addEventListener('click', async () => {
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+      const selected = [];
+      let setup = 0, mo = 0;
+      list.querySelectorAll('li.checked').forEach(li => {
+        selected.push(li.dataset.name);
+        setup += parseInt(li.dataset.setup, 10) || 0;
+        mo += parseInt(li.dataset.mo, 10) || 0;
+      });
+      const data = {
+        plan: 'Build Your Own',
+        selectedFeatures: selected.join(' | '),
+        setupTotal: '$' + setup.toLocaleString('en-US'),
+        monthlyTotal: '$' + mo.toLocaleString('en-US') + '/mo',
+        _subject: 'Tractio — Build Your Own quote request'
+      };
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+      try {
+        const res = await fetch(QUOTE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('failed');
+        successEl.style.display = 'block';
+        submitBtn.textContent = 'Sent ✓';
+        setTimeout(() => { submitBtn.disabled = false; submitBtn.textContent = originalText; }, 3000);
+      } catch (err) {
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false; submitBtn.textContent = originalText;
+      }
+    });
+  })();
   document.getElementById('trac-quoteForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!validateStep(3)) return;
