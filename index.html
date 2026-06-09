@@ -2462,7 +2462,9 @@ function initTractio() {
       });
     });
     recalc();
-    submitBtn.addEventListener('click', async () => {
+    // Build Your Own routes through the existing quote modal so the submission
+    // includes the contact fields and Turnstile token that Formspree requires.
+    submitBtn.addEventListener('click', () => {
       successEl.style.display = 'none';
       errorEl.style.display = 'none';
       const selected = [];
@@ -2472,29 +2474,15 @@ function initTractio() {
         setup += parseInt(li.dataset.setup, 10) || 0;
         mo += parseInt(li.dataset.mo, 10) || 0;
       });
-      const data = {
+      window.__tracBuildYourOwn = {
         plan: 'Build Your Own',
         selectedFeatures: selected.join(' | '),
         setupTotal: '$' + setup.toLocaleString('en-US'),
-        monthlyTotal: '$' + mo.toLocaleString('en-US') + '/mo',
-        _subject: 'Tractio — Build Your Own quote request'
+        monthlyTotal: '$' + mo.toLocaleString('en-US') + '/mo'
       };
-      const originalText = submitBtn.textContent;
-      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
-      try {
-        const res = await fetch(QUOTE_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        if (!res.ok) throw new Error('failed');
-        successEl.style.display = 'block';
-        submitBtn.textContent = 'Sent ✓';
-        setTimeout(() => { submitBtn.disabled = false; submitBtn.textContent = originalText; }, 3000);
-      } catch (err) {
-        errorEl.style.display = 'block';
-        submitBtn.disabled = false; submitBtn.textContent = originalText;
-      }
+      // Trigger the existing "Get Started" → quote modal flow
+      const opener = document.querySelector('#section-tractio [data-trac-open-quote]');
+      if (opener) opener.click();
     });
   })();
   document.getElementById('trac-quoteForm').addEventListener('submit', async (e) => {
@@ -2511,11 +2499,17 @@ function initTractio() {
       return;
     }
     data['cf-turnstile-response'] = tsInput.value;
+    // If the Build Your Own calculator stashed a selection, merge it in
+    if (window.__tracBuildYourOwn) {
+      Object.assign(data, window.__tracBuildYourOwn);
+      data._subject = 'Tractio — Build Your Own quote request';
+    }
     try {
       const res = await fetch(QUOTE_ENDPOINT, { method: 'POST', headers: {'Accept':'application/json','Content-Type':'application/json'}, body: JSON.stringify(data) });
       if (!res.ok) throw new Error('Submit failed');
       root.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
       success.style.display = 'block';
+      window.__tracBuildYourOwn = null;
     } catch (err) {
       root.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
       error.style.display = 'block';
