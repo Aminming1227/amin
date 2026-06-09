@@ -542,6 +542,10 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-drivo .steps-cta { text-align: center; }
 #section-drivo .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 #section-drivo .approval-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+#section-drivo .approval-grid.approval-grid-single { grid-template-columns: 1fr; max-width: 760px; margin: 0 auto; text-align: center; }
+#section-drivo .approval-grid-single .approval-left h2,
+#section-drivo .approval-grid-single .approval-left > p { text-align: center; }
+#section-drivo .approval-grid-single .tier-stack { text-align: left; }
 #section-drivo .approval-left h2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; line-height: 1.1; margin-bottom: 20px; }
 #section-drivo .approval-left > p { color: #CBD5E1; font-size: 17px; margin-bottom: 32px; }
 #section-drivo .tier-stack { display: flex; flex-direction: column; gap: 14px; }
@@ -1410,7 +1414,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   </section>
   <section class="bg-card">
     <div class="container">
-      <div class="approval-grid">
+      <div class="approval-grid approval-grid-single">
         <div class="approval-left reveal">
           <h2>You Stay in Control. Always.</h2>
           <p>Drivo never goes rogue. Every significant action gets your approval before it happens — one tap from your phone.</p>
@@ -1419,11 +1423,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
             <div class="tier"><span class="tier-label review">REVIEW</span><p>Important actions appear in your queue waiting for your tap.</p></div>
             <div class="tier"><span class="tier-label always">ALWAYS ASK</span><p>High-stakes decisions always require your explicit approval.</p></div>
           </div>
-        </div>
-        <div class="approval-mock reveal">
-          <div class="mock-header"><div class="mock-dot">D</div><div><div class="mock-title">Drivo wants to send this email</div><div class="mock-time">2 minutes ago</div></div></div>
-          <div class="mock-preview"><strong>To: alex@acmecorp.com — Subject: Following up on our call</strong>Hi Alex, thanks again for the time yesterday. I've put together the proposal we discussed and attached it here. Happy to jump on a quick call this week if you'd like to walk through it together. Let me know what works.</div>
-          <div class="mock-buttons"><button class="btn btn-gold">Approve</button><button class="btn mock-edit">Edit</button></div>
         </div>
       </div>
     </div>
