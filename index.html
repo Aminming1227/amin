@@ -598,6 +598,12 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-drivo .compare-table .check { color: #EAB308; font-weight: 700; font-size: 20px; }
 #section-drivo .compare-table .check-neutral { color: #CBD5E1; font-size: 18px; }
 #section-drivo .compare-table .x { color: #64748B; font-size: 18px; }
+#section-drivo .does-wrap { max-width: 720px; margin: 0 auto; background: #0A1628; border: 1px solid rgba(234,179,8,0.18); border-radius: 16px; padding: 12px 8px; }
+#section-drivo .does-list { list-style: none; margin: 0; padding: 0; }
+#section-drivo .does-list li { display: flex; align-items: center; gap: 16px; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #FFFFFF; font-size: 17px; font-weight: 500; }
+#section-drivo .does-list li:last-child { border-bottom: none; }
+#section-drivo .does-list .does-check { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(234,179,8,0.15); color: #EAB308; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
+@media (max-width: 600px) { #section-drivo .does-list li { padding: 14px 18px; font-size: 15.5px; } }
 #section-drivo .coming-wrap { text-align: center; max-width: 720px; margin: 0 auto; }
 #section-drivo .coming-card { border: 2px solid #EAB308; border-radius: 18px; padding: 36px 32px; margin: 0 auto 32px; background: rgba(234,179,8,0.04); }
 #section-drivo .coming-card p { color: #FFF; font-size: 18px; font-weight: 500; }
@@ -1429,22 +1435,17 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   </section>
   <section class="bg-card">
     <div class="container">
-      <div class="section-head reveal"><h2>Drivo vs The Alternatives.</h2></div>
-      <div class="compare-wrap reveal">
-        <table class="compare-table">
-          <thead><tr><th>Feature</th><th class="drivo-col">Drivo</th><th>Lindy AI</th><th>Manus</th><th>Human EA</th></tr></thead>
-          <tbody>
-            <tr><td>Available 24/7</td><td class="drivo-cell"><span class="check">✓</span></td><td><span class="check-neutral">✓</span></td><td><span class="check-neutral">✓</span></td><td><span class="x">✗</span></td></tr>
-            <tr><td>Sounds exactly like you</td><td class="drivo-cell"><span class="check">✓</span></td><td>Partial</td><td>Partial</td><td><span class="x">✗</span></td></tr>
-            <tr><td>Approval queue before acting</td><td class="drivo-cell"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td>N/A</td></tr>
-            <tr><td>Long-term memory across tasks</td><td class="drivo-cell"><span class="check">✓</span></td><td>Limited</td><td>Limited</td><td>Sometimes</td></tr>
-            <tr><td>Takes real action (not just chat)</td><td class="drivo-cell"><span class="check">✓</span></td><td><span class="check-neutral">✓</span></td><td><span class="check-neutral">✓</span></td><td><span class="check-neutral">✓</span></td></tr>
-            <tr><td>Email + calendar built in</td><td class="drivo-cell"><span class="check">✓</span></td><td>Add-on</td><td><span class="x">✗</span></td><td><span class="check-neutral">✓</span></td></tr>
-            <tr><td>Voice calling</td><td class="drivo-cell"><span class="check">✓</span></td><td><span class="x">✗</span></td><td><span class="x">✗</span></td><td><span class="check-neutral">✓</span></td></tr>
-            <tr><td>Cost per month</td><td class="drivo-cell"><strong>$29–99</strong></td><td>$50–500</td><td>$39+</td><td>$3,000–5,000</td></tr>
-            <tr><td>Setup time</td><td class="drivo-cell"><strong>10 minutes</strong></td><td>Hours</td><td>Hours</td><td>Weeks</td></tr>
-          </tbody>
-        </table>
+      <div class="section-head reveal"><h2>What Drivo Does.</h2></div>
+      <div class="does-wrap reveal">
+        <ul class="does-list">
+          <li><span class="does-check">✓</span>Available 24/7</li>
+          <li><span class="does-check">✓</span>Sounds like you</li>
+          <li><span class="does-check">✓</span>Approval queue before it acts</li>
+          <li><span class="does-check">✓</span>Long-term memory across tasks</li>
+          <li><span class="does-check">✓</span>Takes real action, not just chat</li>
+          <li><span class="does-check">✓</span>Email + calendar built in</li>
+          <li><span class="does-check">✓</span>Voice calling</li>
+        </ul>
       </div>
     </div>
   </section>
