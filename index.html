@@ -1201,11 +1201,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   <section class="pricing">
     <div class="container">
       <div class="section-head reveal"><span class="label">Services & Pricing</span><h2>Choose Your System.</h2></div>
-      <div class="toggle-wrap reveal">
-        <span class="toggle-label active" id="trac-monthlyLabel">Monthly</span>
-        <div class="toggle" id="trac-billingToggle" role="switch" aria-checked="false" tabindex="0"><div class="toggle-dot"></div></div>
-        <span class="toggle-label" id="trac-annualLabel">Annual <span class="toggle-savings">Save 15%</span></span>
-      </div>
       <div class="price-grid">
         <div class="price-card reveal">
           <h3>Starter</h3>
@@ -2366,22 +2361,6 @@ function initTractio() {
     window.addEventListener('resize', init);
     init(); tick();
   })();
-
-  // Pricing toggle
-  const toggle = document.getElementById('trac-billingToggle');
-  const monthlyLbl = document.getElementById('trac-monthlyLabel');
-  const annualLbl = document.getElementById('trac-annualLabel');
-  function setBilling(annual) {
-    toggle.classList.toggle('active', annual);
-    toggle.setAttribute('aria-checked', annual ? 'true' : 'false');
-    monthlyLbl.classList.toggle('active', !annual);
-    annualLbl.classList.toggle('active', annual);
-    root.querySelectorAll('.price-amount').forEach(el => { el.textContent = annual ? el.dataset.annual : el.dataset.monthly; });
-  }
-  if (toggle) {
-    toggle.addEventListener('click', () => setBilling(!toggle.classList.contains('active')));
-    toggle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); } });
-  }
 
   // FAQ
   root.querySelectorAll('.faq-item').forEach(item => {
