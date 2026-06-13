@@ -853,9 +853,9 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-studeo .platform-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; }
 #section-studeo .platform-logo { width: 72px; height: 72px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
 #section-studeo .platform-logo svg { width: 56px; height: 56px; display: block; }
-#section-studeo .live-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #34d399; letter-spacing: 1.5px; }
-#section-studeo .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 0 rgba(52,211,153,0.7); animation: stuPulse 1.8s infinite; }
-@keyframes stuPulse { 0% { box-shadow: 0 0 0 0 rgba(52,211,153,0.7); } 70% { box-shadow: 0 0 0 10px rgba(52,211,153,0); } 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); } }
+#section-studeo .live-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #F59E0B; letter-spacing: 1.5px; }
+#section-studeo .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; box-shadow: 0 0 0 0 rgba(245,158,11,0.7); animation: stuPulse 1.8s infinite; }
+@keyframes stuPulse { 0% { box-shadow: 0 0 0 0 rgba(245,158,11,0.7); } 70% { box-shadow: 0 0 0 10px rgba(245,158,11,0); } 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); } }
 #section-studeo .platform-name { font-size: 1.6rem; font-weight: 700; color: #F8F7FF; margin-bottom: 10px; position: relative; z-index: 1; }
 #section-studeo .platform-desc { color: #A6A3C7; font-size: 0.97rem; line-height: 1.55; position: relative; z-index: 1; }
 #section-studeo .platform-row-small { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 36px; }
@@ -1057,7 +1057,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
       <p class="fsubhead fade-up">Done-for-you AI systems built and managed by Fortevo. We handle everything.</p>
       <div class="fservices-grid">
         <div class="fservice-card fade-up">
-          <span class="fstatus-badge live">LIVE</span>
+          <span class="fstatus-badge live" style="white-space:nowrap;">NOW TAKING CLIENTS</span>
           <img src="tractio-logo.png" alt="Tractio" class="clogo" />
           <div class="ctag">AI automation agency for small businesses</div>
           <p class="cdesc">We build custom AI systems that respond to every lead instantly, follow up automatically, and keep your pipeline full — so you focus on the work, not chasing customers.</p>
@@ -1156,7 +1156,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
       <p class="sub reveal">Tractio builds custom AI systems that respond to every lead instantly, follow up automatically, and keep your pipeline full — so you focus on the work, not chasing customers.</p>
       <div class="hero-buttons reveal">
         <button class="btn btn-primary btn-lg" data-trac-open-quote>Get a Free Quote</button>
-        <a href="#" onclick="event.preventDefault();document.querySelector('#section-tractio .how').scrollIntoView({behavior:'smooth'});" class="btn btn-outline btn-lg">See How It Works</a>
+        <a onclick="document.querySelector('#section-tractio .how').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;" class="btn btn-outline btn-lg">See How It Works</a>
       </div>
       <p class="fineprint reveal">Custom built for your business. No templates. No contracts.</p>
     </div>
@@ -1561,7 +1561,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
       <div class="benefit-grid">
         <div class="benefit"><h3>Early Access Pricing</h3><p>Lock in our lowest-ever pricing — locked forever for everyone who joins the waitlist before public release.</p></div>
         <div class="benefit"><h3>First Access</h3><p>You get in before the public launch. One of the first people to use Drivo.</p></div>
-        <div class="benefit"><h3>Priority Onboarding</h3><p>Our team personally helps you set up your AI clone in the first week.</p></div>
+        <div class="benefit"><h3>Priority Onboarding</h3><p>We'll personally help you set up your AI clone in the first week.</p></div>
         <div class="benefit"><h3>Influence the Product</h3><p>Direct line to the team. Your feedback shapes what gets built next.</p></div>
       </div>
     </section>
@@ -1589,7 +1589,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
       <div class="section-head"><h2>Frequently Asked Questions</h2></div>
       <div class="faq-list">
         <div class="faq-item"><button class="faq-q" type="button">When does Drivo launch?<span class="chev">▼</span></button><div class="faq-a"><div class="faq-a-inner">We are targeting a launch in the next several weeks. Waitlist members get access before anyone else, in a phased rollout that begins as soon as the product is production-ready.</div></div></div>
-        <div class="faq-item"><button class="faq-q" type="button">What does early access include?<span class="chev">▼</span></button><div class="faq-a"><div class="faq-a-inner">Early access members get first access ahead of the public launch, priority onboarding from our team, a direct line to the team to shape the product, and locked-in early access pricing.</div></div></div>
+        <div class="faq-item"><button class="faq-q" type="button">What does early access include?<span class="chev">▼</span></button><div class="faq-a"><div class="faq-a-inner">Early access members get first access ahead of the public launch, priority onboarding from us, a direct line to us to shape the product, and locked-in early access pricing.</div></div></div>
         <div class="faq-item"><button class="faq-q" type="button">What happens after I join the waitlist?<span class="chev">▼</span></button><div class="faq-a"><div class="faq-a-inner">You get an instant confirmation, then occasional updates as we get closer to launch. When your spot is ready, we email you a personal invite with onboarding instructions.</div></div></div>
         <div class="faq-item"><button class="faq-q" type="button">What tools does Drivo connect to at launch?<span class="chev">▼</span></button><div class="faq-a"><div class="faq-a-inner">Gmail and Google Calendar, Outlook and Microsoft 365, Slack, the major CRMs (HubSpot, Pipedrive, Salesforce), Notion, and most lead form providers. We are adding new integrations every week.</div></div></div>
         <div class="faq-item"><button class="faq-q" type="button">Is there a free trial when it launches?<span class="chev">▼</span></button><div class="faq-a"><div class="faq-a-inner">Yes — early access members get an extended trial period to fully experience your AI clone before any payment. You only pay if Drivo earns its place in your business.</div></div></div>
@@ -1683,9 +1683,9 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
     <div class="section-inner">
       <div class="reveal text-center"><h2 class="section-headline">Connects to Every Platform Your School Uses.</h2><p class="section-sub">One click. Everything syncs automatically. You never upload a single file.</p></div>
       <div class="platform-row">
-        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="G" data-bg="#1A73E8"></div><span class="live-badge"><span class="live-dot"></span>LIVE</span></div><div class="platform-name">Google Classroom</div><p class="platform-desc">Auto-syncs all assignments, grades, and materials the moment your teacher posts them. Zero setup beyond one click.</p></div>
-        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="C" data-bg="#E66000"></div><span class="live-badge"><span class="live-dot"></span>LIVE</span></div><div class="platform-name">Canvas</div><p class="platform-desc">Full course content, grade updates, and announcements pulled in real time. Always current, always accurate.</p></div>
-        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="S" data-bg="#0770C2"></div><span class="live-badge"><span class="live-dot"></span>LIVE</span></div><div class="platform-name">Schoology</div><p class="platform-desc">Assignments, rubrics, and grade updates synced automatically from every course you are enrolled in.</p></div>
+        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="G" data-bg="#1A73E8"></div><span class="live-badge"><span class="live-dot"></span>AT LAUNCH</span></div><div class="platform-name">Google Classroom</div><p class="platform-desc">Will auto-sync all assignments, grades, and materials the moment your teacher posts them. Zero setup beyond one click.</p></div>
+        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="C" data-bg="#E66000"></div><span class="live-badge"><span class="live-dot"></span>AT LAUNCH</span></div><div class="platform-name">Canvas</div><p class="platform-desc">Full course content, grade updates, and announcements pulled in real time at launch. Always current, always accurate.</p></div>
+        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="S" data-bg="#0770C2"></div><span class="live-badge"><span class="live-dot"></span>AT LAUNCH</span></div><div class="platform-name">Schoology</div><p class="platform-desc">Assignments, rubrics, and grade updates will sync automatically from every course you are enrolled in.</p></div>
       </div>
       <div class="platform-row-small">
         <div class="platform-card-small platform-reveal-small"><div class="small-head"><div class="platform-logo-small" data-platform="I" data-bg="#00558C"></div><span class="soon-badge">COMING SOON</span></div><h4>Infinite Campus</h4><p>Live grade syncing from your school's student information system. Grades update the moment your teacher enters them.</p></div>
@@ -1777,7 +1777,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
         <div class="plan-card reveal"><h3>Classroom Plan</h3><div class="price">$299<span style="font-size:1rem;color:#A6A3C7">/year</span></div><p>1 teacher, up to 35 students.</p></div>
         <div class="plan-card reveal"><h3>School Plan</h3><div class="price">$2,499<span style="font-size:1rem;color:#A6A3C7">/year</span></div><p>Unlimited students and teachers, admin dashboard.</p></div>
       </div>
-      <p class="schools-contact">Larger districts? Email us at <a href="mailto:hello@studeo.ai">hello@studeo.ai</a></p>
+      <p class="schools-contact">Larger districts? Email us at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a></p>
     </div>
   </section>
   <section class="final-cta">
@@ -1807,7 +1807,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
     <p class="sub">Studeo is launching soon. Join the waitlist and get 1 month completely free when we launch.</p>
   </section>
   <div class="container fade-in">
-    <div class="urgency">📚 1,847 students already on the waitlist — limited early access spots remaining</div>
+    <div class="urgency">📚 Join the Studeo waitlist — 1 month free for everyone who signs up before launch</div>
   </div>
   <div class="container fade-in" id="swl-form-top">
     <form class="form-card" data-swl-form>
@@ -1829,7 +1829,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
     <div class="benefit-grid">
       <div class="benefit-card"><h3>1 Month Free</h3><p>Early access members get the first 1 month completely free. No credit card required at signup.</p></div>
       <div class="benefit-card"><h3>First to Try New Features</h3><p>Every new feature goes to waitlist members before the public.</p></div>
-      <div class="benefit-card"><h3>Priority Support</h3><p>The Studeo team personally helps you connect your first class and set your grade goals.</p></div>
+      <div class="benefit-card"><h3>Priority Support</h3><p>We'll personally help you connect your first class and set your grade goals.</p></div>
       <div class="benefit-card"><h3>Better Grades or Your Money Back</h3><p>If your grades don't improve in 60 days we give you a full refund. No questions asked.</p></div>
     </div>
   </section>
@@ -2649,23 +2649,16 @@ function initDrivoWL() {
           localStorage.setItem('drivo_waitlist_submitted', 'true');
           localStorage.setItem('drivo_waitlist_email', data.email || '');
           form.reset();
-          // Stable position derived from email so it doesn't change on close/reopen
-          let storedPos = localStorage.getItem('drivo_waitlist_pos');
-          if (!storedPos) {
-            storedPos = String(247 + Math.floor(Math.random() * 60) + 1);
-            localStorage.setItem('drivo_waitlist_pos', storedPos);
-          }
           openWaitlistCelebration({
             email: data.email,
             color: '#EAB308',
             glow: 'rgba(234,179,8,0.45)',
             colors: ['#EAB308', '#FFFFFF', '#FACC15', '#0A1628'],
             title: "You're In.",
-            positionText: storedPos,
             perks: [
               'Locked-in early access pricing',
               'Priority onboarding when Drivo launches',
-              'Direct line to the Drivo team'
+              'Direct line to us as we build'
             ],
             shareTitle: 'Drivo',
             shareText: 'I just joined the Drivo waitlist — AI that runs your business 24/7. Early access pricing locks in at signup.',
@@ -2674,7 +2667,7 @@ function initDrivoWL() {
         } else { throw new Error('submit failed'); }
       } catch (err) {
         msgEl.className = 'form-msg error';
-        msgEl.innerHTML = `Something went wrong. Email us directly at <a href="mailto:hello@drivo.ai">hello@drivo.ai</a>`;
+        msgEl.innerHTML = `Something went wrong. Email us directly at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>`;
       } finally {
         btn.disabled = false; btn.textContent = originalText;
       }
@@ -2850,18 +2843,12 @@ function initStudeoWL() {
           localStorage.setItem('studeo_waitlist_email', formData.get('email') || '');
           msg.className = ''; msg.innerHTML = '';
           form.reset();
-          let storedPos = localStorage.getItem('studeo_waitlist_pos');
-          if (!storedPos) {
-            storedPos = String(1847 + Math.floor(Math.random() * 80) + 1);
-            localStorage.setItem('studeo_waitlist_pos', storedPos);
-          }
           openWaitlistCelebration({
             email: data.email,
             color: '#F59E0B',
             glow: 'rgba(245,158,11,0.45)',
             colors: ['#F59E0B', '#FFFFFF', '#FBBF24', '#1E1B4B'],
             title: "You're In.",
-            positionText: storedPos,
             perks: [
               '1 month completely free at launch',
               'Priority access to AI tutor and study planner',
@@ -2874,7 +2861,7 @@ function initStudeoWL() {
         } else { throw new Error('Request failed'); }
       } catch (err) {
         msg.className = 'form-message error';
-        msg.innerHTML = 'Something went wrong. Email us at <a href="mailto:hello@studeo.ai">hello@studeo.ai</a>';
+        msg.innerHTML = 'Something went wrong. Email us at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>';
       } finally {
         btn.disabled = false; btn.textContent = originalText;
       }
