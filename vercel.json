@@ -6,6 +6,7 @@
     { "source": "/drivo", "destination": "/index.html" },
     { "source": "/drivo/waitlist", "destination": "/index.html" },
     { "source": "/studeo", "destination": "/index.html" },
-    { "source": "/studeo/waitlist", "destination": "/index.html" }
+    { "source": "/studeo/waitlist", "destination": "/index.html" },
+    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }
