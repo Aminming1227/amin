@@ -975,21 +975,9 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 // Set data-page immediately on first paint so CSS can hide the global navbar
 // before any content renders on subsections.
 (function(){
-  var pathMap = {
-    '/':                'home',
-    '/tractio':         'tractio',
-    '/drivo':           'drivo',
-    '/drivo/waitlist':  'drivo-waitlist',
-    '/studeo':          'studeo',
-    '/studeo/waitlist': 'studeo-waitlist'
-  };
-  var path = (location.pathname || '/').replace(/\/+$/, '') || '/';
-  var page = pathMap[path] || 'home';
-  // Legacy hash links (#drivo etc.) still set the right page until JS runs
-  if (page === 'home') {
-    var hash = (location.hash || '').replace('#','');
-    if (pathMap['/' + hash]) page = pathMap['/' + hash];
-  }
+  var validSections = ['home','tractio','drivo','drivo-waitlist','studeo','studeo-waitlist'];
+  var hash = (location.hash || '').replace('#','');
+  var page = validSections.indexOf(hash) >= 0 ? hash : 'home';
   document.body.setAttribute('data-page', page);
 })();
 </script>
@@ -2153,31 +2141,16 @@ function initBookingModal() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBookingModal(); });
 }
 
-// Map between section id and URL path (clean URLs via Vercel rewrites)
-const SECTION_PATHS = {
-  'home':             '/',
-  'tractio':          '/tractio',
-  'drivo':            '/drivo',
-  'drivo-waitlist':   '/drivo/waitlist',
-  'studeo':           '/studeo',
-  'studeo-waitlist':  '/studeo/waitlist',
-};
-function pathToSection(path) {
-  if (!path) return 'home';
-  const clean = path.replace(/\/+$/, '') || '/';
-  for (const id in SECTION_PATHS) {
-    if (SECTION_PATHS[id] === clean) return id;
-  }
-  return 'home';
-}
-
+// Hash-based routing (Vercel rewrites for clean URLs aren't applied on this project)
 function showSection(id, pushHistory = true) {
   if (!sections.includes(id)) id = 'home';
   sections.forEach(s => { const el = document.getElementById('section-' + s); if (el) el.style.display = 'none'; });
   const target = document.getElementById('section-' + id);
   if (target) { target.style.display = 'block'; window.scrollTo(0, 0); }
   if (pushHistory) {
-    const newUrl = SECTION_PATHS[id] + window.location.search;
+    const newUrl = (id === 'home')
+      ? (window.location.pathname + window.location.search)
+      : (window.location.pathname + window.location.search + '#' + id);
     history.pushState({ sec: id }, '', newUrl);
   }
   // Global Fortevo navbar only on the home section — CSS-driven via body attribute
@@ -2245,12 +2218,13 @@ window.addEventListener('load', function() {
     const loader = document.getElementById('loading-screen');
     if (loader) { loader.style.opacity = '0'; loader.style.transition = 'opacity 0.3s ease-out'; setTimeout(() => loader.remove(), 300); }
   }, 400);
-  const legacyHash = window.location.hash.replace('#', '');
-  const initial = legacyHash && sections.includes(legacyHash)
-    ? legacyHash
-    : pathToSection(window.location.pathname);
+  const hash = window.location.hash.replace('#', '');
+  const initial = sections.includes(hash) ? hash : 'home';
   showSection(initial, false);
-  history.replaceState({ sec: initial }, '', SECTION_PATHS[initial] + window.location.search);
+  const initialUrl = (initial === 'home')
+    ? (window.location.pathname + window.location.search)
+    : (window.location.pathname + window.location.search + '#' + initial);
+  history.replaceState({ sec: initial }, '', initialUrl);
   initFortevoCanvas();
   initBookingModal();
   if (typeof initTractio === 'function') initTractio();
@@ -2261,7 +2235,8 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener('popstate', function(e) {
-  const target = pathToSection(window.location.pathname);
+  const hash = window.location.hash.replace('#', '');
+  const target = sections.includes(hash) ? hash : 'home';
   showSection(target, false);
 });
 
