@@ -408,7 +408,27 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-tractio .toggle { position: relative; width: 52px; height: 28px; background: #1C1C1E; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
 #section-tractio .toggle-dot { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: #F97316; border-radius: 50%; transition: transform .25s; }
 #section-tractio .toggle.active .toggle-dot { transform: translateX(24px); }
-#section-tractio .price-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; align-items: stretch; max-width: 880px; margin: 0 auto; }
+#section-tractio .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: stretch; }
+#section-tractio .build-card { background: #1C1C1E; border: 2px solid #F97316; border-radius: 12px; padding: 28px 24px; display: flex; flex-direction: column; position: relative; }
+#section-tractio .build-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+#section-tractio .build-sub { color: #A1A1A6; font-size: 14px; margin-bottom: 18px; }
+#section-tractio .build-feature-list { list-style: none; margin: 0 0 18px; flex: 1; }
+#section-tractio .build-feature-list li { display: flex; align-items: flex-start; gap: 12px; padding: 11px 10px; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px; color: #FFF; }
+#section-tractio .build-feature-list li:hover { background: rgba(249,115,22,0.06); }
+#section-tractio .build-feature-list li.disabled { cursor: not-allowed; background: rgba(249,115,22,0.08); }
+#section-tractio .build-feature-list li.disabled:hover { background: rgba(249,115,22,0.08); }
+#section-tractio .build-checkbox { flex-shrink: 0; width: 18px; height: 18px; border: 2px solid #F97316; border-radius: 4px; background: transparent; position: relative; margin-top: 2px; transition: background 0.15s; }
+#section-tractio .build-feature-list li.checked .build-checkbox { background: #F97316; }
+#section-tractio .build-feature-list li.checked .build-checkbox::after { content: ''; position: absolute; left: 4px; top: 0px; width: 6px; height: 11px; border: solid #FFFFFF; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+#section-tractio .build-feature-text { flex: 1; line-height: 1.4; }
+#section-tractio .build-required-tag { display: inline-block; background: #F97316; color: #FFF; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 6px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
+#section-tractio .build-feature-price { display: block; color: #A1A1A6; font-size: 12px; margin-top: 3px; font-variant-numeric: tabular-nums; }
+#section-tractio .build-total { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.35); border-radius: 8px; padding: 16px 18px; margin-bottom: 18px; }
+#section-tractio .build-total-label { color: #A1A1A6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+#section-tractio .build-total-amount { color: #FFF; font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.3; }
+#section-tractio .build-total-amount .accent { color: #F97316; }
+#section-tractio .build-card .btn { width: 100%; }
+@media (max-width: 1100px) { #section-tractio .price-grid { grid-template-columns: 1fr 1fr; max-width: 880px; margin: 0 auto; } }
 @media (max-width: 700px) { #section-tractio .price-grid { grid-template-columns: 1fr; } }
 #section-tractio .price-card { background: #1C1C1E; border-radius: 12px; padding: 36px 28px; border: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; position: relative; }
 #section-tractio .price-card.featured { border-color: #F97316; transform: translateY(-10px); }
@@ -1191,6 +1211,33 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
           <p class="price-sub">Full call handling plus real-time emergency triage.</p>
           <ul class="price-features"><li>Everything in Tractio Core</li><li>Emergency triage — Atlas detects urgent calls (no heat, no AC, water leak) and flags them to you in real time</li><li>Instant owner routing for urgent jobs</li><li>Custom call scripts you approve before launch</li></ul>
           <button class="btn btn-primary" data-trac-open-quote>Get Started</button>
+        </div>
+        <div class="build-card reveal" id="trac-build-card">
+          <h3>Build Your Own</h3>
+          <p class="build-sub">Pick exactly what you need. Pricing updates live.</p>
+          <ul class="build-feature-list" id="trac-build-list">
+            <li class="checked disabled" data-required="true" data-setup="497" data-mo="297" data-name="AI phone agent — answers calls 24/7">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">AI phone agent — answers calls 24/7<span class="build-required-tag">REQUIRED</span><span class="build-feature-price">$497 setup + $297/mo</span></span>
+            </li>
+            <li data-setup="200" data-mo="100" data-name="Lead qualification + appointment booking">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Lead qualification + appointment booking<span class="build-feature-price">$200 setup + $100/mo</span></span>
+            </li>
+            <li data-setup="200" data-mo="100" data-name="After-hours / overflow capture">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">After-hours / overflow capture<span class="build-feature-price">$200 setup + $100/mo</span></span>
+            </li>
+            <li data-setup="300" data-mo="150" data-name="Emergency triage (urgent-call detection + routing)">
+              <span class="build-checkbox"></span>
+              <span class="build-feature-text">Emergency triage (urgent-call detection + routing)<span class="build-feature-price">$300 setup + $150/mo</span></span>
+            </li>
+          </ul>
+          <div class="build-total">
+            <div class="build-total-label">Your Total</div>
+            <div class="build-total-amount"><span class="accent" id="trac-build-setup">$497</span> setup + <span class="accent" id="trac-build-mo">$297</span>/mo</div>
+          </div>
+          <button class="btn btn-primary" id="trac-build-submit" type="button">Get Started</button>
         </div>
       </div>
       <p class="pricing-foot reveal">Setup is one-time. Cancel anytime.<br><span style="display:inline-block;margin-top:8px;opacity:0.85;">Available as add-ons once your system is live: instant SMS lead response · appointment reminders · review generation · database reactivation.</span></p>
@@ -2335,6 +2382,52 @@ function initTractio() {
 
   const QUOTE_ENDPOINT = 'https://formspree.io/f/xzdwkydv';
 
+  // Build Your Own calculator — stashes the selection and routes through the
+  // existing quote modal so Formspree gets the required name/email/phone
+  // and the Cloudflare Turnstile token along with the custom feature list.
+  (function initBuildYourOwn() {
+    const list = document.getElementById('trac-build-list');
+    if (!list) return;
+    const setupEl = document.getElementById('trac-build-setup');
+    const moEl = document.getElementById('trac-build-mo');
+    const submitBtn = document.getElementById('trac-build-submit');
+    function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+    function recalc() {
+      let setup = 0, mo = 0;
+      list.querySelectorAll('li.checked').forEach(li => {
+        setup += parseInt(li.dataset.setup, 10) || 0;
+        mo += parseInt(li.dataset.mo, 10) || 0;
+      });
+      setupEl.textContent = fmt(setup);
+      moEl.textContent = fmt(mo);
+    }
+    list.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', () => {
+        if (li.dataset.required === 'true') return;
+        li.classList.toggle('checked');
+        recalc();
+      });
+    });
+    recalc();
+    submitBtn.addEventListener('click', () => {
+      const selected = [];
+      let setup = 0, mo = 0;
+      list.querySelectorAll('li.checked').forEach(li => {
+        selected.push(li.dataset.name);
+        setup += parseInt(li.dataset.setup, 10) || 0;
+        mo += parseInt(li.dataset.mo, 10) || 0;
+      });
+      window.__tracBuildYourOwn = {
+        plan: 'Build Your Own',
+        selectedFeatures: selected.join(' | '),
+        setupTotal: '$' + setup.toLocaleString('en-US'),
+        monthlyTotal: '$' + mo.toLocaleString('en-US') + '/mo'
+      };
+      const opener = document.querySelector('#section-tractio [data-trac-open-quote]');
+      if (opener) opener.click();
+    });
+  })();
+
   document.getElementById('trac-quoteForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!validateStep(3)) return;
@@ -2349,11 +2442,16 @@ function initTractio() {
       return;
     }
     data['cf-turnstile-response'] = tsInput.value;
+    if (window.__tracBuildYourOwn) {
+      Object.assign(data, window.__tracBuildYourOwn);
+      data._subject = 'Tractio — Build Your Own quote request';
+    }
     try {
       const res = await fetch(QUOTE_ENDPOINT, { method: 'POST', headers: {'Accept':'application/json','Content-Type':'application/json'}, body: JSON.stringify(data) });
       if (!res.ok) throw new Error('Submit failed');
       root.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
       success.style.display = 'block';
+      window.__tracBuildYourOwn = null;
     } catch (err) {
       root.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
       error.style.display = 'block';
