@@ -303,35 +303,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   #wl-celebrate .wl-title { font-size: 36px; }
 }
 
-/* Booking modal */
-#booking-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 24px; }
-#booking-overlay.open { display: flex; }
-#booking-overlay .bmodal { background: #0D0D0D; border: 1px solid #3B82F6; border-radius: 16px; max-width: 540px; width: 100%; max-height: 92vh; overflow-y: auto; padding: 36px; position: relative; }
-#booking-overlay .bmodal h3 { color: #FFF; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-#booking-overlay .bmodal .bdesc { color: #C0C0C0; font-size: 15px; margin-bottom: 24px; }
-#booking-overlay .bclose { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.05); color: #FFF; font-size: 22px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
-#booking-overlay .bclose:hover { background: rgba(255,255,255,0.12); }
-#booking-overlay .bfield { margin-bottom: 16px; }
-#booking-overlay .bfield label { display: block; color: #C0C0C0; font-size: 13px; margin-bottom: 8px; font-weight: 500; }
-#booking-overlay .bfield input, #booking-overlay .bfield select, #booking-overlay .bfield textarea { width: 100%; padding: 12px 14px; background: #000; border: 1px solid rgba(59,130,246,0.3); border-radius: 8px; color: #FFF; font-family: inherit; font-size: 15px; transition: border-color 0.2s; }
-#booking-overlay .bfield input:focus, #booking-overlay .bfield select:focus, #booking-overlay .bfield textarea:focus { outline: none; border-color: #3B82F6; }
-#booking-overlay .bfield textarea { min-height: 70px; resize: vertical; }
-#booking-overlay .bslots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-#booking-overlay .bslot { background: #000; border: 1px solid rgba(59,130,246,0.3); color: #C0C0C0; padding: 10px 6px; border-radius: 8px; font-size: 13px; cursor: pointer; transition: all 0.15s; text-align: center; }
-#booking-overlay .bslot:hover { border-color: #3B82F6; color: #FFF; }
-#booking-overlay .bslot.selected { background: #3B82F6; color: #FFF; border-color: #3B82F6; }
-#booking-overlay .brow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-#booking-overlay .bsubmit { width: 100%; background: #3B82F6; color: #FFF; padding: 14px 24px; border-radius: 10px; font-weight: 700; font-size: 15px; margin-top: 8px; transition: background 0.2s; cursor: pointer; border: none; }
-#booking-overlay .bsubmit:hover { background: #2563EB; }
-#booking-overlay .bsubmit:disabled { opacity: 0.6; cursor: not-allowed; }
-#booking-overlay .bmsg { margin-top: 14px; padding: 12px 16px; border-radius: 8px; text-align: center; font-size: 14px; display: none; }
-#booking-overlay .bmsg.success { display: block; background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.4); color: #4ade80; }
-#booking-overlay .bmsg.error { display: block; background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.4); color: #fca5a5; }
-@media (max-width: 640px) {
-  #booking-overlay .bmodal { padding: 24px 20px; }
-  #booking-overlay .bslots { grid-template-columns: repeat(3, 1fr); }
-  #booking-overlay .brow { grid-template-columns: 1fr; }
-}
 @media (max-width: 768px) {
   #section-home .fabout-grid { grid-template-columns: 1fr; }
   #section-home .ffooter-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
@@ -453,9 +424,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-tractio .final-cta { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); padding: 96px 24px; text-align: center; }
 #section-tractio .final-cta h2 { font-size: clamp(32px,4.5vw,52px); font-weight: 700; color: #1C1C1E; max-width: 850px; margin: 0 auto 20px; letter-spacing: -0.02em; line-height: 1.1; }
 #section-tractio .final-cta p { color: rgba(28,28,30,0.85); font-size: 18px; max-width: 680px; margin: 0 auto 36px; }
-#section-tractio .final-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-#section-tractio .btn-dark-outline { background: transparent; border: 2px solid #1C1C1E; color: #1C1C1E; padding: 18px 32px; font-size: 17px; }
-#section-tractio .btn-dark-outline:hover { background: #1C1C1E; color: #FFF; transform: translateY(-1px); }
 #section-tractio .trac-footbar { background: #111; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; }
 #section-tractio .trac-footbar img { height: 64px; }
 #section-tractio .trac-footbar a { color: #A1A1A6; cursor: pointer; font-size: 14px; }
@@ -475,6 +443,13 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-tractio .form-group .err { color: #ef4444; font-size: 12px; margin-top: 6px; display: none; }
 #section-tractio .form-group.invalid input, #section-tractio .form-group.invalid select { border-color: #ef4444; }
 #section-tractio .form-group.invalid .err { display: block; }
+#section-tractio .form-group input[type="date"] { color-scheme: dark; }
+#section-tractio .trac-slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+#section-tractio .trac-slot { background: #1C1C1E; border: 1px solid rgba(249,115,22,0.3); color: #A1A1A6; padding: 10px 6px; border-radius: 8px; font-size: 13px; cursor: pointer; transition: all 0.15s; text-align: center; user-select: none; }
+#section-tractio .trac-slot:hover { border-color: #F97316; color: #FFF; }
+#section-tractio .trac-slot.selected { background: #F97316; color: #FFF; border-color: #F97316; }
+#section-tractio .form-group.invalid .trac-slots { outline: 1px solid #ef4444; outline-offset: 4px; border-radius: 8px; }
+@media (max-width: 640px) { #section-tractio .trac-slots { grid-template-columns: repeat(3, 1fr); } }
 #section-tractio .modal-actions { display: flex; gap: 12px; margin-top: 8px; }
 #section-tractio .modal-actions .btn { flex: 1; }
 #section-tractio .modal-step { display: none; }
@@ -1139,7 +1114,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
       <div class="hero-buttons reveal">
         <button class="btn btn-primary btn-lg" onclick="document.querySelector('#section-tractio .pricing').scrollIntoView({behavior:'smooth'});">Choose Your System</button>
         <a onclick="document.querySelector('#section-tractio .how').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;" class="btn btn-outline btn-lg">See How It Works</a>
-        <button class="btn btn-orange-outline btn-lg" onclick="openBookingModal()">Book a Call</button>
       </div>
       <p class="fineprint reveal">Custom built for your business. No templates. No contracts.</p>
     </div>
@@ -1258,10 +1232,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
     <div class="container">
       <h2 class="reveal">Stop Losing Leads to Businesses That Move Faster.</h2>
       <p class="reveal">Get a free custom quote. We will show you exactly what we would build for your business and how much it would cost.</p>
-      <div class="final-cta-buttons reveal">
-        <button class="btn btn-dark" data-trac-open-quote>Get My Free Quote →</button>
-        <button class="btn btn-dark-outline" onclick="openBookingModal()">Book a Call</button>
-      </div>
+      <button class="btn btn-dark reveal" data-trac-open-quote>Get My Free Quote →</button>
     </div>
   </section>
   <div class="trac-footbar">
@@ -1276,9 +1247,10 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
           <div class="progress-bar active" data-step="1"></div>
           <div class="progress-bar" data-step="2"></div>
           <div class="progress-bar" data-step="3"></div>
+          <div class="progress-bar" data-step="4"></div>
         </div>
         <div class="modal-step active" data-step="1">
-          <div class="modal-step-num">STEP 1 OF 3</div>
+          <div class="modal-step-num">STEP 1 OF 4</div>
           <h3>Your Business</h3>
           <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">Tell us a bit about your operation.</p>
           <div class="form-group"><label>Business Name</label><input type="text" name="businessName" required /><div class="err">Please enter your business name.</div></div>
@@ -1287,7 +1259,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
           <div class="modal-actions"><button type="button" class="btn btn-primary" data-next="2">Next →</button></div>
         </div>
         <div class="modal-step" data-step="2">
-          <div class="modal-step-num">STEP 2 OF 3</div>
+          <div class="modal-step-num">STEP 2 OF 4</div>
           <h3>Your Problem</h3>
           <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">What is costing you the most right now?</p>
           <div class="form-group"><label>Biggest Challenge</label><select name="biggestChallenge" required><option value="">Select one</option><option>Missing calls</option><option>Slow follow-up</option><option>Manual scheduling</option><option>No CRM</option><option>All of the above</option></select><div class="err">Please select a challenge.</div></div>
@@ -1296,17 +1268,47 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
           <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="1">← Back</button><button type="button" class="btn btn-primary" data-next="3">Next →</button></div>
         </div>
         <div class="modal-step" data-step="3">
-          <div class="modal-step-num">STEP 3 OF 3</div>
+          <div class="modal-step-num">STEP 3 OF 4</div>
           <h3>Your Contact Info</h3>
-          <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">Where should we send your custom quote?</p>
+          <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">So we can confirm your Zoom call invite.</p>
           <div class="form-group"><label>First Name</label><input type="text" name="firstName" required /><div class="err">Please enter your first name.</div></div>
           <div class="form-group"><label>Last Name</label><input type="text" name="lastName" required /><div class="err">Please enter your last name.</div></div>
           <div class="form-group"><label>Email</label><input type="email" name="email" required /><div class="err">Please enter a valid email.</div></div>
           <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required /><div class="err">Please enter a valid phone number.</div></div>
-          <div class="form-group"><div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark"></div></div>
-          <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="2">← Back</button><button type="submit" class="btn btn-primary">Send My Free Quote →</button></div>
+          <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="2">← Back</button><button type="button" class="btn btn-primary" data-next="4">Next →</button></div>
         </div>
-        <div class="form-success" id="trac-formSuccess"><strong>Thank you!</strong><br>Your quote request is on its way. We will be in touch within 24 hours.</div>
+        <div class="modal-step" data-step="4">
+          <div class="modal-step-num">STEP 4 OF 4</div>
+          <h3>Schedule Your Call</h3>
+          <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">Pick a day and time for a 15-minute Zoom. We'll send the link to your email.</p>
+          <div class="form-group"><label>Pick a date</label><input type="date" name="date" id="trac-callDate" required /><div class="err">Please pick a date.</div></div>
+          <div class="form-group">
+            <label>Pick a time (your local time)</label>
+            <div class="trac-slots" id="trac-callSlots">
+              <div class="trac-slot" data-time="9:00 AM">9:00 AM</div>
+              <div class="trac-slot" data-time="9:30 AM">9:30 AM</div>
+              <div class="trac-slot" data-time="10:00 AM">10:00 AM</div>
+              <div class="trac-slot" data-time="10:30 AM">10:30 AM</div>
+              <div class="trac-slot" data-time="11:00 AM">11:00 AM</div>
+              <div class="trac-slot" data-time="11:30 AM">11:30 AM</div>
+              <div class="trac-slot" data-time="1:00 PM">1:00 PM</div>
+              <div class="trac-slot" data-time="1:30 PM">1:30 PM</div>
+              <div class="trac-slot" data-time="2:00 PM">2:00 PM</div>
+              <div class="trac-slot" data-time="2:30 PM">2:30 PM</div>
+              <div class="trac-slot" data-time="3:00 PM">3:00 PM</div>
+              <div class="trac-slot" data-time="3:30 PM">3:30 PM</div>
+              <div class="trac-slot" data-time="4:00 PM">4:00 PM</div>
+              <div class="trac-slot" data-time="4:30 PM">4:30 PM</div>
+              <div class="trac-slot" data-time="5:00 PM">5:00 PM</div>
+              <div class="trac-slot" data-time="5:30 PM">5:30 PM</div>
+            </div>
+            <input type="hidden" name="time" id="trac-callTime" required />
+            <div class="err">Please pick a time slot.</div>
+          </div>
+          <div class="form-group"><div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark"></div></div>
+          <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="3">← Back</button><button type="submit" class="btn btn-primary">Book My Call →</button></div>
+        </div>
+        <div class="form-success" id="trac-formSuccess"><strong>You're booked!</strong><br>Your Zoom call is confirmed. We'll send the invite to your email shortly.</div>
         <div class="form-error" id="trac-formError">Something went wrong. Please email us directly at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>.</div>
       </form>
     </div>
@@ -1862,49 +1864,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   </div>
 </div>
 
-<!-- BOOKING MODAL (global) -->
-<div id="booking-overlay" onclick="if(event.target===this)closeBookingModal()">
-  <div class="bmodal">
-    <button class="bclose" onclick="closeBookingModal()" aria-label="Close">×</button>
-    <h3>Book an Intro Call</h3>
-    <p class="bdesc">15 minutes with Fortevo. Pick a day and time that works for you.</p>
-    <form id="booking-form" novalidate>
-      <div class="brow">
-        <div class="bfield"><label>Your Name</label><input type="text" name="name" required /></div>
-        <div class="bfield"><label>Email</label><input type="email" name="email" required /></div>
-      </div>
-      <div class="bfield"><label>Company / What you do</label><input type="text" name="company" /></div>
-      <div class="bfield"><label>Pick a date</label><input type="date" name="date" id="booking-date" required /></div>
-      <div class="bfield">
-        <label>Pick a time (your local time)</label>
-        <div class="bslots" id="booking-slots">
-          <div class="bslot" data-time="9:00 AM">9:00 AM</div>
-          <div class="bslot" data-time="9:30 AM">9:30 AM</div>
-          <div class="bslot" data-time="10:00 AM">10:00 AM</div>
-          <div class="bslot" data-time="10:30 AM">10:30 AM</div>
-          <div class="bslot" data-time="11:00 AM">11:00 AM</div>
-          <div class="bslot" data-time="11:30 AM">11:30 AM</div>
-          <div class="bslot" data-time="1:00 PM">1:00 PM</div>
-          <div class="bslot" data-time="1:30 PM">1:30 PM</div>
-          <div class="bslot" data-time="2:00 PM">2:00 PM</div>
-          <div class="bslot" data-time="2:30 PM">2:30 PM</div>
-          <div class="bslot" data-time="3:00 PM">3:00 PM</div>
-          <div class="bslot" data-time="3:30 PM">3:30 PM</div>
-          <div class="bslot" data-time="4:00 PM">4:00 PM</div>
-          <div class="bslot" data-time="4:30 PM">4:30 PM</div>
-          <div class="bslot" data-time="5:00 PM">5:00 PM</div>
-          <div class="bslot" data-time="5:30 PM">5:30 PM</div>
-        </div>
-        <input type="hidden" name="time" id="booking-time" required />
-      </div>
-      <div class="bfield"><label>Anything we should know? (optional)</label><textarea name="notes"></textarea></div>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:8px 0;"></div>
-      <button type="submit" class="bsubmit">Confirm Booking</button>
-      <div class="bmsg" id="booking-msg"></div>
-    </form>
-  </div>
-</div>
-
 <script>
 const sections = ['home', 'tractio', 'drivo', 'drivo-waitlist', 'studeo', 'studeo-waitlist'];
 
@@ -2039,73 +1998,6 @@ function runConfetti(colors) {
   draw();
 }
 
-// ===== BOOKING MODAL =====
-function openBookingModal() {
-  const ov = document.getElementById('booking-overlay');
-  ov.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  const dateEl = document.getElementById('booking-date');
-  if (dateEl && !dateEl.value) {
-    const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);
-    dateEl.value = tomorrow.toISOString().split('T')[0];
-    dateEl.min = new Date().toISOString().split('T')[0];
-  }
-}
-function closeBookingModal() {
-  document.getElementById('booking-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-function initBookingModal() {
-  const slots = document.querySelectorAll('#booking-slots .bslot');
-  const timeInput = document.getElementById('booking-time');
-  slots.forEach(slot => {
-    slot.addEventListener('click', () => {
-      slots.forEach(s => s.classList.remove('selected'));
-      slot.classList.add('selected');
-      timeInput.value = slot.dataset.time;
-    });
-  });
-  const form = document.getElementById('booking-form');
-  const msg = document.getElementById('booking-msg');
-  const BOOKING_ENDPOINT = 'https://formspree.io/f/xkoelgra';
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    msg.className = 'bmsg'; msg.textContent = '';
-    const data = Object.fromEntries(new FormData(form).entries());
-    if (!data.name || !data.email || !data.date || !data.time) {
-      msg.className = 'bmsg error'; msg.textContent = 'Please fill in name, email, date, and pick a time.'; return;
-    }
-    const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
-    if (!tsInput || !tsInput.value) {
-      msg.className = 'bmsg error'; msg.textContent = 'Please wait for the security check to load, then try again.'; return;
-    }
-    data['cf-turnstile-response'] = tsInput.value;
-    const btn = form.querySelector('.bsubmit');
-    const original = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Booking…';
-    try {
-      const res = await fetch(BOOKING_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-      if (!res.ok) {
-        let detail;
-        try { detail = await res.json(); } catch (_) { try { detail = await res.text(); } catch (_2) { detail = '(no body)'; } }
-        console.error('[booking] Formspree submission failed', { status: res.status, statusText: res.statusText, detail });
-        throw new Error('Formspree responded with HTTP ' + res.status);
-      }
-      msg.className = 'bmsg success';
-      msg.innerHTML = `Booked! We'll email ${data.email} a confirmation for ${data.date} at ${data.time}.`;
-      form.reset();
-      document.querySelectorAll('#booking-slots .bslot').forEach(s => s.classList.remove('selected'));
-    } catch (err) {
-      console.error('[booking] submit error:', err);
-      msg.className = 'bmsg error';
-      msg.innerHTML = 'Could not submit. Email us at <a href="mailto:fortevo.ai@gmail.com" style="color:#3B82F6;">fortevo.ai@gmail.com</a>';
-    } finally {
-      btn.disabled = false; btn.textContent = original;
-    }
-  });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBookingModal(); });
-}
-
 // Hash-based routing (Vercel rewrites for clean URLs aren't applied on this project)
 function showSection(id, pushHistory = true) {
   if (!sections.includes(id)) id = 'home';
@@ -2191,7 +2083,6 @@ window.addEventListener('load', function() {
     : (window.location.pathname + window.location.search + '#' + initial);
   history.replaceState({ sec: initial }, '', initialUrl);
   initFortevoCanvas();
-  initBookingModal();
   if (typeof initTractio === 'function') initTractio();
   if (typeof initDrivo === 'function') initDrivo();
   if (typeof initDrivoWL === 'function') initDrivoWL();
@@ -2349,12 +2240,41 @@ function initTractio() {
   // Modal
   const modal = document.getElementById('trac-quoteModal');
   const modalClose = document.getElementById('trac-modalClose');
-  function openModal() { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+  const callDateEl = document.getElementById('trac-callDate');
+  const callTimeEl = document.getElementById('trac-callTime');
+  const callSlotsEl = document.getElementById('trac-callSlots');
+  function openModal() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    // Step 4 date picker: clamp to today minimum, default to tomorrow if empty
+    if (callDateEl) {
+      const today = new Date();
+      const min = today.toISOString().split('T')[0];
+      callDateEl.min = min;
+      if (!callDateEl.value) {
+        const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);
+        callDateEl.value = tomorrow.toISOString().split('T')[0];
+      }
+    }
+  }
   function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
   root.querySelectorAll('[data-trac-open-quote]').forEach(b => b.addEventListener('click', openModal));
   modalClose.addEventListener('click', closeModal);
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  // Step 4 time-slot picker
+  if (callSlotsEl && callTimeEl) {
+    callSlotsEl.querySelectorAll('.trac-slot').forEach(slot => {
+      slot.addEventListener('click', () => {
+        callSlotsEl.querySelectorAll('.trac-slot').forEach(s => s.classList.remove('selected'));
+        slot.classList.add('selected');
+        callTimeEl.value = slot.dataset.time;
+        callTimeEl.closest('.form-group').classList.remove('invalid');
+      });
+    });
+  }
 
   // Form wizard
   function showStep(n) {
@@ -2432,7 +2352,7 @@ function initTractio() {
 
   document.getElementById('trac-quoteForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (!validateStep(3)) return;
+    if (!validateStep(4)) return;
     const form = e.target;
     const data = Object.fromEntries(new FormData(form).entries());
     const success = document.getElementById('trac-formSuccess');
