@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fortevo — Building the AI Companies of Tomorrow</title>
-<meta name="description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Tractio, Drivo, and Studeo." />
+<meta name="description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Drivo and Studeo." />
 <link rel="icon" type="image/png" href="fortevo-logo.png" />
 <meta property="og:title" content="Fortevo — Building the AI Companies of Tomorrow">
-<meta property="og:description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Tractio, Drivo, and Studeo.">
+<meta property="og:description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Drivo and Studeo.">
 <meta property="og:image" content="https://fortevo.co/fortevo-logo.png">
 <meta property="og:url" content="https://fortevo.co">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,6 @@
 :root {
   --fortevo-bg: #000000; --fortevo-card: #0D0D0D; --fortevo-blue: #3B82F6;
   --fortevo-silver: #C0C0C0; --fortevo-white: #FFFFFF;
-  --tractio-bg: #1C1C1E; --tractio-card: #2A2A2A; --tractio-orange: #F97316;
   --drivo-bg: #0A1628; --drivo-card: #0F1F3D; --drivo-gold: #EAB308;
   --studeo-bg: #1E1B4B; --studeo-card: #2D2A5E; --studeo-amber: #F59E0B;
 }
@@ -121,7 +120,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 #section-home .fcontact-card a { color: #3B82F6; font-size: 15px; transition: color 0.2s; }
 #section-home .fcontact-card a:hover { color: #FFF; }
 #section-home .ffooter { background: #000; border-top: 1px solid #3B82F6; padding: 60px 24px 40px; }
-#section-home .ffooter-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; }
+#section-home .ffooter-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1.2fr; gap: 48px; }
 #section-home .ffooter-col img { width: 200px; margin-bottom: 16px; }
 #section-home .ffooter-col p { color: #9CA3AF; font-size: 14px; margin-bottom: 6px; }
 #section-home .ffooter-col h4 { color: #C0C0C0; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
@@ -312,163 +311,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   #section-home .ffounder h2 { font-size: 28px; }
 }
 
-/* ========== TRACTIO ========== */
-#section-tractio { background: #1C1C1E; color: #FFFFFF; }
-#section-tractio .trac-idbar { background: #1C1C1E; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-#section-tractio .trac-idbar img { height: 56px; }
-#section-tractio .trac-idbar a { color: #F97316; font-size: 14px; cursor: pointer; }
-#section-tractio .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-#section-tractio a { color: inherit; text-decoration: none; }
-#section-tractio .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: transform .2s, background .2s, box-shadow .2s; cursor: pointer; border: 2px solid transparent; }
-#section-tractio .btn-primary { background: #F97316; color: #FFF; }
-#section-tractio .btn-primary:hover { background: #EA580C; transform: translateY(-1px); }
-#section-tractio .btn-outline { background: transparent; border: 2px solid #FFF; color: #FFF; }
-#section-tractio .btn-outline:hover { background: #FFF; color: #1C1C1E; }
-#section-tractio .btn-orange-outline { background: transparent; border: 2px solid #F97316; color: #F97316; }
-#section-tractio .btn-orange-outline:hover { background: #F97316; color: #FFF; }
-#section-tractio .btn-dark { background: #1C1C1E; color: #FFF; padding: 18px 32px; font-size: 17px; }
-#section-tractio .btn-dark:hover { background: #000; transform: translateY(-1px); }
-#section-tractio .btn-lg { padding: 16px 32px; font-size: 17px; }
-#section-tractio .hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; padding: 80px 24px; }
-#section-tractio #trac-particles { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
-#section-tractio .hero-content { position: relative; z-index: 1; max-width: 900px; }
-#section-tractio .hero-logo { width: min(420px,80vw); height: auto; margin: 0 auto 32px; }
-#section-tractio .pill { display: inline-block; background: rgba(249,115,22,0.15); color: #F97316; border: 1px solid rgba(249,115,22,0.3); padding: 8px 18px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; margin-bottom: 28px; }
-#section-tractio .hero h1 { font-size: clamp(40px,6.5vw,72px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 24px; }
-#section-tractio .hero p.sub { font-size: clamp(17px,1.6vw,20px); color: #A1A1A6; max-width: 720px; margin: 0 auto 36px; }
-#section-tractio .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
-#section-tractio .fineprint { color: #6E6E73; font-size: 13px; }
-#section-tractio section { padding: 100px 0; position: relative; }
-#section-tractio .label { display: inline-block; color: #F97316; font-size: 13px; font-weight: 600; letter-spacing: 0.15em; margin-bottom: 18px; text-transform: uppercase; }
-#section-tractio .section-head { text-align: center; margin-bottom: 64px; }
-#section-tractio .section-head h2 { font-size: clamp(32px,4.4vw,52px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; max-width: 850px; margin: 0 auto; }
-#section-tractio .problem { background: #2A2A2A; }
-#section-tractio .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-#section-tractio .problem-card { background: #1C1C1E; border-left: 3px solid #F97316; padding: 32px; border-radius: 8px; }
-#section-tractio .problem-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 12px; }
-#section-tractio .problem-card p { color: #A1A1A6; font-size: 16px; }
-#section-tractio .solution { background: #1C1C1E; }
-#section-tractio .solution-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
-#section-tractio .feature-card { background: #2A2A2A; border-top: 3px solid #F97316; padding: 36px; border-radius: 10px; }
-#section-tractio .feature-icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(249,115,22,0.12); display: flex; align-items: center; justify-content: center; color: #F97316; margin-bottom: 20px; }
-#section-tractio .feature-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 10px; }
-#section-tractio .feature-card p { color: #A1A1A6; }
-#section-tractio .how { background: #2A2A2A; }
-#section-tractio .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; position: relative; margin-bottom: 56px; }
-#section-tractio .steps::before { content: ""; position: absolute; top: 36px; left: 14%; right: 14%; border-top: 2px dashed #F97316; opacity: .5; z-index: 0; }
-#section-tractio .step { text-align: center; position: relative; z-index: 1; padding: 0 12px; }
-#section-tractio .step-num { width: 72px; height: 72px; border-radius: 50%; background: #F97316; color: #FFF; font-size: 28px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; box-shadow: 0 0 0 8px #2A2A2A; }
-#section-tractio .step h3 { font-size: 22px; font-weight: 600; margin-bottom: 10px; }
-#section-tractio .step p { color: #A1A1A6; font-size: 15px; }
-#section-tractio .how-cta { text-align: center; }
-#section-tractio .results { background: #1C1C1E; }
-#section-tractio .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 64px; }
-#section-tractio .stat-card { background: #2A2A2A; border-radius: 12px; padding: 40px 28px; text-align: center; border-bottom: 3px solid #F97316; }
-#section-tractio .stat-num { font-size: 48px; font-weight: 700; color: #F97316; margin-bottom: 8px; letter-spacing: -0.02em; }
-#section-tractio .stat-card h3 { font-size: 18px; margin-bottom: 10px; font-weight: 600; }
-#section-tractio .stat-card p { color: #A1A1A6; font-size: 15px; }
-#section-tractio .testimonials { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-#section-tractio .testimonial { background: #2A2A2A; border-left: 3px solid #F97316; padding: 28px; border-radius: 8px; }
-#section-tractio .testimonial blockquote { font-style: italic; color: #FFF; margin-bottom: 16px; font-size: 16px; }
-#section-tractio .testimonial cite { color: #A1A1A6; font-style: normal; font-size: 14px; }
-#section-tractio .pricing { background: #2A2A2A; }
-#section-tractio .toggle-wrap { display: flex; justify-content: center; align-items: center; gap: 14px; margin-bottom: 48px; }
-#section-tractio .toggle-label { color: #A1A1A6; font-size: 15px; font-weight: 500; cursor: pointer; user-select: none; }
-#section-tractio .toggle-label.active { color: #FFF; }
-#section-tractio .toggle-savings { background: rgba(249,115,22,0.15); color: #F97316; font-size: 12px; padding: 3px 10px; border-radius: 999px; margin-left: 6px; }
-#section-tractio .toggle { position: relative; width: 52px; height: 28px; background: #1C1C1E; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
-#section-tractio .toggle-dot { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: #F97316; border-radius: 50%; transition: transform .25s; }
-#section-tractio .toggle.active .toggle-dot { transform: translateX(24px); }
-#section-tractio .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: stretch; }
-#section-tractio .build-card { background: #1C1C1E; border: 2px solid #F97316; border-radius: 12px; padding: 28px 24px; display: flex; flex-direction: column; position: relative; }
-#section-tractio .build-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-#section-tractio .build-sub { color: #A1A1A6; font-size: 14px; margin-bottom: 18px; }
-#section-tractio .build-feature-list { list-style: none; margin: 0 0 18px; flex: 1; }
-#section-tractio .build-feature-list li { display: flex; align-items: flex-start; gap: 12px; padding: 11px 10px; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px; color: #FFF; }
-#section-tractio .build-feature-list li:hover { background: rgba(249,115,22,0.06); }
-#section-tractio .build-feature-list li.disabled { cursor: not-allowed; background: rgba(249,115,22,0.08); }
-#section-tractio .build-feature-list li.disabled:hover { background: rgba(249,115,22,0.08); }
-#section-tractio .build-checkbox { flex-shrink: 0; width: 18px; height: 18px; border: 2px solid #F97316; border-radius: 4px; background: transparent; position: relative; margin-top: 2px; transition: background 0.15s; }
-#section-tractio .build-feature-list li.checked .build-checkbox { background: #F97316; }
-#section-tractio .build-feature-list li.checked .build-checkbox::after { content: ''; position: absolute; left: 4px; top: 0px; width: 6px; height: 11px; border: solid #FFFFFF; border-width: 0 2px 2px 0; transform: rotate(45deg); }
-#section-tractio .build-feature-text { flex: 1; line-height: 1.4; }
-#section-tractio .build-required-tag { display: inline-block; background: #F97316; color: #FFF; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; padding: 2px 6px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
-#section-tractio .build-feature-price { display: block; color: #A1A1A6; font-size: 12px; margin-top: 3px; font-variant-numeric: tabular-nums; }
-#section-tractio .build-total { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.35); border-radius: 8px; padding: 16px 18px; margin-bottom: 18px; }
-#section-tractio .build-total-label { color: #A1A1A6; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
-#section-tractio .build-total-amount { color: #FFF; font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.3; }
-#section-tractio .build-total-amount .accent { color: #F97316; }
-#section-tractio .build-card .btn { width: 100%; }
-@media (max-width: 1100px) { #section-tractio .price-grid { grid-template-columns: 1fr 1fr; max-width: 880px; margin: 0 auto; } }
-@media (max-width: 700px) { #section-tractio .price-grid { grid-template-columns: 1fr; } }
-#section-tractio .price-card { background: #1C1C1E; border-radius: 12px; padding: 36px 28px; border: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; position: relative; }
-#section-tractio .price-card.featured { border-color: #F97316; transform: translateY(-10px); }
-#section-tractio .popular-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #F97316; color: #FFF; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 6px 14px; border-radius: 999px; }
-#section-tractio .price-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 14px; }
-#section-tractio .price-amount { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
-#section-tractio .price-sub { color: #A1A1A6; font-size: 14px; margin-bottom: 24px; }
-#section-tractio .price-features { list-style: none; margin-bottom: 28px; flex: 1; }
-#section-tractio .price-features li { padding: 8px 0; color: #A1A1A6; font-size: 15px; display: flex; align-items: flex-start; gap: 10px; }
-#section-tractio .price-features li::before { content: "✓"; color: #F97316; font-weight: 700; flex-shrink: 0; }
-#section-tractio .price-card .btn { width: 100%; }
-#section-tractio .pricing-foot { text-align: center; color: #6E6E73; font-size: 14px; margin-top: 36px; }
-#section-tractio .faq { background: #1C1C1E; }
-#section-tractio .faq-list { max-width: 800px; margin: 0 auto; }
-#section-tractio .faq-item { background: #2A2A2A; border-radius: 8px; margin-bottom: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.04); transition: border-color .25s; }
-#section-tractio .faq-item.open { border-color: #F97316; }
-#section-tractio .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 22px 26px; text-align: left; font-size: 17px; font-weight: 500; color: #FFF; }
-#section-tractio .faq-icon { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #F97316; font-size: 22px; font-weight: 300; transition: transform .3s; }
-#section-tractio .faq-item.open .faq-icon { transform: rotate(45deg); }
-#section-tractio .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; color: #A1A1A6; }
-#section-tractio .faq-a-inner { padding: 0 26px 24px; font-size: 16px; line-height: 1.7; }
-#section-tractio .final-cta { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); padding: 96px 24px; text-align: center; }
-#section-tractio .final-cta h2 { font-size: clamp(32px,4.5vw,52px); font-weight: 700; color: #1C1C1E; max-width: 850px; margin: 0 auto 20px; letter-spacing: -0.02em; line-height: 1.1; }
-#section-tractio .final-cta p { color: rgba(28,28,30,0.85); font-size: 18px; max-width: 680px; margin: 0 auto 36px; }
-#section-tractio .trac-footbar { background: #111; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; }
-#section-tractio .trac-footbar img { height: 64px; }
-#section-tractio .trac-footbar a { color: #A1A1A6; cursor: pointer; font-size: 14px; }
-#section-tractio .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 24px; opacity: 0; transition: opacity .25s; }
-#section-tractio .modal-overlay.open { display: flex; opacity: 1; }
-#section-tractio .modal { background: #2A2A2A; border-top: 4px solid #F97316; border-radius: 12px; width: 100%; max-width: 520px; padding: 36px; position: relative; max-height: 90vh; overflow-y: auto; }
-#section-tractio .modal-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.05); color: #FFF; font-size: 22px; display: flex; align-items: center; justify-content: center; }
-#section-tractio .modal h3 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
-#section-tractio .modal-step-num { font-size: 13px; color: #F97316; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 8px; }
-#section-tractio .progress { display: flex; gap: 6px; margin-bottom: 28px; }
-#section-tractio .progress-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; }
-#section-tractio .progress-bar.active { background: #F97316; }
-#section-tractio .form-group { margin-bottom: 18px; }
-#section-tractio .form-group label { display: block; color: #A1A1A6; font-size: 13px; margin-bottom: 8px; font-weight: 500; }
-#section-tractio .form-group input, #section-tractio .form-group select, #section-tractio .form-group textarea { width: 100%; padding: 13px 16px; background: #1C1C1E; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; color: #FFF; font-family: inherit; font-size: 15px; transition: border-color .2s; }
-#section-tractio .form-group textarea { resize: vertical; min-height: 80px; }
-#section-tractio .form-group input:focus, #section-tractio .form-group select:focus, #section-tractio .form-group textarea:focus { outline: none; border-color: #F97316; }
-#section-tractio .form-group .err { color: #ef4444; font-size: 12px; margin-top: 6px; display: none; }
-#section-tractio .form-group.invalid input, #section-tractio .form-group.invalid select { border-color: #ef4444; }
-#section-tractio .form-group.invalid .err { display: block; }
-#section-tractio .form-group input[type="date"] { color-scheme: dark; }
-#section-tractio .trac-slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-#section-tractio .trac-slot { background: #1C1C1E; border: 1px solid rgba(249,115,22,0.3); color: #A1A1A6; padding: 10px 6px; border-radius: 8px; font-size: 13px; cursor: pointer; transition: all 0.15s; text-align: center; user-select: none; }
-#section-tractio .trac-slot:hover { border-color: #F97316; color: #FFF; }
-#section-tractio .trac-slot.selected { background: #F97316; color: #FFF; border-color: #F97316; }
-#section-tractio .form-group.invalid .trac-slots { outline: 1px solid #ef4444; outline-offset: 4px; border-radius: 8px; }
-@media (max-width: 640px) { #section-tractio .trac-slots { grid-template-columns: repeat(3, 1fr); } }
-#section-tractio .modal-actions { display: flex; gap: 12px; margin-top: 8px; }
-#section-tractio .modal-actions .btn { flex: 1; }
-#section-tractio .modal-step { display: none; }
-#section-tractio .modal-step.active { display: block; }
-#section-tractio .form-success, #section-tractio .form-error { display: none; padding: 20px; border-radius: 8px; text-align: center; }
-#section-tractio .form-success { background: rgba(34,197,94,0.1); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
-#section-tractio .form-error { background: rgba(239,68,68,0.1); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
-#section-tractio .form-error a { color: #F97316; text-decoration: underline; }
-@media (max-width: 900px) {
-  #section-tractio .problem-grid, #section-tractio .solution-grid, #section-tractio .steps, #section-tractio .stats, #section-tractio .testimonials, #section-tractio .price-grid { grid-template-columns: 1fr; }
-  #section-tractio .steps::before { display: none; }
-  #section-tractio .price-card.featured { transform: none; }
-}
-@media (max-width: 768px) {
-  #section-tractio section { padding: 60px 0; }
-  #section-tractio .trac-idbar { padding: 0 16px; }
-  #section-tractio .trac-footbar { padding: 24px 16px; flex-direction: column; gap: 12px; }
-}
 /* ========== DRIVO ========== */
 #section-drivo { background: #0A1628; color: #FFFFFF; }
 #section-drivo .drv-idbar { background: #0A1628; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid rgba(234,179,8,0.1); }
@@ -950,7 +792,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 // Set data-page immediately on first paint so CSS can hide the global navbar
 // before any content renders on subsections.
 (function(){
-  var validSections = ['home','tractio','drivo','drivo-waitlist','studeo','studeo-waitlist'];
+  var validSections = ['home','drivo','drivo-waitlist','studeo','studeo-waitlist'];
   var hash = (location.hash || '').replace('#','');
   var page = validSections.indexOf(hash) >= 0 ? hash : 'home';
   document.body.setAttribute('data-page', page);
@@ -963,7 +805,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   <div class="gnav-logo" onclick="showSection('home')"><img src="fortevo-logo.png" alt="Fortevo" /></div>
   <div class="gnav-pills">
     <button class="gnav-pill" id="nav-home" onclick="showSection('home')">Home</button>
-    <button class="gnav-pill" id="nav-tractio" onclick="showSection('tractio')">Tractio</button>
     <button class="gnav-pill" id="nav-drivo" onclick="showSection('drivo')">Drivo</button>
     <button class="gnav-pill" id="nav-studeo" onclick="showSection('studeo')">Studeo</button>
   </div>
@@ -973,7 +814,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 
 <div id="mobile-overlay">
   <button class="m-pill" onclick="navMobile('home')">Home</button>
-  <button class="m-pill" onclick="navMobile('tractio')">Tractio</button>
   <button class="m-pill" onclick="navMobile('drivo')">Drivo</button>
   <button class="m-pill" onclick="navMobile('studeo')">Studeo</button>
 </div>
@@ -1010,25 +850,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
         </div>
       </div>
       <p class="fmore-soon">More tools coming soon.</p>
-    </div>
-  </section>
-  <div class="fdivider"><span class="dlabel">TOOLS</span><div class="dline"></div><span class="dlabel">SERVICES</span></div>
-  <section class="fsection">
-    <div class="fcontainer">
-      <span class="flabel fade-up">WHAT WE DO</span>
-      <h2 class="fhead fade-up">Our Services.</h2>
-      <p class="fsubhead fade-up">Done-for-you AI systems built and managed by Fortevo. We handle everything.</p>
-      <div class="fservices-grid">
-        <div class="fservice-card fade-up">
-          <span class="fstatus-badge live" style="white-space:nowrap;">NOW TAKING CLIENTS</span>
-          <img src="tractio-logo.png" alt="Tractio" class="clogo" />
-          <div class="ctag">AI automation agency for small businesses</div>
-          <p class="cdesc">We build custom AI systems that respond to every lead instantly, follow up automatically, and keep your pipeline full — so you focus on the work, not chasing customers.</p>
-          <p class="cdetail" style="margin-bottom:16px;">→ Currently serving: HVAC and home service businesses</p>
-          <button class="fcta-btn" onclick="showSection('tractio')">Explore Tractio →</button>
-        </div>
-      </div>
-      <p class="fmore-soon">More services coming soon.</p>
     </div>
   </section>
   <section class="fsection alt">
@@ -1090,10 +911,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
         <a onclick="showSection('studeo')" style="cursor:pointer;">Studeo</a>
       </div>
       <div class="ffooter-col">
-        <h4>Services</h4>
-        <a onclick="showSection('tractio')" style="cursor:pointer;">Tractio</a>
-      </div>
-      <div class="ffooter-col">
         <h4>Email</h4>
         <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>
       </div>
@@ -1102,210 +919,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   </footer>
 </div>
 
-<!-- TRACTIO SECTION -->
-<div id="section-tractio" class="section-wrap" style="display:none;">
-  <div class="trac-idbar">
-    <img src="tractio-logo.png" alt="Tractio" />
-    <a onclick="showSection('home')">← Back to Fortevo</a>
-  </div>
-  <section class="hero">
-    <canvas id="trac-particles"></canvas>
-    <div class="hero-content">
-      <img src="tractio-logo.png" alt="Tractio" class="hero-logo reveal" />
-      <h1 class="reveal">Your Business, Running on Autopilot.</h1>
-      <p class="sub reveal">Tractio builds your custom call-handling system — an AI phone agent that answers every call 24/7, qualifies leads, books appointments, and flags emergencies to you in real time.</p>
-      <div class="hero-buttons reveal">
-        <button class="btn btn-primary btn-lg" onclick="document.querySelector('#section-tractio .pricing').scrollIntoView({behavior:'smooth'});">Choose Your System</button>
-        <a onclick="document.querySelector('#section-tractio .how').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;" class="btn btn-outline btn-lg">See How It Works</a>
-      </div>
-      <p class="fineprint reveal">Custom built for your business. No templates. No contracts.</p>
-    </div>
-  </section>
-  <section class="problem">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="label">The Problem</span>
-        <h2>Every Missed Call is a Missed Customer.</h2>
-      </div>
-      <div class="problem-grid">
-        <div class="problem-card reveal"><h3>Missed Calls</h3><p>You cannot answer every call. Every unanswered phone is a lead going straight to your competitor.</p></div>
-        <div class="problem-card reveal"><h3>Slow Follow-Up</h3><p>Leads go cold in under 5 minutes. By the time you call back they have already moved on.</p></div>
-        <div class="problem-card reveal"><h3>Manual Everything</h3><p>You spend hours every week on tasks that should run automatically — follow-ups, scheduling, reminders.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="solution">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="label">The Solution</span>
-        <h2>Your AI Phone Agent.</h2>
-      </div>
-      <div class="solution-grid">
-        <div class="feature-card reveal"><div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg></div><h3>Answers Every Call. 24/7.</h3><p>Your AI agent picks up every time — day, night, weekends, holidays. Never miss a lead, even after hours.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></div><h3>Qualifies &amp; Books Automatically</h3><p>Asks the right questions, qualifies the caller, and books the job straight onto your calendar — no human in the loop.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-7h3v5z"/><path d="M3 19a2 2 0 0 0 2 2h1v-7H3v5z"/></svg></div><h3>After-Hours Overflow Capture</h3><p>When you can't pick up — on a roof, in a truck, asleep — your AI agent captures the caller's info and notifies you so nothing falls through the cracks.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Emergency Triage</h3><p>Detects urgent calls (no heat, no AC, water leak) and flags them to you in real time as urgent. Routine calls get booked into the schedule.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="how">
-    <div class="container">
-      <div class="section-head reveal"><span class="label">How It Works</span><h2>Up and Running in 7 Days.</h2></div>
-      <div class="steps">
-        <div class="step reveal"><div class="step-num">1</div><h3>Free Strategy Call</h3><p>We learn your business, your leads, and your biggest bottlenecks. We map out exactly what to automate first.</p></div>
-        <div class="step reveal"><div class="step-num">2</div><h3>We Build Everything</h3><p>We build your custom AI system in 5-7 days. You see it before it goes live. You approve everything.</p></div>
-        <div class="step reveal"><div class="step-num">3</div><h3>Your Business Runs Itself</h3><p>Flip the switch and watch leads get responded to, followed up, and booked — automatically.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="results">
-    <div class="container">
-      <div class="section-head reveal"><span class="label">What You Get</span><h2>What Happens When Tractio Takes Over.</h2></div>
-      <div class="stats">
-        <div class="stat-card reveal"><div class="stat-num">24/7</div><h3>Every Call Answered</h3><p>Your AI agent picks up every time. No voicemail. No missed leads.</p></div>
-        <div class="stat-card reveal"><div class="stat-num">Auto</div><h3>Hands-Off Booking</h3><p>Qualified callers get booked straight onto your calendar without you lifting a finger.</p></div>
-        <div class="stat-card reveal"><div class="stat-num">Flagged</div><h3>Emergencies Caught</h3><p>Urgent jobs (no heat, no AC, leaks) are flagged to you the moment they come in.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="pricing">
-    <div class="container">
-      <div class="section-head reveal"><span class="label">Services & Pricing</span><h2>Choose Your System.</h2></div>
-      <div class="price-grid">
-        <div class="price-card reveal">
-          <h3>Tractio Core</h3>
-          <div class="price-amount">$497 setup + $297/mo</div>
-          <p class="price-sub">24/7 AI call handling. Built lean.</p>
-          <ul class="price-features"><li>AI phone agent answers every call 24/7</li><li>Lead qualification</li><li>Appointment booking onto your calendar</li><li>After-hours overflow capture + caller notifications</li><li>Owner notification on every booking</li></ul>
-          <button class="btn btn-orange-outline" data-trac-open-quote>Get Started</button>
-        </div>
-        <div class="price-card featured reveal">
-          <span class="popular-badge">MOST POPULAR</span>
-          <h3>Tractio Pro</h3>
-          <div class="price-amount">$997 setup + $497/mo</div>
-          <p class="price-sub">Full call handling plus real-time emergency triage.</p>
-          <ul class="price-features"><li>Everything in Tractio Core</li><li>Emergency triage — detects urgent calls (no heat, no AC, water leak) and flags them to you in real time</li><li>Instant owner routing for urgent jobs</li><li>Custom call scripts you approve before launch</li></ul>
-          <button class="btn btn-primary" data-trac-open-quote>Get Started</button>
-        </div>
-        <div class="build-card reveal" id="trac-build-card">
-          <h3>Build Your Own</h3>
-          <p class="build-sub">Pick exactly what you need. Pricing updates live.</p>
-          <ul class="build-feature-list" id="trac-build-list">
-            <li class="checked disabled" data-required="true" data-setup="397" data-mo="197" data-name="AI phone agent — answers calls 24/7">
-              <span class="build-checkbox"></span>
-              <span class="build-feature-text">AI phone agent — answers calls 24/7<span class="build-required-tag">REQUIRED</span><span class="build-feature-price">$397 setup + $197/mo</span></span>
-            </li>
-            <li data-setup="150" data-mo="75" data-name="Lead qualification + appointment booking">
-              <span class="build-checkbox"></span>
-              <span class="build-feature-text">Lead qualification + appointment booking<span class="build-feature-price">$150 setup + $75/mo</span></span>
-            </li>
-            <li data-setup="150" data-mo="75" data-name="After-hours / overflow capture">
-              <span class="build-checkbox"></span>
-              <span class="build-feature-text">After-hours / overflow capture<span class="build-feature-price">$150 setup + $75/mo</span></span>
-            </li>
-            <li data-setup="300" data-mo="150" data-name="Emergency triage (urgent-call detection + routing)">
-              <span class="build-checkbox"></span>
-              <span class="build-feature-text">Emergency triage (urgent-call detection + routing)<span class="build-feature-price">$300 setup + $150/mo</span></span>
-            </li>
-          </ul>
-          <div class="build-total">
-            <div class="build-total-label">Your Total</div>
-            <div class="build-total-amount"><span class="accent" id="trac-build-setup">$397</span> setup + <span class="accent" id="trac-build-mo">$197</span>/mo</div>
-          </div>
-          <button class="btn btn-primary" id="trac-build-submit" type="button">Get Started</button>
-        </div>
-      </div>
-      <p class="pricing-foot reveal">Setup is one-time. Cancel anytime.</p>
-    </div>
-  </section>
-  <section class="faq">
-    <div class="container">
-      <div class="section-head reveal"><span class="label">FAQ</span><h2>Common Questions.</h2></div>
-      <div class="faq-list">
-        <div class="faq-item reveal"><button class="faq-q">What exactly does Tractio build for my business?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">We build you a custom AI phone agent that answers every call 24/7, qualifies the caller, books the job straight onto your calendar, and captures after-hours callers so nothing falls through the cracks. On Tractio Pro, it also detects urgent calls — no heat, no AC, water leaks — and flags them to you in real time so you can act on emergencies the moment they come in. It connects to your existing phone number and calendar so your operation runs exactly the same, except now every call is answered and qualified.</div></div></div>
-        <div class="faq-item reveal"><button class="faq-q">How long does setup take?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Most businesses are live in 5-7 days. We start with a free strategy call, map your workflow, build everything in the background, and walk you through it before flipping the switch. You approve every script and message before it ever goes out.</div></div></div>
-        <div class="faq-item reveal"><button class="faq-q">Do I need to be tech-savvy to use it?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Not at all. Tractio is built for busy owners who would rather be out on the job than learning new software. The dashboard works on your phone, we handle all the technical setup, and we are one text away whenever you need anything.</div></div></div>
-        <div class="faq-item reveal"><button class="faq-q">What businesses is Tractio built for?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Any business where every missed call or slow follow-up is real money on the table. If you rely on inbound leads and need fast, consistent follow-up to win work, Tractio is built for you.</div></div></div>
-        <div class="faq-item reveal"><button class="faq-q">What happens if I want to cancel?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Cancel anytime — no long-term contracts and no cancellation fees. Just send us a message and we will wind your system down at the end of your current billing cycle.</div></div></div>
-      </div>
-    </div>
-  </section>
-  <section class="final-cta">
-    <div class="container">
-      <h2 class="reveal">Stop Losing Leads to Businesses That Move Faster.</h2>
-      <p class="reveal">Pick the plan that fits your business and get set up in days, not weeks.</p>
-      <button class="btn btn-dark reveal" onclick="document.querySelector('#section-tractio .pricing').scrollIntoView({behavior:'smooth'});">Choose Your System</button>
-    </div>
-  </section>
-  <div class="trac-footbar">
-    <img src="tractio-logo.png" alt="Tractio" />
-    <a onclick="showSection('home')">Back to Fortevo →</a>
-  </div>
-  <div class="modal-overlay" id="trac-quoteModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true">
-      <button class="modal-close" id="trac-modalClose" aria-label="Close">×</button>
-      <form id="trac-quoteForm" novalidate>
-        <div class="progress">
-          <div class="progress-bar active" data-step="1"></div>
-          <div class="progress-bar" data-step="2"></div>
-          <div class="progress-bar" data-step="3"></div>
-        </div>
-        <div class="modal-step active" data-step="1">
-          <div class="modal-step-num">STEP 1 OF 3</div>
-          <h3>Your Business</h3>
-          <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">Tell us a bit about your operation.</p>
-          <div class="form-group"><label>Business Name</label><input type="text" name="businessName" required /><div class="err">Please enter your business name.</div></div>
-          <div class="form-group"><label>Business Type</label><select name="businessType" required><option value="">Select one</option><option>HVAC</option><option>Plumbing</option><option>Electrical</option><option>Landscaping</option><option>Roofing</option><option>Real Estate</option><option>Other</option></select><div class="err">Please select your business type.</div></div>
-          <div class="modal-actions"><button type="button" class="btn btn-primary" data-next="2">Next →</button></div>
-        </div>
-        <div class="modal-step" data-step="2">
-          <div class="modal-step-num">STEP 2 OF 3</div>
-          <h3>Your Contact Info</h3>
-          <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">So we can confirm your Zoom call invite.</p>
-          <div class="form-group"><label>First Name</label><input type="text" name="firstName" required /><div class="err">Please enter your first name.</div></div>
-          <div class="form-group"><label>Last Name</label><input type="text" name="lastName" required /><div class="err">Please enter your last name.</div></div>
-          <div class="form-group"><label>Email</label><input type="email" name="email" required /><div class="err">Please enter a valid email.</div></div>
-          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required /><div class="err">Please enter a valid phone number.</div></div>
-          <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="1">← Back</button><button type="button" class="btn btn-primary" data-next="3">Next →</button></div>
-        </div>
-        <div class="modal-step" data-step="3">
-          <div class="modal-step-num">STEP 3 OF 3</div>
-          <h3>Book an Intro Call</h3>
-          <p style="color:#A1A1A6;margin-bottom:24px;font-size:14px">15 minutes with us. Pick a day and time that works for you — we'll send the Zoom link to the email you entered.</p>
-          <div class="form-group"><label>Pick a date</label><input type="date" name="date" id="trac-callDate" required /><div class="err">Please pick a date.</div></div>
-          <div class="form-group">
-            <label>Pick a time (your local time)</label>
-            <div class="trac-slots" id="trac-callSlots">
-              <div class="trac-slot" data-time="9:00 AM">9:00 AM</div>
-              <div class="trac-slot" data-time="9:30 AM">9:30 AM</div>
-              <div class="trac-slot" data-time="10:00 AM">10:00 AM</div>
-              <div class="trac-slot" data-time="10:30 AM">10:30 AM</div>
-              <div class="trac-slot" data-time="11:00 AM">11:00 AM</div>
-              <div class="trac-slot" data-time="11:30 AM">11:30 AM</div>
-              <div class="trac-slot" data-time="1:00 PM">1:00 PM</div>
-              <div class="trac-slot" data-time="1:30 PM">1:30 PM</div>
-              <div class="trac-slot" data-time="2:00 PM">2:00 PM</div>
-              <div class="trac-slot" data-time="2:30 PM">2:30 PM</div>
-              <div class="trac-slot" data-time="3:00 PM">3:00 PM</div>
-              <div class="trac-slot" data-time="3:30 PM">3:30 PM</div>
-              <div class="trac-slot" data-time="4:00 PM">4:00 PM</div>
-              <div class="trac-slot" data-time="4:30 PM">4:30 PM</div>
-              <div class="trac-slot" data-time="5:00 PM">5:00 PM</div>
-              <div class="trac-slot" data-time="5:30 PM">5:30 PM</div>
-            </div>
-            <input type="hidden" name="time" id="trac-callTime" required />
-            <div class="err">Please pick a time slot.</div>
-          </div>
-          <div class="form-group"><label>Anything we should know? <span style="color:#6E6E73;font-weight:400">(optional)</span></label><textarea name="notes" rows="3" placeholder="Context, questions, or anything else you'd like us to know before the call."></textarea></div>
-          <div class="form-group"><div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark"></div></div>
-          <div class="modal-actions"><button type="button" class="btn btn-orange-outline" data-back="2">← Back</button><button type="submit" class="btn btn-primary">Confirm Booking</button></div>
-        </div>
-        <div class="form-success" id="trac-formSuccess"><strong>You're booked!</strong><br>Your intro call is confirmed. We'll send the Zoom link to your email shortly.</div>
-        <div class="form-error" id="trac-formError">Something went wrong. Please email us directly at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>.</div>
-      </form>
-    </div>
-  </div>
-</div>
 <!-- DRIVO SECTION -->
 <div id="section-drivo" class="section-wrap" style="display:none;">
   <div class="drv-idbar">
@@ -1857,7 +1470,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 </div>
 
 <script>
-const sections = ['home', 'tractio', 'drivo', 'drivo-waitlist', 'studeo', 'studeo-waitlist'];
+const sections = ['home', 'drivo', 'drivo-waitlist', 'studeo', 'studeo-waitlist'];
 
 // ===== WAITLIST CELEBRATION =====
 let wlConfettiRAF = null;
@@ -2010,7 +1623,7 @@ function showSection(id, pushHistory = true) {
 }
 
 function updateNavPills(activeId) {
-  ['home','tractio','drivo','studeo'].forEach(id => {
+  ['home','drivo','studeo'].forEach(id => {
     const pill = document.getElementById('nav-' + id);
     if (!pill) return;
     const isActive = activeId === id || (id === 'drivo' && activeId === 'drivo-waitlist') || (id === 'studeo' && activeId === 'studeo-waitlist');
@@ -2018,7 +1631,7 @@ function updateNavPills(activeId) {
     pill.style.color = isActive ? '#FFFFFF' : '#C0C0C0';
   });
   document.querySelectorAll('#mobile-overlay .m-pill').forEach((p, i) => {
-    const ids = ['home','tractio','drivo','studeo'];
+    const ids = ['home','drivo','studeo'];
     const isActive = activeId === ids[i] || (ids[i] === 'drivo' && activeId === 'drivo-waitlist') || (ids[i] === 'studeo' && activeId === 'studeo-waitlist');
     p.classList.toggle('active', isActive);
   });
@@ -2075,7 +1688,6 @@ window.addEventListener('load', function() {
     : (window.location.pathname + window.location.search + '#' + initial);
   history.replaceState({ sec: initial }, '', initialUrl);
   initFortevoCanvas();
-  if (typeof initTractio === 'function') initTractio();
   if (typeof initDrivo === 'function') initDrivo();
   if (typeof initDrivoWL === 'function') initDrivoWL();
   if (typeof initStudeo === 'function') initStudeo();
@@ -2178,199 +1790,6 @@ function initFortevoCanvas() {
   }
   resize(); draw();
   window.addEventListener('resize', resize);
-}
-// ========== TRACTIO JS ==========
-function initTractio() {
-  const root = document.getElementById('section-tractio');
-  if (!root) return;
-  // Particles
-  (function() {
-    const canvas = document.getElementById('trac-particles');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let w, h, dots;
-    function resize() {
-      const dpr = window.devicePixelRatio || 1;
-      w = canvas.clientWidth; h = canvas.clientHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr,0,0,dpr,0,0);
-    }
-    function init() {
-      resize();
-      const count = Math.min(80, Math.floor((w*h)/15000));
-      dots = Array.from({length:count}, () => ({ x: Math.random()*w, y: Math.random()*h, r: Math.random()*1.6 + 0.4, vx: (Math.random()-0.5)*0.25, vy: (Math.random()-0.5)*0.25, a: Math.random()*0.5 + 0.2 }));
-    }
-    function tick() {
-      ctx.clearRect(0,0,w,h);
-      dots.forEach(d => {
-        d.x += d.vx; d.y += d.vy;
-        if (d.x < 0 || d.x > w) d.vx *= -1;
-        if (d.y < 0 || d.y > h) d.vy *= -1;
-        ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
-        ctx.fillStyle = `rgba(249,115,22,${d.a})`; ctx.fill();
-      });
-      requestAnimationFrame(tick);
-    }
-    window.addEventListener('resize', init);
-    init(); tick();
-  })();
-
-  // FAQ
-  root.querySelectorAll('.faq-item').forEach(item => {
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    q.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
-      root.querySelectorAll('.faq-item').forEach(other => {
-        other.classList.remove('open');
-        other.querySelector('.faq-a').style.maxHeight = null;
-      });
-      if (!isOpen) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
-    });
-  });
-
-  // Modal
-  const modal = document.getElementById('trac-quoteModal');
-  const modalClose = document.getElementById('trac-modalClose');
-  const callDateEl = document.getElementById('trac-callDate');
-  const callTimeEl = document.getElementById('trac-callTime');
-  const callSlotsEl = document.getElementById('trac-callSlots');
-  function openModal() {
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
-    // Step 4 date picker: clamp to today minimum, default to tomorrow if empty
-    if (callDateEl) {
-      const today = new Date();
-      const min = today.toISOString().split('T')[0];
-      callDateEl.min = min;
-      if (!callDateEl.value) {
-        const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);
-        callDateEl.value = tomorrow.toISOString().split('T')[0];
-      }
-    }
-  }
-  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
-  root.querySelectorAll('[data-trac-open-quote]').forEach(b => b.addEventListener('click', openModal));
-  modalClose.addEventListener('click', closeModal);
-  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
-
-  // Step 4 time-slot picker
-  if (callSlotsEl && callTimeEl) {
-    callSlotsEl.querySelectorAll('.trac-slot').forEach(slot => {
-      slot.addEventListener('click', () => {
-        callSlotsEl.querySelectorAll('.trac-slot').forEach(s => s.classList.remove('selected'));
-        slot.classList.add('selected');
-        callTimeEl.value = slot.dataset.time;
-        callTimeEl.closest('.form-group').classList.remove('invalid');
-      });
-    });
-  }
-
-  // Form wizard
-  function showStep(n) {
-    root.querySelectorAll('.modal-step').forEach(s => s.classList.toggle('active', s.dataset.step == n));
-    root.querySelectorAll('.progress-bar').forEach(p => p.classList.toggle('active', p.dataset.step <= n));
-  }
-  function validateStep(n) {
-    const step = root.querySelector(`.modal-step[data-step="${n}"]`);
-    const fields = step.querySelectorAll('input, select');
-    let ok = true;
-    fields.forEach(f => {
-      const group = f.closest('.form-group');
-      let valid = !!f.value.trim();
-      if (valid && f.type === 'email') valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value.trim());
-      if (valid && f.type === 'tel') valid = /[\d]{7,}/.test(f.value.replace(/\D/g,''));
-      group.classList.toggle('invalid', !valid);
-      if (!valid) ok = false;
-    });
-    return ok;
-  }
-  root.querySelectorAll('[data-next]').forEach(b => { b.addEventListener('click', () => { const current = b.closest('.modal-step').dataset.step; if (validateStep(current)) showStep(b.dataset.next); }); });
-  root.querySelectorAll('[data-back]').forEach(b => { b.addEventListener('click', () => showStep(b.dataset.back)); });
-  root.querySelectorAll('#trac-quoteForm input, #trac-quoteForm select').forEach(f => {
-    f.addEventListener('input', () => f.closest('.form-group').classList.remove('invalid'));
-    f.addEventListener('change', () => f.closest('.form-group').classList.remove('invalid'));
-  });
-
-  const QUOTE_ENDPOINT = 'https://formspree.io/f/xzdwkydv';
-
-  // Build Your Own calculator — stashes the selection and routes through the
-  // existing quote modal so Formspree gets the required name/email/phone
-  // and the Cloudflare Turnstile token along with the custom feature list.
-  (function initBuildYourOwn() {
-    const list = document.getElementById('trac-build-list');
-    if (!list) return;
-    const setupEl = document.getElementById('trac-build-setup');
-    const moEl = document.getElementById('trac-build-mo');
-    const submitBtn = document.getElementById('trac-build-submit');
-    function fmt(n) { return '$' + n.toLocaleString('en-US'); }
-    function recalc() {
-      let setup = 0, mo = 0;
-      list.querySelectorAll('li.checked').forEach(li => {
-        setup += parseInt(li.dataset.setup, 10) || 0;
-        mo += parseInt(li.dataset.mo, 10) || 0;
-      });
-      setupEl.textContent = fmt(setup);
-      moEl.textContent = fmt(mo);
-    }
-    list.querySelectorAll('li').forEach(li => {
-      li.addEventListener('click', () => {
-        if (li.dataset.required === 'true') return;
-        li.classList.toggle('checked');
-        recalc();
-      });
-    });
-    recalc();
-    submitBtn.addEventListener('click', () => {
-      const selected = [];
-      let setup = 0, mo = 0;
-      list.querySelectorAll('li.checked').forEach(li => {
-        selected.push(li.dataset.name);
-        setup += parseInt(li.dataset.setup, 10) || 0;
-        mo += parseInt(li.dataset.mo, 10) || 0;
-      });
-      window.__tracBuildYourOwn = {
-        plan: 'Build Your Own',
-        selectedFeatures: selected.join(' | '),
-        setupTotal: '$' + setup.toLocaleString('en-US'),
-        monthlyTotal: '$' + mo.toLocaleString('en-US') + '/mo'
-      };
-      const opener = document.querySelector('#section-tractio [data-trac-open-quote]');
-      if (opener) opener.click();
-    });
-  })();
-
-  document.getElementById('trac-quoteForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!validateStep(3)) return;
-    const form = e.target;
-    const data = Object.fromEntries(new FormData(form).entries());
-    const success = document.getElementById('trac-formSuccess');
-    const error = document.getElementById('trac-formError');
-    success.style.display = 'none'; error.style.display = 'none';
-    const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
-    if (!tsInput || !tsInput.value) {
-      alert('Please wait for the security check to load, then try again.');
-      return;
-    }
-    data['cf-turnstile-response'] = tsInput.value;
-    if (window.__tracBuildYourOwn) {
-      Object.assign(data, window.__tracBuildYourOwn);
-      data._subject = 'Tractio — Build Your Own quote request';
-    }
-    try {
-      const res = await fetch(QUOTE_ENDPOINT, { method: 'POST', headers: {'Accept':'application/json','Content-Type':'application/json'}, body: JSON.stringify(data) });
-      if (!res.ok) throw new Error('Submit failed');
-      root.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
-      success.style.display = 'block';
-      window.__tracBuildYourOwn = null;
-    } catch (err) {
-      root.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
-      error.style.display = 'block';
-    }
-  });
 }
 // ========== DRIVO JS ==========
 function initDrivo() {
