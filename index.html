@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fortevo — Building the AI Companies of Tomorrow</title>
-<meta name="description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Drivo and Studeo." />
+<meta name="description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Drivo." />
 <link rel="icon" type="image/png" href="fortevo-clean.png" />
 <link rel="apple-touch-icon" href="fortevo-clean.png" />
 <meta property="og:title" content="Fortevo — Building the AI Companies of Tomorrow">
-<meta property="og:description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Drivo and Studeo.">
+<meta property="og:description" content="Fortevo is a venture studio that builds, owns, and operates AI-first companies. Home of Drivo.">
 <meta property="og:image" content="https://fortevo.co/fortevo-logo.png">
 <meta property="og:url" content="https://fortevo.co">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,6 @@
   --fortevo-bg: #000000; --fortevo-card: #0D0D0D; --fortevo-blue: #3B82F6;
   --fortevo-silver: #C0C0C0; --fortevo-white: #FFFFFF;
   --drivo-bg: #0A1628; --drivo-card: #0F1F3D; --drivo-gold: #EAB308;
-  --studeo-bg: #1E1B4B; --studeo-card: #2D2A5E; --studeo-amber: #F59E0B;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -529,263 +528,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   #section-drivo-waitlist .founder { padding: 40px 24px; margin: 40px 0; }
   #section-drivo-waitlist .dwl-footbar { padding: 24px 16px; flex-direction: column; gap: 12px; }
 }
-/* ========== STUDEO ========== */
-#section-studeo { background: #1E1B4B; color: #F8F7FF; }
-#section-studeo .stu-idbar { background: #1E1B4B; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid rgba(245,158,11,0.1); }
-#section-studeo .stu-idbar img { height: 56px; }
-#section-studeo .stu-idbar a { color: #F59E0B; font-size: 14px; cursor: pointer; }
-#section-studeo a { color: inherit; text-decoration: none; }
-#section-studeo .btn { display: inline-block; padding: 12px 24px; border-radius: 999px; font-weight: 600; font-size: 15px; transition: all 0.2s ease; cursor: pointer; text-align: center; }
-#section-studeo .btn-amber { background: #F59E0B; color: #1E1B4B; }
-#section-studeo .btn-amber:hover { background: #D97706; transform: translateY(-2px); }
-#section-studeo .btn-outline { border: 2px solid #F8F7FF; color: #F8F7FF; }
-#section-studeo .btn-outline:hover { background: #F8F7FF; color: #1E1B4B; transform: translateY(-2px); }
-#section-studeo .btn-amber-outline { border: 2px solid #F59E0B; color: #F59E0B; }
-#section-studeo .btn-amber-outline:hover { background: #F59E0B; color: #1E1B4B; }
-#section-studeo .btn-dark { background: #1E1B4B; color: #F8F7FF; padding: 16px 36px; font-size: 17px; }
-#section-studeo .btn-dark:hover { background: #15123a; transform: translateY(-2px); }
-#section-studeo .btn-large { padding: 18px 36px; font-size: 17px; }
-#section-studeo .hero { position: relative; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 24px; overflow: hidden; }
-#section-studeo #stu-particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-#section-studeo .hero-content { position: relative; z-index: 2; max-width: 880px; }
-#section-studeo .hero-logo { height: 180px; width: auto; margin: 0 auto 24px; }
-#section-studeo .pill { display: inline-block; background: rgba(245,158,11,0.15); color: #F59E0B; padding: 8px 18px; border-radius: 999px; font-weight: 600; font-size: 14px; letter-spacing: 1.5px; margin-bottom: 28px; border: 1px solid rgba(245,158,11,0.3); }
-#section-studeo h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 24px; }
-#section-studeo .hero p.lead { font-size: 1.25rem; color: #A6A3C7; max-width: 700px; margin: 0 auto 40px; line-height: 1.5; }
-#section-studeo .hero-btns { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 24px; }
-#section-studeo .hero-fineprint { color: #A6A3C7; font-size: 14px; }
-#section-studeo section { padding: 100px 24px; position: relative; }
-#section-studeo .section-inner { max-width: 1200px; margin: 0 auto; }
-#section-studeo .label { color: #F59E0B; font-weight: 600; letter-spacing: 2.5px; font-size: 13px; text-transform: uppercase; margin-bottom: 16px; }
-#section-studeo .section-headline { font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; max-width: 900px; }
-#section-studeo .section-sub { color: #A6A3C7; font-size: 1.15rem; max-width: 700px; margin-bottom: 60px; }
-#section-studeo .text-center { text-align: center; }
-#section-studeo .text-center .section-headline, #section-studeo .text-center .section-sub { margin-left: auto; margin-right: auto; }
-#section-studeo .problem { background: #2D2A5E; }
-#section-studeo .problem-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-#section-studeo .problem-card { background: #1E1B4B; padding: 36px 28px; border-radius: 14px; border-left: 4px solid #F59E0B; transition: transform 0.3s; }
-#section-studeo .problem-card:hover { transform: translateY(-6px); }
-#section-studeo .problem-card h3 { font-size: 1.35rem; margin-bottom: 14px; font-weight: 600; }
-#section-studeo .problem-card p { color: #A6A3C7; font-size: 1rem; }
-#section-studeo .feature-block { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px; }
-#section-studeo .feature-block:last-child { margin-bottom: 0; }
-#section-studeo .feature-block.reverse .feature-text { order: 2; }
-#section-studeo .feature-block.reverse .feature-mockup { order: 1; }
-#section-studeo .feature-icon { width: 60px; height: 60px; background: rgba(245,158,11,0.15); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 30px; color: #F59E0B; }
-#section-studeo .feature-text h3 { font-size: 2rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 18px; }
-#section-studeo .feature-text p { color: #A6A3C7; font-size: 1.1rem; }
-#section-studeo .mockup-card { background: #2D2A5E; border-radius: 18px; padding: 28px; box-shadow: 0 25px 60px rgba(0,0,0,0.3); border: 1px solid rgba(245,158,11,0.12); }
-#section-studeo .mockup-header { display: flex; align-items: center; gap: 8px; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-#section-studeo .mockup-dot { width: 10px; height: 10px; border-radius: 50%; background: #4a4781; }
-#section-studeo .mockup-dot.amber { background: #F59E0B; }
-#section-studeo .mockup-title { margin-left: 8px; font-size: 13px; color: #A6A3C7; }
-#section-studeo .mockup-row { display: flex; justify-content: space-between; align-items: center; padding: 14px; background: rgba(255,255,255,0.03); border-radius: 10px; margin-bottom: 10px; font-size: 14px; }
-#section-studeo .check { color: #34d399; font-weight: 700; }
-#section-studeo .sync { color: #A6A3C7; font-size: 12px; margin-top: 10px; }
-#section-studeo .grade-old { color: #A6A3C7; }
-#section-studeo .grade-arrow { color: #F59E0B; margin: 0 8px; }
-#section-studeo .grade-new { color: #34d399; font-weight: 600; }
-#section-studeo .flashcard { background: linear-gradient(135deg, #F59E0B, #D97706); color: #1E1B4B; padding: 24px; border-radius: 12px; margin-bottom: 14px; font-weight: 600; }
-#section-studeo .flashcard small { display: block; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; opacity: 0.7; margin-bottom: 8px; font-weight: 700; }
-#section-studeo .quiz-q { background: rgba(255,255,255,0.05); padding: 16px; border-radius: 10px; font-size: 14px; }
-#section-studeo .quiz-q .q-label { color: #F59E0B; font-size: 11px; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
-#section-studeo .how { background: #2D2A5E; }
-#section-studeo .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 60px; position: relative; }
-#section-studeo .steps::before { content: ''; position: absolute; top: 35px; left: 16%; right: 16%; border-top: 2px dotted #F59E0B; opacity: 0.5; z-index: 0; }
-#section-studeo .step { text-align: center; position: relative; z-index: 1; }
-#section-studeo .step-num { width: 72px; height: 72px; margin: 0 auto 22px; background: #F59E0B; color: #1E1B4B; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; font-weight: 700; box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
-#section-studeo .step h3 { font-size: 1.35rem; margin-bottom: 12px; font-weight: 600; }
-#section-studeo .step p { color: #A6A3C7; }
-#section-studeo .how .cta-wrap { text-align: center; }
-#section-studeo .stats { background: #1E1B4B; padding: 80px 24px; }
-#section-studeo .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-#section-studeo .stat-card { background: #2D2A5E; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid rgba(245,158,11,0.15); }
-#section-studeo .stat-icon { font-size: 2.4rem; margin-bottom: 14px; }
-#section-studeo .stat-card p { color: #F8F7FF; font-size: 1.05rem; line-height: 1.5; }
-#section-studeo .calculator { background: #1E1B4B; }
-#section-studeo .calc-card { background: #2D2A5E; border-radius: 18px; padding: 44px; max-width: 760px; margin: 40px auto 0; border: 1px solid rgba(245,158,11,0.18); }
-#section-studeo .calc-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
-#section-studeo .calc-field { text-align: left; }
-#section-studeo .calc-field label { display: block; color: #A6A3C7; font-size: 0.9rem; margin-bottom: 8px; font-weight: 500; }
-#section-studeo .calc-field input { width: 100%; background: #1E1B4B; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 16px; color: #F8F7FF; font-family: inherit; font-size: 1.05rem; font-weight: 500; transition: border 0.2s; }
-#section-studeo .calc-field input:focus { outline: none; border-color: #F59E0B; }
-#section-studeo .calc-result { background: #1E1B4B; padding: 24px; border-radius: 12px; color: #F8F7FF; font-size: 1.05rem; line-height: 1.55; min-height: 60px; }
-#section-studeo .calc-result .score { font-weight: 700; font-size: 1.4rem; display: inline-block; }
-#section-studeo .calc-result .score.green { color: #34d399; }
-#section-studeo .calc-result .score.amber { color: #F59E0B; }
-#section-studeo .calc-result .hint { display: block; color: #F59E0B; margin-top: 8px; font-style: italic; font-size: 0.95rem; }
-#section-studeo .calc-result.unreachable { color: #F59E0B; font-style: italic; }
-#section-studeo .stories-card { max-width: 560px; margin: 40px auto 36px; padding: 28px 32px; background: #2D2A5E; border: 2px solid #F59E0B; border-radius: 16px; color: #F8F7FF; font-size: 1.05rem; line-height: 1.5; }
-#section-studeo .pricing { background: #2D2A5E; }
-#section-studeo .toggle-wrap { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 60px; color: #A6A3C7; }
-#section-studeo .toggle-wrap .active { color: #F8F7FF; font-weight: 600; }
-#section-studeo .toggle { width: 56px; height: 30px; background: #1E1B4B; border-radius: 999px; position: relative; cursor: pointer; border: 1px solid rgba(245,158,11,0.3); }
-#section-studeo .toggle-knob { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; background: #F59E0B; border-radius: 50%; transition: left 0.25s; }
-#section-studeo .toggle.annual .toggle-knob { left: 29px; }
-#section-studeo .save-badge { background: rgba(245,158,11,0.15); color: #F59E0B; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
-#section-studeo .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
-#section-studeo .price-card { background: #1E1B4B; padding: 40px 32px; border-radius: 18px; border: 2px solid transparent; display: flex; flex-direction: column; transition: transform 0.25s, border 0.25s; position: relative; }
-#section-studeo .price-card:hover { transform: scale(1.03); }
-#section-studeo .price-card.popular { border-color: #F59E0B; transform: scale(1.04); }
-#section-studeo .price-card.popular:hover { transform: scale(1.07); }
-#section-studeo .popular-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #F59E0B; color: #1E1B4B; padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: 12px; letter-spacing: 1px; }
-#section-studeo .price-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
-#section-studeo .price-amount { font-size: 2.6rem; font-weight: 700; margin-bottom: 6px; }
-#section-studeo .price-amount small { font-size: 1rem; color: #A6A3C7; font-weight: 400; }
-#section-studeo .price-note { color: #A6A3C7; font-size: 14px; margin-bottom: 24px; min-height: 22px; }
-#section-studeo .price-features { list-style: none; margin-bottom: 32px; flex: 1; }
-#section-studeo .price-features li { padding: 8px 0; color: #F8F7FF; font-size: 0.97rem; padding-left: 26px; position: relative; }
-#section-studeo .price-features li::before { content: '✓'; position: absolute; left: 0; color: #F59E0B; font-weight: 700; }
-#section-studeo .price-card .btn { width: 100%; }
-#section-studeo .pricing-fineprint { text-align: center; color: #A6A3C7; margin-top: 40px; }
-#section-studeo .compare-wrap { margin-top: 64px; }
-#section-studeo .compare-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-bottom: 28px; }
-#section-studeo .compare-scroll { overflow-x: auto; }
-#section-studeo .compare-table { width: 100%; border-collapse: collapse; background: #1E1B4B; border-radius: 14px; overflow: hidden; min-width: 600px; }
-#section-studeo .compare-table th, #section-studeo .compare-table td { padding: 14px 18px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); color: #F8F7FF; font-size: 0.95rem; }
-#section-studeo .compare-table th { background: rgba(245,158,11,0.1); color: #F59E0B; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
-#section-studeo .compare-table tbody tr:nth-child(odd) { background: rgba(255,255,255,0.02); }
-#section-studeo .compare-table td:first-child { text-align: left; color: #F8F7FF; font-weight: 500; }
-#section-studeo .compare-table .y { color: #F59E0B; font-weight: 700; font-size: 1.15rem; }
-#section-studeo .compare-table .x { color: #A6A3C7; font-size: 1.05rem; }
-#section-studeo .free-upsell { color: #A6A3C7; font-size: 0.85rem; font-style: italic; margin-bottom: 18px; margin-top: -8px; }
-#section-studeo .schools-benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 60px; }
-#section-studeo .school-card { background: #2D2A5E; padding: 32px; border-radius: 14px; border-top: 4px solid #F59E0B; }
-#section-studeo .school-card h3 { font-size: 1.3rem; margin-bottom: 12px; font-weight: 600; }
-#section-studeo .school-card p { color: #A6A3C7; }
-#section-studeo .school-plans { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 24px; }
-#section-studeo .plan-card { background: #2D2A5E; padding: 36px; border-radius: 16px; border-top: 4px solid #F59E0B; text-align: center; }
-#section-studeo .plan-card h3 { font-size: 1.6rem; margin-bottom: 8px; font-weight: 700; }
-#section-studeo .plan-card .price { font-size: 2.25rem; color: #F59E0B; font-weight: 700; margin-bottom: 14px; }
-#section-studeo .plan-card p { color: #A6A3C7; }
-#section-studeo .schools-contact { text-align: center; color: #A6A3C7; }
-#section-studeo .schools-contact a { color: #F59E0B; }
-#section-studeo .final-cta { background: linear-gradient(135deg, #F59E0B, #D97706); text-align: center; color: #1E1B4B; }
-#section-studeo .final-cta h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 18px; letter-spacing: -0.02em; }
-#section-studeo .final-cta p { font-size: 1.2rem; margin-bottom: 36px; opacity: 0.85; }
-#section-studeo .platforms { background: #2D2A5E; }
-#section-studeo .platforms .section-headline, #section-studeo .platforms .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
-#section-studeo .platform-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px; margin-bottom: 36px; }
-#section-studeo .platform-card { position: relative; overflow: hidden; background: #1E1B4B; border: 1px solid rgba(245,158,11,0.25); border-radius: 16px; padding: 32px; min-height: 220px; display: flex; flex-direction: column; }
-#section-studeo .platform-card::after { content: ''; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: radial-gradient(circle at center, rgba(245,158,11,0.18), transparent 70%); pointer-events: none; }
-#section-studeo .platform-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; }
-#section-studeo .platform-logo { width: 72px; height: 72px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-#section-studeo .platform-logo svg { width: 56px; height: 56px; display: block; }
-#section-studeo .live-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #F59E0B; letter-spacing: 1.5px; }
-#section-studeo .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #F59E0B; box-shadow: 0 0 0 0 rgba(245,158,11,0.7); animation: stuPulse 1.8s infinite; }
-@keyframes stuPulse { 0% { box-shadow: 0 0 0 0 rgba(245,158,11,0.7); } 70% { box-shadow: 0 0 0 10px rgba(245,158,11,0); } 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); } }
-#section-studeo .platform-name { font-size: 1.6rem; font-weight: 700; color: #F8F7FF; margin-bottom: 10px; position: relative; z-index: 1; }
-#section-studeo .platform-desc { color: #A6A3C7; font-size: 0.97rem; line-height: 1.55; position: relative; z-index: 1; }
-#section-studeo .platform-row-small { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 36px; }
-#section-studeo .platform-card-small { position: relative; background: #1E1B4B; border-radius: 14px; border-top: 2px solid #F59E0B; padding: 20px; display: flex; flex-direction: column; }
-#section-studeo .small-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-#section-studeo .platform-logo-small { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-#section-studeo .platform-logo-small svg { width: 44px; height: 44px; display: block; }
-#section-studeo .soon-badge { background: rgba(245,158,11,0.15); color: #F59E0B; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(245,158,11,0.3); }
-#section-studeo .platform-card-small h4 { font-size: 18px; font-weight: 700; color: #F8F7FF; margin-bottom: 8px; }
-#section-studeo .platform-card-small p { color: #A6A3C7; font-size: 14px; line-height: 1.5; }
-#section-studeo .platforms-footnote { text-align: center; color: #A6A3C7; font-style: italic; margin-top: 16px; }
-#section-studeo .platforms-footnote a { color: #F59E0B; }
-#section-studeo .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s ease, transform 0.9s ease; }
-#section-studeo .reveal-left.visible { opacity: 1; transform: translateX(0); }
-#section-studeo .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
-#section-studeo .reveal-right.visible { opacity: 1; transform: translateX(0); }
-#section-studeo .platform-reveal, #section-studeo .platform-reveal-small { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-#section-studeo .platform-reveal.visible, #section-studeo .platform-reveal-small.visible { opacity: 1; transform: translateY(0); }
-#section-studeo .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-#section-studeo .reveal.visible { opacity: 1; transform: translateY(0); }
-#section-studeo .stu-footbar { background: #1E1B4B; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); }
-#section-studeo .stu-footbar img { height: 64px; }
-#section-studeo .stu-footbar a { color: #A6A3C7; cursor: pointer; font-size: 14px; }
-@media (max-width: 768px) {
-  #section-studeo .stats-grid, #section-studeo .problem-cards, #section-studeo .pricing-grid, #section-studeo .schools-benefits, #section-studeo .school-plans, #section-studeo .steps { grid-template-columns: 1fr; }
-  #section-studeo .steps::before { display: none; }
-  #section-studeo .feature-block { grid-template-columns: 1fr; gap: 36px; margin-bottom: 80px; }
-  #section-studeo .feature-block.reverse .feature-text { order: 1; }
-  #section-studeo .feature-block.reverse .feature-mockup { order: 2; }
-  #section-studeo .price-card.popular, #section-studeo .price-card.popular:hover { transform: none; }
-  #section-studeo .price-card:hover { transform: none; }
-  #section-studeo .platform-row { grid-template-columns: 1fr; }
-  #section-studeo .platform-row-small { grid-template-columns: 1fr 1fr; }
-  #section-studeo .calc-inputs { grid-template-columns: 1fr; }
-  #section-studeo .calc-card { padding: 28px; }
-  #section-studeo .stu-idbar { padding: 0 16px; }
-  #section-studeo .stu-footbar { padding: 24px 16px; flex-direction: column; gap: 12px; }
-  #section-studeo section { padding: 60px 24px; }
-}
-/* ========== STUDEO WAITLIST ========== */
-#section-studeo-waitlist { background: #1E1B4B; color: #F8F7FF; font-size: 17px; }
-#section-studeo-waitlist .swl-header { background: #1E1B4B; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid rgba(245,158,11,0.1); }
-#section-studeo-waitlist .swl-header img { height: 56px; }
-#section-studeo-waitlist .swl-header a { color: #F59E0B; font-size: 14px; cursor: pointer; }
-#section-studeo-waitlist .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
-#section-studeo-waitlist .top { padding: 56px 0 24px; text-align: center; }
-#section-studeo-waitlist .logo-top { width: 260px; height: auto; display: block; margin: 0 auto 24px; }
-#section-studeo-waitlist .pill { display: inline-block; background: rgba(245,158,11,0.15); color: #F59E0B; font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(245,158,11,0.35); }
-#section-studeo-waitlist .headline-section { padding: 32px 0 24px; text-align: center; }
-#section-studeo-waitlist h1 { font-size: clamp(34px, 5.5vw, 56px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; }
-#section-studeo-waitlist h1 .accent { color: #F59E0B; }
-#section-studeo-waitlist .sub { font-size: clamp(17px, 2vw, 20px); color: rgba(248,247,255,0.72); max-width: 600px; margin: 0 auto; }
-#section-studeo-waitlist .urgency { background: #B45309; color: #F8F7FF; text-align: center; padding: 14px 20px; margin: 32px 0; border-radius: 12px; font-size: 15px; font-weight: 500; }
-#section-studeo-waitlist .form-card { background: #2D2A5E; border: 1px solid rgba(245,158,11,0.35); border-radius: 18px; padding: 32px; margin: 24px 0 56px; box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
-#section-studeo-waitlist .form-title { font-size: 22px; font-weight: 600; margin-bottom: 24px; text-align: center; }
-#section-studeo-waitlist .field { margin-bottom: 16px; }
-#section-studeo-waitlist .field label { display: block; font-size: 13px; font-weight: 500; color: rgba(248,247,255,0.72); margin-bottom: 6px; }
-#section-studeo-waitlist .field input, #section-studeo-waitlist .field select { width: 100%; background: #1E1B4B; color: #F8F7FF; border: 1px solid rgba(248,247,255,0.08); border-radius: 10px; padding: 14px 16px; font-size: 16px; font-family: inherit; transition: border-color 0.2s, box-shadow 0.2s; appearance: none; -webkit-appearance: none; }
-#section-studeo-waitlist .field select { background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F59E0B' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 14px center; background-size: 16px; padding-right: 40px; }
-#section-studeo-waitlist .field input:focus, #section-studeo-waitlist .field select:focus { outline: none; border-color: #F59E0B; box-shadow: 0 0 0 3px rgba(245,158,11,0.18); }
-#section-studeo-waitlist .btn { display: block; width: 100%; background: #F59E0B; color: #1E1B4B; border: none; border-radius: 12px; padding: 18px 20px; font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer; margin-top: 12px; transition: transform 0.15s, box-shadow 0.2s, background 0.2s; }
-#section-studeo-waitlist .btn:hover { background: #FBBF24; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(245,158,11,0.25); }
-#section-studeo-waitlist .btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-#section-studeo-waitlist .fine-print { text-align: center; font-size: 13px; color: rgba(248,247,255,0.55); margin-top: 16px; }
-#section-studeo-waitlist .form-message { margin-top: 18px; padding: 14px 16px; border-radius: 10px; font-size: 15px; display: none; }
-#section-studeo-waitlist .form-message.success { background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.4); color: #6EE7B7; display: block; }
-#section-studeo-waitlist .form-message.error { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.4); color: #FCA5A5; display: block; }
-#section-studeo-waitlist .form-message a { color: inherit; text-decoration: underline; }
-#section-studeo-waitlist section { padding: 24px 0; }
-#section-studeo-waitlist .section-heading { text-align: center; font-size: clamp(28px, 4vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin-bottom: 36px; line-height: 1.15; }
-#section-studeo-waitlist .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-#section-studeo-waitlist .benefit-card { background: #2D2A5E; border: 1px solid rgba(245,158,11,0.35); border-radius: 14px; padding: 24px; }
-#section-studeo-waitlist .benefit-card h3 { font-size: 18px; color: #F59E0B; margin-bottom: 10px; font-weight: 600; }
-#section-studeo-waitlist .benefit-card p { font-size: 15px; color: rgba(248,247,255,0.72); }
-#section-studeo-waitlist .everything-section { padding-top: 56px; }
-#section-studeo-waitlist .category { background: #2D2A5E; border-radius: 14px; padding: 24px 26px; margin-bottom: 16px; border: 1px solid rgba(248,247,255,0.08); }
-#section-studeo-waitlist .category-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-#section-studeo-waitlist .icon { width: 40px; height: 40px; flex: 0 0 40px; background: rgba(245,158,11,0.15); color: #F59E0B; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-#section-studeo-waitlist .category h3 { font-size: 19px; font-weight: 600; }
-#section-studeo-waitlist .category ul { list-style: none; padding-left: 0; }
-#section-studeo-waitlist .category li { position: relative; padding-left: 22px; margin-bottom: 8px; font-size: 15px; color: rgba(248,247,255,0.72); }
-#section-studeo-waitlist .category li::before { content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: #F59E0B; border-radius: 50%; }
-#section-studeo-waitlist .stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-#section-studeo-waitlist .stat-card { background: #2D2A5E; border: 1px solid rgba(245,158,11,0.35); border-radius: 14px; padding: 28px 20px; text-align: center; }
-#section-studeo-waitlist .stat-label { font-size: 18px; font-weight: 700; color: #F59E0B; margin-bottom: 10px; line-height: 1.25; }
-#section-studeo-waitlist .stat-card p { font-size: 13px; color: rgba(248,247,255,0.72); }
-#section-studeo-waitlist .parents-card { background: #2D2A5E; border-radius: 16px; border-top: 3px solid #F59E0B; padding: 36px 32px; text-align: center; }
-#section-studeo-waitlist .parents-card h2 { font-size: 28px; font-weight: 700; margin-bottom: 16px; }
-#section-studeo-waitlist .parents-card p { color: rgba(248,247,255,0.72); margin-bottom: 24px; font-size: 16px; }
-#section-studeo-waitlist .btn-outline { display: inline-block; background: transparent; color: #F59E0B; border: 2px solid #F59E0B; padding: 14px 22px; border-radius: 12px; font-weight: 700; font-size: 16px; cursor: pointer; text-decoration: none; font-family: inherit; transition: background 0.2s, color 0.2s; }
-#section-studeo-waitlist .btn-outline:hover { background: #F59E0B; color: #1E1B4B; }
-#section-studeo-waitlist .faq-item { border-bottom: 1px solid rgba(248,247,255,0.08); }
-#section-studeo-waitlist .faq-q { width: 100%; background: none; border: none; color: #F8F7FF; font-family: inherit; text-align: left; padding: 22px 0; font-size: 17px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s; }
-#section-studeo-waitlist .faq-q:hover { color: #F59E0B; }
-#section-studeo-waitlist .faq-q .chev { color: #F59E0B; font-size: 22px; line-height: 1; transition: transform 0.25s; flex-shrink: 0; }
-#section-studeo-waitlist .faq-item.open .faq-q { color: #F59E0B; }
-#section-studeo-waitlist .faq-item.open .chev { transform: rotate(45deg); }
-#section-studeo-waitlist .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; color: rgba(248,247,255,0.72); font-size: 15.5px; }
-#section-studeo-waitlist .faq-item.open .faq-a { max-height: 320px; padding: 0 0 22px; }
-#section-studeo-waitlist .swl-footbar { background: #1E1B4B; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 32px; }
-#section-studeo-waitlist .swl-footbar img { height: 64px; }
-#section-studeo-waitlist .swl-footbar a { color: rgba(248,247,255,0.72); cursor: pointer; font-size: 14px; }
-@media (max-width: 640px) {
-  #section-studeo-waitlist { font-size: 16px; }
-  #section-studeo-waitlist .swl-header { padding: 0 16px; }
-  #section-studeo-waitlist .benefit-grid { grid-template-columns: 1fr; }
-  #section-studeo-waitlist .stats-grid { grid-template-columns: 1fr; }
-  #section-studeo-waitlist .form-card { padding: 24px 20px; }
-  #section-studeo-waitlist .parents-card { padding: 28px 22px; }
-  #section-studeo-waitlist .category { padding: 22px 20px; }
-  #section-studeo-waitlist .swl-footbar { padding: 24px 16px; flex-direction: column; gap: 12px; }
-}
 </style>
 </head>
 <body>
@@ -793,7 +535,7 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 // Set data-page immediately on first paint so CSS can hide the global navbar
 // before any content renders on subsections.
 (function(){
-  var validSections = ['home','drivo','drivo-waitlist','studeo','studeo-waitlist'];
+  var validSections = ['home','drivo','drivo-waitlist'];
   var hash = (location.hash || '').replace('#','');
   var page = validSections.indexOf(hash) >= 0 ? hash : 'home';
   document.body.setAttribute('data-page', page);
@@ -807,7 +549,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
   <div class="gnav-pills">
     <button class="gnav-pill" id="nav-home" onclick="showSection('home')">Home</button>
     <button class="gnav-pill" id="nav-drivo" onclick="showSection('drivo')">Drivo</button>
-    <button class="gnav-pill" id="nav-studeo" onclick="showSection('studeo')">Studeo</button>
   </div>
   <button class="gnav-cta" onclick="showSection('home'); setTimeout(function(){var c=document.getElementById('fortevo-contact'); if(c) c.scrollIntoView({behavior:'smooth'});}, 100);">Contact</button>
   <div class="gnav-hamburger" id="gnav-hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
@@ -816,7 +557,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 <div id="mobile-overlay">
   <button class="m-pill" onclick="navMobile('home')">Home</button>
   <button class="m-pill" onclick="navMobile('drivo')">Drivo</button>
-  <button class="m-pill" onclick="navMobile('studeo')">Studeo</button>
 </div>
 
 <!-- FORTEVO HOME -->
@@ -841,13 +581,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
           <div class="ctag">AI business agent for entrepreneurs</div>
           <p class="cdesc">Your AI clone that handles email, calendar, leads, and operations 24 hours a day in your exact voice.</p>
           <button class="fcta-btn" onclick="showSection('drivo')">Explore Drivo →</button>
-        </div>
-        <div class="ftool-card fade-up">
-          <span class="fstatus-badge beta">BETA</span>
-          <img src="studeo-logo.png" alt="Studeo" class="clogo" />
-          <div class="ctag">AI study platform for students</div>
-          <p class="cdesc">Connects to Google Classroom automatically, tracks every grade, and builds your personalized study plan.</p>
-          <button class="fcta-btn" onclick="showSection('studeo')">Explore Studeo →</button>
         </div>
       </div>
       <p class="fmore-soon">More tools coming soon.</p>
@@ -909,7 +642,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
       <div class="ffooter-col">
         <h4>Tools</h4>
         <a onclick="showSection('drivo')" style="cursor:pointer;">Drivo</a>
-        <a onclick="showSection('studeo')" style="cursor:pointer;">Studeo</a>
       </div>
       <div class="ffooter-col">
         <h4>Email</h4>
@@ -1180,274 +912,6 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
     <a onclick="showSection('drivo')">← Back to Drivo</a>
   </div>
 </div>
-<!-- STUDEO SECTION -->
-<div id="section-studeo" class="section-wrap" style="display:none;">
-  <div class="stu-idbar">
-    <img src="studeo-logo.png" alt="Studeo" />
-    <a onclick="showSection('home')">← Back to Fortevo</a>
-  </div>
-  <section class="hero">
-    <canvas id="stu-particles"></canvas>
-    <div class="hero-content">
-      <img src="studeo-logo.png" alt="Studeo" class="hero-logo" />
-      <div class="pill">✦ BUILT FOR STUDENTS</div>
-      <h1>Study Smarter. Stress Less.</h1>
-      <p class="lead">Studeo connects to Google Classroom automatically, tracks every grade, and tells you exactly what to study tonight. No uploading. No guessing. Just better grades.</p>
-      <div class="hero-btns">
-        <a class="btn btn-amber btn-large" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Start for Free</a>
-        <a class="btn btn-outline btn-large" onclick="document.querySelector('#section-studeo .how').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">See How It Works</a>
-      </div>
-      <p class="hero-fineprint">Free forever on the basic plan. No credit card required.</p>
-    </div>
-  </section>
-  <section class="problem">
-    <div class="section-inner">
-      <div class="reveal"><div class="label">The Problem</div><h2 class="section-headline">Studying Hard Isn't the Problem. Studying Smart Is.</h2></div>
-      <div class="problem-cards" style="margin-top: 50px;">
-        <div class="problem-card reveal"><h3>Wasted Time</h3><p>You spend more time organizing notes than actually learning. By the time everything is ready the motivation is gone.</p></div>
-        <div class="problem-card reveal"><h3>Guessing What to Study</h3><p>You study the wrong things and still fail the test. Your teacher knows what matters. Your notes don't.</p></div>
-        <div class="problem-card reveal"><h3>Stress Before Exams</h3><p>The night before a big test you panic because you don't know where to start. Sound familiar?</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="solution">
-    <div class="section-inner">
-      <div class="reveal text-center" style="margin-bottom: 80px;"><div class="label">The Solution</div><h2 class="section-headline">Studeo Knows What You Need to Study Before You Do.</h2><p class="section-sub">Connect your school once. Studeo handles everything else automatically.</p></div>
-      <div class="feature-block">
-        <div class="feature-text reveal-left"><div class="feature-icon">⚡</div><h3>Auto-Connects to Your Classes</h3><p>One click connects Google Classroom, Canvas, or Schoology. Every assignment, every deadline, every piece of material appears instantly. You never upload a single file.</p></div>
-        <div class="feature-mockup reveal-right"><div class="mockup-card"><div class="mockup-header"><div class="mockup-dot amber"></div><div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-title">Connected Classes</div></div><div class="mockup-row"><span>AP Chemistry</span><span class="check">✓ Connected</span></div><div class="mockup-row"><span>AP History</span><span class="check">✓ Connected</span></div><div class="mockup-row"><span>Calculus</span><span class="check">✓ Connected</span></div><div class="sync">Last synced 2 min ago</div></div></div>
-      </div>
-      <div class="feature-block reverse">
-        <div class="feature-text reveal-right"><div class="feature-icon">📈</div><h3>Tracks Every Grade and Tells You How to Improve It</h3><p>Studeo connects to your grade portal and shows you exactly what score you need on the next assignment to hit your target grade.</p></div>
-        <div class="feature-mockup reveal-left"><div class="mockup-card"><div class="mockup-header"><div class="mockup-dot amber"></div><div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-title">Grade Tracker</div></div><div class="mockup-row"><span>Chemistry</span><span><span class="grade-old">81%</span><span class="grade-arrow">→</span><span class="grade-new">87%</span></span></div><div class="mockup-row"><span>History</span><span><span class="grade-old">74%</span><span class="grade-arrow">→</span><span class="grade-new">80%</span></span></div><div class="mockup-row"><span>Calculus</span><span><span class="grade-old">88%</span><span class="grade-arrow">→</span><span class="grade-new">92%</span></span></div></div></div>
-      </div>
-      <div class="feature-block">
-        <div class="feature-text reveal-left"><div class="feature-icon">📅</div><h3>Builds Your Study Plan Around Real Test Dates</h3><p>Day by day schedule built around your actual test dates and current grade status.</p></div>
-        <div class="feature-mockup reveal-right"><div class="mockup-card"><div class="mockup-header"><div class="mockup-dot amber"></div><div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-title">Your Study Plan</div></div><div class="mockup-row"><span><strong>Tonight</strong> · Chemistry</span><span class="grade-new">45 min</span></div><div class="mockup-row"><span><strong>Tomorrow</strong> · History</span><span class="grade-new">30 min</span></div><div class="mockup-row"><span><strong>Thursday</strong></span><span style="color:#F59E0B">Practice Quiz Day</span></div></div></div>
-      </div>
-      <div class="feature-block reverse">
-        <div class="feature-text reveal-right"><div class="feature-icon">🎧</div><h3>Generates Flashcards, Quizzes and Audio Overviews</h3><p>Smart flashcards that adapt to what you struggle with, unlimited practice quizzes, and audio summaries for the bus ride to school.</p></div>
-        <div class="feature-mockup reveal-left"><div class="mockup-card"><div class="mockup-header"><div class="mockup-dot amber"></div><div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-title">Study Tools</div></div><div class="flashcard"><small>Flashcard · Chemistry</small>What is the atomic number of Carbon?</div><div class="quiz-q"><div class="q-label">Quiz · Question 3 of 10</div>Which event triggered the start of World War I in 1914?</div></div></div>
-      </div>
-    </div>
-  </section>
-  <section class="stats">
-    <div class="section-inner">
-      <div class="stats-grid">
-        <div class="stat-card reveal"><div class="stat-icon">📚</div><p>Students report feeling more prepared for exams after 2 weeks</p></div>
-        <div class="stat-card reveal"><div class="stat-icon">📈</div><p>Study sessions become more consistent with a daily plan</p></div>
-        <div class="stat-card reveal"><div class="stat-icon">🌙</div><p>Less last-minute cramming with personalized schedules</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="platforms">
-    <div class="section-inner">
-      <div class="reveal text-center"><h2 class="section-headline">Connects to Every Platform Your School Uses.</h2><p class="section-sub">One click. Everything syncs automatically. You never upload a single file.</p></div>
-      <div class="platform-row">
-        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="G" data-bg="#1A73E8"></div><span class="live-badge"><span class="live-dot"></span>AT LAUNCH</span></div><div class="platform-name">Google Classroom</div><p class="platform-desc">Will auto-sync all assignments, grades, and materials the moment your teacher posts them. Zero setup beyond one click.</p></div>
-        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="C" data-bg="#E66000"></div><span class="live-badge"><span class="live-dot"></span>AT LAUNCH</span></div><div class="platform-name">Canvas</div><p class="platform-desc">Full course content, grade updates, and announcements pulled in real time at launch. Always current, always accurate.</p></div>
-        <div class="platform-card platform-reveal"><div class="platform-head"><div class="platform-logo" data-platform="S" data-bg="#0770C2"></div><span class="live-badge"><span class="live-dot"></span>AT LAUNCH</span></div><div class="platform-name">Schoology</div><p class="platform-desc">Assignments, rubrics, and grade updates will sync automatically from every course you are enrolled in.</p></div>
-      </div>
-      <div class="platform-row-small">
-        <div class="platform-card-small platform-reveal-small"><div class="small-head"><div class="platform-logo-small" data-platform="I" data-bg="#00558C"></div><span class="soon-badge">COMING SOON</span></div><h4>Infinite Campus</h4><p>Live grade syncing from your school's student information system. Grades update the moment your teacher enters them.</p></div>
-        <div class="platform-card-small platform-reveal-small"><div class="small-head"><div class="platform-logo-small" data-platform="P" data-bg="#005EB8"></div><span class="soon-badge">COMING SOON</span></div><h4>PowerSchool</h4><p>The most widely used student information system in the US. Full grade and attendance data connected automatically.</p></div>
-        <div class="platform-card-small platform-reveal-small"><div class="small-head"><div class="platform-logo-small" data-platform="S" data-bg="#0099CC"></div><span class="soon-badge">COMING SOON</span></div><h4>Skyward</h4><p>Used by thousands of districts nationwide. Complete grade portal integration coming soon.</p></div>
-        <div class="platform-card-small platform-reveal-small"><div class="small-head"><div class="platform-logo-small" data-platform="A" data-bg="#C8102E"></div><span class="soon-badge">COMING SOON</span></div><h4>Aeries</h4><p>Popular across California and western states. Student data and grades connected seamlessly.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="how">
-    <div class="section-inner text-center">
-      <div class="reveal"><h2 class="section-headline">Better Grades in 3 Steps.</h2></div>
-      <div class="steps">
-        <div class="step reveal"><div class="step-num">1</div><h3>Connect Your Classes</h3><p>Sign up free and connect Google Classroom with one click. Every assignment and grade syncs automatically.</p></div>
-        <div class="step reveal"><div class="step-num">2</div><h3>Tell Studeo Your Goals</h3><p>Set your target grade for each class. Studeo analyzes where you are and exactly what it takes to get there.</p></div>
-        <div class="step reveal"><div class="step-num">3</div><h3>Follow Your Plan and Watch Your Grades Rise</h3><p>A daily study plan tells you exactly what to do each night. Nothing slips through the cracks.</p></div>
-      </div>
-      <div class="cta-wrap reveal"><a class="btn btn-amber btn-large" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Start for Free — No Credit Card Needed</a></div>
-    </div>
-  </section>
-  <section class="calculator">
-    <div class="section-inner text-center">
-      <div class="reveal"><h2 class="section-headline">What Grade Do You Need?</h2><p class="section-sub">Enter your numbers and see exactly what score you need on your next assignment.</p></div>
-      <div class="calc-card reveal">
-        <div class="calc-inputs">
-          <div class="calc-field"><label>Current grade %</label><input id="stu-currentGrade" type="number" min="0" max="100" value="78" /></div>
-          <div class="calc-field"><label>Assignment weight %</label><input id="stu-assignmentWeight" type="number" min="0" max="100" value="20" /></div>
-          <div class="calc-field"><label>Target final grade %</label><input id="stu-targetGrade" type="number" min="0" max="100" value="85" /></div>
-        </div>
-        <div class="calc-result" id="stu-calcResult"></div>
-        <a class="btn btn-amber btn-large" onclick="showSection('studeo-waitlist')" style="margin-top: 28px; cursor:pointer;">Get My Personalized Study Plan →</a>
-      </div>
-    </div>
-  </section>
-  <section class="social-proof">
-    <div class="section-inner text-center">
-      <div class="reveal"><h2 class="section-headline" style="color: #F59E0B;">Student Stories Coming Soon.</h2><p class="section-sub">Studeo is launching this fall. Join the waitlist and be one of the first students to use it — your story could be featured here.</p></div>
-      <div class="stories-card reveal"><p>Early access members get 1 month completely free. No credit card required.</p></div>
-      <a class="btn btn-amber btn-large reveal" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Join the Waitlist →</a>
-    </div>
-  </section>
-  <section class="pricing">
-    <div class="section-inner">
-      <div class="reveal text-center"><h2 class="section-headline">Start Free. Upgrade When You're Ready.</h2><p class="section-sub">No credit card required. Cancel anytime.</p></div>
-      <div class="toggle-wrap reveal">
-        <span id="stu-monthlyLabel" class="active">Monthly</span>
-        <div class="toggle" id="stu-billingToggle"><div class="toggle-knob"></div></div>
-        <span id="stu-annualLabel">Annual</span>
-        <span class="save-badge">Save 20%</span>
-      </div>
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-name">Free</div>
-          <div class="price-amount">$0 <small>/ forever</small></div>
-          <div class="price-note">Try Studeo free — no credit card, no time limit.</div>
-          <ul class="price-features"><li>Connect 1 class</li><li>5 AI study questions per day</li><li>Basic flashcard generation</li><li>Read-only grade overview</li></ul>
-          <p class="free-upsell">Want the full experience? The Student plan is $9.99/month.</p>
-          <a class="btn btn-amber-outline" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Start Free</a>
-        </div>
-        <div class="price-card popular reveal">
-          <div class="popular-badge">MOST POPULAR</div>
-          <div class="price-name">Student</div>
-          <div class="price-amount" data-monthly="$9.99" data-annual="$7.99">$9.99 <small>/ month</small></div>
-          <div class="price-note" data-monthly="Billed monthly" data-annual="Billed annually — save 20%">Billed monthly</div>
-          <ul class="price-features"><li>Unlimited classes</li><li>Full grade tracking and improvement plans</li><li>Unlimited quizzes and flashcards</li><li>Personalized study planner</li><li>AI tutor chat</li></ul>
-          <a class="btn btn-amber" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Start Free Trial</a>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-name">Scholar</div>
-          <div class="price-amount" data-monthly="$19.99" data-annual="$15.99">$19.99 <small>/ month</small></div>
-          <div class="price-note" data-monthly="Billed monthly" data-annual="Billed annually — save 20%">Billed monthly</div>
-          <ul class="price-features"><li>Everything in Student</li><li>Audio overviews in podcast and sleep modes</li><li>AI video creator from class materials</li><li>Parent dashboard</li><li>Priority AI tutor responses</li></ul>
-          <a class="btn btn-amber" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Start Free Trial</a>
-        </div>
-      </div>
-      <p class="pricing-fineprint">All paid plans include a 7-day free trial. No credit card required to start.</p>
-    </div>
-  </section>
-  <section class="schools">
-    <div class="section-inner">
-      <div class="reveal text-center"><div class="label">For Schools</div><h2 class="section-headline">Bring Studeo to Your Entire School.</h2><p class="section-sub">Teachers get class-wide analytics. Administrators get district-wide data. Students get better grades.</p></div>
-      <div class="schools-benefits">
-        <div class="school-card reveal"><h3>Teacher Dashboard</h3><p>See every student's study activity, upcoming test readiness, and grade trajectory in one view.</p></div>
-        <div class="school-card reveal"><h3>Parent Reports</h3><p>Automatic weekly emails to parents showing study time, upcoming tests, and grade changes.</p></div>
-        <div class="school-card reveal"><h3>FERPA Compliant</h3><p>Student data is protected by design. We never sell student data. Ever.</p></div>
-        <div class="school-card reveal"><h3>One-Click Deployment</h3><p>Google Workspace SSO means every student signs in instantly with their school account.</p></div>
-      </div>
-      <div class="school-plans">
-        <div class="plan-card reveal"><h3>Classroom Plan</h3><div class="price">$299<span style="font-size:1rem;color:#A6A3C7">/year</span></div><p>1 teacher, up to 35 students.</p></div>
-        <div class="plan-card reveal"><h3>School Plan</h3><div class="price">$2,499<span style="font-size:1rem;color:#A6A3C7">/year</span></div><p>Unlimited students and teachers, admin dashboard.</p></div>
-      </div>
-      <p class="schools-contact">Larger districts? Email us at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a></p>
-    </div>
-  </section>
-  <section class="final-cta">
-    <div class="section-inner reveal">
-      <h2>Your Best Grades Are Waiting.</h2>
-      <p>Free to start. Takes 60 seconds to connect your first class.</p>
-      <a class="btn btn-dark" onclick="showSection('studeo-waitlist')" style="cursor:pointer;">Start for Free Now →</a>
-    </div>
-  </section>
-  <div class="stu-footbar">
-    <img src="studeo-logo.png" alt="Studeo" />
-    <a onclick="showSection('home')">Back to Fortevo →</a>
-  </div>
-</div>
-<!-- STUDEO WAITLIST SECTION -->
-<div id="section-studeo-waitlist" class="section-wrap" style="display:none;">
-  <div class="swl-header">
-    <img src="studeo-logo.png" alt="Studeo" />
-    <a onclick="showSection('studeo')">← Back to Studeo</a>
-  </div>
-  <header class="top container fade-in">
-    <img src="studeo-logo.png" alt="Studeo" class="logo-top" />
-    <span class="pill">Early Access Now Open</span>
-  </header>
-  <section class="headline-section container fade-in">
-    <h1>Get Early Access to the <span class="accent">AI That Actually Improves Your Grades.</span></h1>
-    <p class="sub">Studeo is launching soon. Join the waitlist and get 1 month completely free when we launch.</p>
-  </section>
-  <div class="container fade-in">
-    <div class="urgency">📚 Join the Studeo waitlist — 1 month free for everyone who signs up before launch</div>
-  </div>
-  <div class="container fade-in" id="swl-form-top">
-    <form class="form-card" data-swl-form>
-      <div class="form-title">Join the Waitlist</div>
-      <div class="field"><label>First Name</label><input type="text" name="firstName" required autocomplete="given-name" /></div>
-      <div class="field"><label>Email Address</label><input type="email" name="email" required autocomplete="email" /></div>
-      <div class="field"><label>I am a</label><select name="role" required data-role-select><option value="" disabled selected>Select one</option><option value="student">High School Student</option><option value="college">College Student</option><option value="parent">Parent of a Student</option><option value="teacher">Teacher</option><option value="admin">School Administrator</option></select></div>
-      <div class="field" data-grade-field><label>Grade Level</label><select name="grade"><option value="" disabled selected>Select one</option><option>9th Grade</option><option>10th Grade</option><option>11th Grade</option><option>12th Grade</option><option>College Freshman</option><option>College Sophomore</option><option>College Junior</option><option>College Senior</option></select></div>
-      <div class="field" data-school-field style="display:none;"><label>School or district name (optional)</label><input type="text" name="school" autocomplete="organization" /></div>
-      <div class="field"><label>School Platform</label><select name="platform" required data-platform-select><option value="" disabled selected>Select one</option><option>Google Classroom</option><option>Canvas</option><option>Schoology</option><option>Blackboard</option><option>Not Sure</option><option>Other</option></select></div>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:16px 0;"></div>
-      <button type="submit" class="btn">Join the Waitlist — Get 1 Month Free →</button>
-      <p class="fine-print">No credit card. Cancel anytime. Student data is never sold.</p>
-      <div class="form-message" data-message></div>
-    </form>
-  </div>
-  <section class="container fade-in">
-    <h2 class="section-heading">What You Get as an Early Access Member</h2>
-    <div class="benefit-grid">
-      <div class="benefit-card"><h3>1 Month Free</h3><p>Early access members get the first 1 month completely free. No credit card required at signup.</p></div>
-      <div class="benefit-card"><h3>First to Try New Features</h3><p>Every new feature goes to waitlist members before the public.</p></div>
-      <div class="benefit-card"><h3>Priority Support</h3><p>We'll personally help you connect your first class and set your grade goals.</p></div>
-      <div class="benefit-card"><h3>Better Grades or Your Money Back</h3><p>If your grades don't improve in 60 days we give you a full refund. No questions asked.</p></div>
-    </div>
-  </section>
-  <section class="container everything-section fade-in">
-    <h2 class="section-heading">Here Is Everything Studeo Does For You.</h2>
-    <div class="category"><div class="category-head"><div class="icon">🔗</div><h3>Automatic Content Collection</h3></div><ul><li>Connects to Google Classroom, Canvas, and Schoology with one click</li><li>Pulls every assignment the moment it is posted</li><li>Syncs lecture notes and study materials automatically</li><li>Never requires manual file uploading ever</li><li>Stays synced in real time throughout the semester</li></ul></div>
-    <div class="category"><div class="category-head"><div class="icon">📈</div><h3>Grade Tracking and Improvement</h3></div><ul><li>Shows your current grade in every class in real time</li><li>Calculates exactly what score you need on upcoming assignments to reach your target grade</li><li>Identifies which specific topics are hurting your grade the most</li><li>Sends instant alerts when any grade changes</li><li>Shows your grade trend over time</li></ul></div>
-    <div class="category"><div class="category-head"><div class="icon">📅</div><h3>Personalized Study Planning</h3></div><ul><li>Builds a day-by-day study schedule around your real test dates</li><li>Tells you exactly what to study each night and for how long</li><li>Adjusts your plan automatically when you fall behind</li><li>Prioritizes the subjects where you need the most work</li><li>Never lets a test or deadline sneak up on you</li></ul></div>
-    <div class="category"><div class="category-head"><div class="icon">🧠</div><h3>Smart Flashcards and Quizzes</h3></div><ul><li>Generates flashcards directly from your class materials</li><li>Uses spaced repetition to focus on the concepts you struggle with most</li><li>Creates unlimited practice quizzes with full explanations</li><li>Tracks your quiz performance over time</li><li>Gets smarter about your weaknesses the more you use it</li></ul></div>
-    <div class="category"><div class="category-head"><div class="icon">🎧</div><h3>Audio Overviews</h3></div><ul><li>Turns your class materials into podcast-style audio summaries</li><li>Listen while commuting, working out, or before bed</li><li>Podcast mode for full-length reviews</li><li>Sleep mode for gentle review before bed</li><li>Commute mode for quick 10-minute summaries</li></ul></div>
-    <div class="category"><div class="category-head"><div class="icon">💬</div><h3>AI Tutor Chat</h3></div><ul><li>Ask any question about your class material and get a clear thorough explanation</li><li>Explains concepts multiple ways until you actually understand</li><li>Guides you toward the answer instead of just giving it to you</li><li>Remembers what you struggled with before and adjusts explanations accordingly</li><li>Available 24 hours a day every day</li></ul></div>
-  </section>
-  <section class="container fade-in">
-    <h2 class="section-heading">Why Studeo.</h2>
-    <div class="stats-grid">
-      <div class="stat-card"><div class="stat-label">Zero manual uploading — ever</div><p>Connect once and Studeo pulls everything automatically.</p></div>
-      <div class="stat-card"><div class="stat-label">Built around your real test dates</div><p>Your study plan adjusts every time a new assignment is posted.</p></div>
-      <div class="stat-card"><div class="stat-label">Grade tracking that actually works</div><p>See exactly what score you need on every upcoming assignment.</p></div>
-    </div>
-  </section>
-  <section class="container fade-in">
-    <div class="parents-card">
-      <h2>Parents Love Studeo Too.</h2>
-      <p>Studeo sends you a weekly summary showing your student's study activity, upcoming tests, and any grade changes. You stay informed without hovering. FERPA compliant — your student's data is protected by design. We never sell student information to anyone.</p>
-      <a href="#swl-form-bottom" class="btn-outline" onclick="document.getElementById('swl-form-bottom').scrollIntoView({behavior:'smooth'});return false;">Join the Waitlist as a Parent →</a>
-    </div>
-  </section>
-  <section class="container fade-in">
-    <h2 class="section-heading">Frequently Asked Questions</h2>
-    <div class="faq-item"><button class="faq-q" type="button">When does Studeo launch?<span class="chev">+</span></button><div class="faq-a"><p style="padding:0 24px 22px;font-size:15.5px;">We are launching in the coming weeks. Waitlist members are the first to get access — the moment we open the doors, you'll get an invite by email.</p></div></div>
-    <div class="faq-item"><button class="faq-q" type="button">What does 1 month free mean exactly?<span class="chev">+</span></button><div class="faq-a"><p style="padding:0 24px 22px;font-size:15.5px;">Early access members get full unlimited access to every Studeo feature for the first first month, completely free. No credit card is required to sign up, and you can cancel any time before the trial ends.</p></div></div>
-    <div class="faq-item"><button class="faq-q" type="button">Does it work with my school's platform?<span class="chev">+</span></button><div class="faq-a"><p style="padding:0 24px 22px;font-size:15.5px;">Studeo connects to Google Classroom, Canvas, Schoology, and Blackboard out of the box. If your school uses something else, let us know — we add new integrations regularly.</p></div></div>
-    <div class="faq-item"><button class="faq-q" type="button">Is student data kept private and safe?<span class="chev">+</span></button><div class="faq-a"><p style="padding:0 24px 22px;font-size:15.5px;">Yes. Studeo is FERPA compliant and your data is encrypted in transit and at rest. We never sell or share student data with third parties, ever.</p></div></div>
-    <div class="faq-item"><button class="faq-q" type="button">What grade levels is Studeo for?<span class="chev">+</span></button><div class="faq-a"><p style="padding:0 24px 22px;font-size:15.5px;">Studeo is built for high school students (grades 9–12) and college students at every level. Parents and teachers are welcome to join as well.</p></div></div>
-    <div class="faq-item"><button class="faq-q" type="button">Do students under 18 need parental permission?<span class="chev">+</span></button><div class="faq-a"><p style="padding:0 24px 22px;font-size:15.5px;">Yes. Students under 18 will be asked to verify parental permission before connecting school accounts. We make the process simple — one email to a parent for a single click of approval.</p></div></div>
-  </section>
-  <div class="container fade-in" id="swl-form-bottom">
-    <form class="form-card" data-swl-form>
-      <div class="form-title">Join the Waitlist</div>
-      <div class="field"><label>First Name</label><input type="text" name="firstName" required autocomplete="given-name" /></div>
-      <div class="field"><label>Email Address</label><input type="email" name="email" required autocomplete="email" /></div>
-      <div class="field"><label>I am a</label><select name="role" required data-role-select><option value="" disabled selected>Select one</option><option value="student">High School Student</option><option value="college">College Student</option><option value="parent">Parent of a Student</option><option value="teacher">Teacher</option><option value="admin">School Administrator</option></select></div>
-      <div class="field" data-grade-field><label>Grade Level</label><select name="grade"><option value="" disabled selected>Select one</option><option>9th Grade</option><option>10th Grade</option><option>11th Grade</option><option>12th Grade</option><option>College Freshman</option><option>College Sophomore</option><option>College Junior</option><option>College Senior</option></select></div>
-      <div class="field" data-school-field style="display:none;"><label>School or district name (optional)</label><input type="text" name="school" autocomplete="organization" /></div>
-      <div class="field"><label>School Platform</label><select name="platform" required><option value="" disabled selected>Select one</option><option>Google Classroom</option><option>Canvas</option><option>Schoology</option><option>Blackboard</option><option>Not Sure</option><option>Other</option></select></div>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAADXTTH75JvNuRpdN" data-theme="dark" style="margin:16px 0;"></div>
-      <button type="submit" class="btn">Join the Waitlist — Get 1 Month Free →</button>
-      <p class="fine-print">No credit card. Cancel anytime. Student data is never sold.</p>
-      <div class="form-message" data-message></div>
-    </form>
-  </div>
-  <div class="swl-footbar">
-    <img src="studeo-logo.png" alt="Studeo" />
-    <a onclick="showSection('studeo')">← Back to Studeo</a>
-  </div>
-</div>
-
 <!-- WAITLIST CELEBRATION OVERLAY (global) -->
 <div id="wl-celebrate">
   <canvas id="wl-confetti-canvas"></canvas>
@@ -1471,12 +935,12 @@ body:not([data-page="home"]) .section-wrap { padding-top: 0 !important; }
 </div>
 
 <script>
-const sections = ['home', 'drivo', 'drivo-waitlist', 'studeo', 'studeo-waitlist'];
+const sections = ['home', 'drivo', 'drivo-waitlist'];
 
 // ===== WAITLIST CELEBRATION =====
 let wlConfettiRAF = null;
 function openWaitlistCelebration(opts) {
-  // opts: { brand: 'drivo'|'studeo', email, color, glow, shareText, shareUrl, perks: [], positionText }
+  // opts: { brand: 'drivo', email, color, glow, shareText, shareUrl, perks: [], positionText }
   const overlay = document.getElementById('wl-celebrate');
   const card = overlay.querySelector('.wl-card');
   const title = document.getElementById('wl-celebrate-title');
@@ -1624,16 +1088,16 @@ function showSection(id, pushHistory = true) {
 }
 
 function updateNavPills(activeId) {
-  ['home','drivo','studeo'].forEach(id => {
+  ['home','drivo'].forEach(id => {
     const pill = document.getElementById('nav-' + id);
     if (!pill) return;
-    const isActive = activeId === id || (id === 'drivo' && activeId === 'drivo-waitlist') || (id === 'studeo' && activeId === 'studeo-waitlist');
+    const isActive = activeId === id || (id === 'drivo' && activeId === 'drivo-waitlist');
     pill.style.background = isActive ? '#3B82F6' : 'transparent';
     pill.style.color = isActive ? '#FFFFFF' : '#C0C0C0';
   });
   document.querySelectorAll('#mobile-overlay .m-pill').forEach((p, i) => {
-    const ids = ['home','drivo','studeo'];
-    const isActive = activeId === ids[i] || (ids[i] === 'drivo' && activeId === 'drivo-waitlist') || (ids[i] === 'studeo' && activeId === 'studeo-waitlist');
+    const ids = ['home','drivo'];
+    const isActive = activeId === ids[i] || (ids[i] === 'drivo' && activeId === 'drivo-waitlist');
     p.classList.toggle('active', isActive);
   });
 }
@@ -1691,8 +1155,6 @@ window.addEventListener('load', function() {
   initFortevoCanvas();
   if (typeof initDrivo === 'function') initDrivo();
   if (typeof initDrivoWL === 'function') initDrivoWL();
-  if (typeof initStudeo === 'function') initStudeo();
-  if (typeof initStudeoWL === 'function') initStudeoWL();
 });
 
 window.addEventListener('popstate', function(e) {
@@ -1935,200 +1397,6 @@ function initDrivoWL() {
       } catch (err) {
         msgEl.className = 'form-msg error';
         msgEl.innerHTML = `Something went wrong. Email us directly at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>`;
-      } finally {
-        btn.disabled = false; btn.textContent = originalText;
-      }
-    });
-  });
-}
-// ========== STUDEO JS ==========
-function initStudeo() {
-  const root = document.getElementById('section-studeo');
-  if (!root) return;
-  // Pricing toggle
-  const toggle = document.getElementById('stu-billingToggle');
-  const monthlyLabel = document.getElementById('stu-monthlyLabel');
-  const annualLabel = document.getElementById('stu-annualLabel');
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      const annual = toggle.classList.toggle('annual');
-      monthlyLabel.classList.toggle('active', !annual);
-      annualLabel.classList.toggle('active', annual);
-      root.querySelectorAll('.price-amount[data-monthly]').forEach(el => {
-        const val = annual ? el.dataset.annual : el.dataset.monthly;
-        el.innerHTML = val + ' <small>/ month</small>';
-      });
-      root.querySelectorAll('.price-note[data-monthly]').forEach(el => { el.textContent = annual ? el.dataset.annual : el.dataset.monthly; });
-    });
-  }
-  // Platform logo SVGs
-  root.querySelectorAll('.platform-logo[data-platform]').forEach(el => {
-    const letter = el.dataset.platform;
-    const bg = el.dataset.bg;
-    el.innerHTML = '<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="12" fill="' + bg + '"/><text x="28" y="38" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="30" fill="#ffffff">' + letter + '</text></svg>';
-  });
-  root.querySelectorAll('.platform-logo-small[data-platform]').forEach(el => {
-    const letter = el.dataset.platform;
-    const bg = el.dataset.bg;
-    el.innerHTML = '<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="44" rx="10" fill="' + bg + '"/><text x="22" y="30" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="22" fill="#ffffff">' + letter + '</text></svg>';
-  });
-  // Grade calculator
-  (function() {
-    const currentEl = document.getElementById('stu-currentGrade');
-    const weightEl = document.getElementById('stu-assignmentWeight');
-    const targetEl = document.getElementById('stu-targetGrade');
-    const result = document.getElementById('stu-calcResult');
-    if (!result) return;
-    function compute() {
-      const currentGrade = parseFloat(currentEl.value) || 0;
-      const assignmentWeight = parseFloat(weightEl.value) || 0;
-      const targetGrade = parseFloat(targetEl.value) || 0;
-      const currentWeight = 100 - assignmentWeight;
-      const neededScore = (targetGrade - (currentGrade * currentWeight / 100)) / (assignmentWeight / 100);
-      const raw = Math.round(neededScore);
-      const clamped = Math.round(Math.min(Math.max(neededScore, 0), 100));
-      result.classList.remove('unreachable');
-      if (raw > 100) {
-        result.classList.add('unreachable');
-        result.textContent = 'This target may not be reachable on this assignment alone — but Studeo can help you maximize your final grade.';
-        return;
-      }
-      let scoreClass = 'green';
-      let hint = '';
-      if (clamped > 90) { scoreClass = 'amber'; hint = '<span class="hint">You can do it — start studying tonight.</span>'; }
-      result.innerHTML = 'To reach <strong>' + targetGrade + '%</strong> you need to score <span class="score ' + scoreClass + '">' + clamped + '%</span> on your next assignment.' + hint;
-    }
-    [currentEl, weightEl, targetEl].forEach(el => el.addEventListener('input', compute));
-    compute();
-  })();
-  // Particles
-  (function() {
-    const canvas = document.getElementById('stu-particles');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let w, h, particles;
-    const COUNT = 55;
-    function resize() { w = canvas.width = canvas.offsetWidth; h = canvas.height = canvas.offsetHeight; }
-    function init() {
-      resize();
-      particles = [];
-      for (let i = 0; i < COUNT; i++) {
-        particles.push({ x: Math.random() * w, y: Math.random() * h, r: Math.random() * 2 + 0.6, vx: (Math.random() - 0.5) * 0.25, vy: (Math.random() - 0.5) * 0.25, a: Math.random() * 0.5 + 0.15 });
-      }
-    }
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      particles.forEach(p => {
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(245, 158, 11, ' + p.a + ')'; ctx.fill();
-      });
-      requestAnimationFrame(draw);
-    }
-    init(); draw();
-    window.addEventListener('resize', init);
-  })();
-}
-// ========== STUDEO WAITLIST JS ==========
-function initStudeoWL() {
-  const root = document.getElementById('section-studeo-waitlist');
-  if (!root) return;
-  // Role-based toggle
-  function applyRoleToggle(roleSelect) {
-    const form = roleSelect.closest('form');
-    const gradeField = form.querySelector('[data-grade-field]');
-    const schoolField = form.querySelector('[data-school-field]');
-    const gradeSelect = gradeField.querySelector('select');
-    const val = roleSelect.value;
-    if (val === 'student' || val === 'college') {
-      gradeField.style.display = 'block';
-      schoolField.style.display = 'none';
-      if (gradeSelect) gradeSelect.setAttribute('required', 'required');
-    } else if (val) {
-      gradeField.style.display = 'none';
-      schoolField.style.display = 'block';
-      if (gradeSelect) gradeSelect.removeAttribute('required');
-    }
-  }
-  root.querySelectorAll('[data-role-select]').forEach(sel => { sel.addEventListener('change', () => applyRoleToggle(sel)); });
-  // FAQ
-  root.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      const wasOpen = item.classList.contains('open');
-      root.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    });
-  });
-  // Form submit
-  const WAITLIST_ENDPOINT = 'https://formspree.io/f/xredorlw';
-  function buildShareCard() {
-    return `<div style="margin-top:20px; padding:20px; background:#1E1B4B; border:1px solid #F59E0B; border-radius:12px; text-align:center;">
-        <p style="color:#F59E0B; font-weight:700; margin-bottom:8px;">📚 Tell a Classmate</p>
-        <p style="color:#F8F7FF; font-size:0.9rem; margin-bottom:12px;">Share Studeo with a friend — help them get better grades too.</p>
-        <button onclick="navigator.share ? navigator.share({title:'Studeo',text:'I just joined the Studeo waitlist — AI that connects to Google Classroom and helps you get better grades. 1 month free for early access.',url:window.location.href}) : navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))" style="background:#F59E0B;color:#1E1B4B;border:none;padding:10px 24px;border-radius:8px;font-weight:700;cursor:pointer;">Share with a Classmate →</button>
-      </div>`;
-  }
-  function renderAlreadyJoined(form, email) {
-    const display = email ? ` We have ${email} on file.` : '';
-    form.innerHTML = `<div class="form-title">You're already on the list ✓</div>
-      <p style="text-align:center; color: rgba(248,247,255,0.72); font-size:15px;">Thanks for joining the Studeo waitlist.${display} Watch your inbox for your early access invite and details about your 1 free month.</p>
-      ${buildShareCard()}`;
-  }
-  if (localStorage.getItem('studeo_waitlist_submitted') === 'true') {
-    const savedEmail = localStorage.getItem('studeo_waitlist_email') || '';
-    root.querySelectorAll('[data-swl-form]').forEach(form => renderAlreadyJoined(form, savedEmail));
-  }
-  root.querySelectorAll('[data-swl-form]').forEach(form => {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const msg = form.querySelector('[data-message]');
-      const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      msg.className = 'form-message'; msg.textContent = '';
-      const formData = new FormData(form);
-      const tsInput = form.querySelector('input[name="cf-turnstile-response"]');
-      if (!tsInput || !tsInput.value) {
-        msg.className = 'form-message error'; msg.textContent = 'Please wait for the security check to load, then try again.'; return;
-      }
-      const data = {
-        firstName: (formData.get('firstName') || '').toString().trim(),
-        email: (formData.get('email') || '').toString().trim(),
-        role: formData.get('role') || '',
-        grade: formData.get('grade') || '',
-        school: (formData.get('school') || '').toString().trim(),
-        platform: formData.get('platform') || '',
-        'cf-turnstile-response': tsInput.value,
-      };
-      btn.disabled = true; btn.textContent = 'Joining...';
-      try {
-        const res = await fetch(WAITLIST_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) });
-        if (res.ok) {
-          localStorage.setItem('studeo_waitlist_submitted', 'true');
-          localStorage.setItem('studeo_waitlist_email', formData.get('email') || '');
-          msg.className = ''; msg.innerHTML = '';
-          form.reset();
-          openWaitlistCelebration({
-            email: data.email,
-            color: '#F59E0B',
-            glow: 'rgba(245,158,11,0.45)',
-            colors: ['#F59E0B', '#FFFFFF', '#FBBF24', '#1E1B4B'],
-            title: "You're In.",
-            perks: [
-              '1 month completely free at launch',
-              'Priority access to AI tutor and study planner',
-              'Better grades or your money back'
-            ],
-            shareTitle: 'Studeo',
-            shareText: 'I just joined the Studeo waitlist — AI that connects to Google Classroom and helps you get better grades. 1 free month for early access.',
-            shareUrl: window.location.origin + window.location.pathname + '#studeo'
-          });
-        } else { throw new Error('Request failed'); }
-      } catch (err) {
-        msg.className = 'form-message error';
-        msg.innerHTML = 'Something went wrong. Email us at <a href="mailto:fortevo.ai@gmail.com">fortevo.ai@gmail.com</a>';
       } finally {
         btn.disabled = false; btn.textContent = originalText;
       }
